@@ -3,10 +3,6 @@ class Solution:
         adj = defaultdict(list)
         n = len(graph)
         
-        for u in range(n):
-            for v in graph[u]:
-                adj[u].append(v)
-        
         dp = [[False] * (1 << n) for i in range(n)]
         
         dq = deque([])
@@ -23,7 +19,7 @@ class Solution:
             if visited == allNode:
                 return step
             
-            for v in adj[u]:
+            for v in graph[u]:
                 mask_v = visited | (1 << v)
                 if not dp[v][mask_v]:
                     dp[v][mask_v] = True
