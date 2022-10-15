@@ -16,7 +16,7 @@ public:
                 return false;
             }
         }
-        for (int x = i, y = j; x >= 0 and y >= 0; --x, ++y) {
+        for (int x = i, y = j; x >= 0 and y < col; --x, ++y) {
             if (nQueens[x][y] == 'Q') {
                 return false;
             }
