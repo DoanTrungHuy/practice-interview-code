@@ -27,7 +27,5 @@ class Solution:
                             return False
                         if '0' <= board[x][y] <= '9':
                             mat.add(board[x][y]) 
-                        print(board[x][y], end = ' ')
-                    print()
         
         return True
