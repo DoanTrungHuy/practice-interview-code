@@ -4,7 +4,7 @@ class Solution:
         
         for i in range(n - 1):
             cnt, char = 1, ans[0]
-            tmp = []
+            tmp = ''
             
             for j in range(1, len(ans)):
                 if char == ans[j]:
@@ -16,7 +16,6 @@ class Solution:
             
             tmp += str(cnt)
             tmp += char
-            
             ans = tmp
                     
         return ''.join(ans)
