@@ -18,4 +18,4 @@ class Solution:
             tmp += char
             ans = tmp
                     
-        return ''.join(ans)
+        return ans
