@@ -22,7 +22,6 @@ public:
             
             ans = tmp;
         }
-        
         return ans;
     }
 };
