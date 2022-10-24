@@ -1,27 +1,25 @@
 class Solution:
     def maxLength(self, arr: List[str]) -> int:
         n = len(arr)
-        self.ans = 0
+        ans = 0
         
-        def checkUnique(path):
-            ms = set()
-            for char in path:
-                if char in ms:
-                    return False
-                ms.add(char)
-            return True
-        
-        def backTracking(i, path):
-            if not checkUnique(path):
-                return
-            
-            if len(path) > self.ans:
-                self.ans = len(path)
-            
-            for j in range(i, n):
-                backTracking(j + 1, path + arr[j])
+        for i in range(1 << n):
+            seen = set()
+            flag = True
+            temp = ''
+            for j in range(n):
+                if (i >> j) & 1 == 0:
+                    continue
+                for char in arr[j]:
+                    if char in seen:
+                        flag = False
+                        break
+                    seen.add(char)
+                if not flag:
+                    break
+                temp += arr[j]
+            sz = len(temp)
+            if sz > ans:
+                ans = sz
                 
-        backTracking(0, '')
-        return self.ans
-                
-            
+        return ans
