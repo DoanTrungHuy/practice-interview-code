@@ -6,7 +6,8 @@ class Solution:
         for i in range(1 << n):
             seen = set()
             flag = True
-            temp = ''
+            size = 0
+            
             for j in range(n):
                 if (i >> j) & 1 == 0:
                     continue
@@ -17,9 +18,9 @@ class Solution:
                     seen.add(char)
                 if not flag:
                     break
-                temp += arr[j]
-            sz = len(temp)
-            if sz > ans:
-                ans = sz
+                size += len(arr[j])
+  
+            if size > ans:
+                ans = size
                 
         return ans
