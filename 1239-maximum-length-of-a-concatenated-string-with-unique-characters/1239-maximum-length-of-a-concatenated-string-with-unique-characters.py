@@ -11,16 +11,14 @@ class Solution:
             for j in range(n):
                 if (i >> j) & 1 == 0:
                     continue
-                cnt = 0
                 for char in arr[j]:
                     if char in seen:
                         flag = False
                         break
                     seen.add(char)
-                    cnt += 1
                 if not flag:
                     break
-                size += cnt
+                size += len(arr[j])
   
             if size > ans:
                 ans = size
