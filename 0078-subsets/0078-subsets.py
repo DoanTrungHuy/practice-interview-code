@@ -12,6 +12,5 @@ class Solution:
                 tmp += [nums[i]]
             
             ans += [tmp]
-            
         
         return ans
