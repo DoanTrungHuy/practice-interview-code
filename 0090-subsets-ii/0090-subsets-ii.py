@@ -3,6 +3,7 @@ class Solution:
         ans = []
         nums.sort()
         n = len(nums)
+        seen = set()
         
         for mask in range(1 << n):
             tmp = []
@@ -12,8 +13,10 @@ class Solution:
                 if not (mask >> i) & 1:
                     continue    
                 tmp += [nums[i]]
+                s += str(nums[i])
                 
-            if tmp not in ans:
+            if s not in seen:
                 ans += [tmp]
+                seen.add(s)
         
         return ans
