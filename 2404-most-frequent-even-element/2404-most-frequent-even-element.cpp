@@ -1,26 +1,19 @@
 class Solution {
 public:
     int mostFrequentEven(vector<int>& nums) {
-        int cnt[100000] = {0};
-        int m = INT_MIN;
+        map<int, int> mm;
+        int maxFreq = 0;
         for (int num : nums) {
-            cnt[num]++;
-            if (!(num % 2)) {
-                m = max(m, cnt[num]);
+            mm[num]++;
+            if (num % 2 == 0) {
+                maxFreq = max(maxFreq, mm[num]);
             }
         }
-        int ans = INT_MAX;
-        for (int num : nums) {
-            if (num % 2) {
-                continue;
-            }
-            if (m == cnt[num]) {
-                ans = min(ans, num);
+        for (auto [val, cnt] : mm) {
+            if (val % 2 == 0 and cnt == maxFreq) {
+                return val;
             }
         }
-        if (ans == INT_MAX) {
-            return -1;
-        }
-        return ans;
+        return -1;
     }
 };
