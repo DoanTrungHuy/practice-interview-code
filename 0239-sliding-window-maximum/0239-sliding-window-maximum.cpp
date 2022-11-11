@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int dp[22][1000000];
+    int dp[22][100005];
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         int n = nums.size();
         for (int i = 0; i < n; ++i) {
