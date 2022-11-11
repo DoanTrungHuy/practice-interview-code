@@ -13,9 +13,9 @@ public:
             }
         }
         vector<int> ans;
-        for (int j = 0; j < n - k + 1; ++j) {
-            int l = j + 1;
-            int r = j + k;
+        for (int j = 1; j <= n - k + 1; ++j) {
+            int l = j;
+            int r = j + k - 1;
             int i = log2(r - l + 1);
             ans.push_back(max(dp[i][l], dp[i][r - (1 << i) + 1]));
         }
