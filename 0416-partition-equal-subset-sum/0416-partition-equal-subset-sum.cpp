@@ -24,6 +24,7 @@ public:
             return false;
         }
         s /= 2;
+        sort(nums.begin(), nums.end());
         dp.resize(s + 1, vector<int>(n, -1));
         return rec(nums, s);
     }
