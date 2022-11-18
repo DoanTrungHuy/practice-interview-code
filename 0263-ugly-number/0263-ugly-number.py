@@ -15,7 +15,7 @@ class Solution:
                 while n >= 1 and n % pr == 0:
                     n /= pr
                     
-            if n not in checkPrime and self.isPrime(n):
+            if n > 5 and self.isPrime(n):
                 return False
             
             if n == 1:
