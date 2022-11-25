@@ -1,56 +1,38 @@
 class Solution {
 public:
     string removeKdigits(string num, int k) {
-        // number of operation greater than length we return an empty string
-        if(num.length() <= k)   
+        int n = num.size();
+        if (n <= k) {
             return "0";
-        
-        // k is 0 , no need of removing /  preforming any operation
-        if(k == 0)
+        }
+        if (k == 0) {
             return num;
-        
-        string res = "";// result string
-        stack <char> s; // char stack
-        
-        s.push(num[0]); // pushing first character into stack
-        
-        for(int i = 1; i<num.length(); ++i)
-        {
-            while(k > 0 && !s.empty() && num[i] < s.top())
-            {
-                // if k greater than 0 and our stack is not empty and the upcoming digit,
-                // is less than the current top than we will pop the stack top
+        }
+        stack<char> st;
+        st.push(num[0]);
+        for (int i = 1; i < n; ++i) {
+            while (k > 0 and !st.empty() and st.top() > num[i]) {
+                st.pop();
                 --k;
-                s.pop();
             }
-            
-            s.push(num[i]);
-            
-            // popping preceding zeroes
-            if(s.size() == 1 && num[i] == '0')
-                s.pop();
+            st.push(num[i]);
+            if (st.size() == 1 and num[i] == '0') {
+                st.pop();
+            }
         }
-        
-        while(k && !s.empty())
-        {
-            // for cases like "456" where every num[i] > num.top()
+        while (k > 0 and !st.empty()) {
+            st.pop();
             --k;
-            s.pop();
         }
-        
-        while(!s.empty())
-        {
-            res.push_back(s.top()); // pushing stack top to string
-            s.pop(); // pop the top element
+        string res;
+        while (!st.empty()) {
+            res.push_back(st.top());
+            st.pop();
         }
-        
-        reverse(res.begin(),res.end()); // reverse the string 
-        
-        if(res.length() == 0)
+        if (res.size() == 0) {
             return "0";
-        
+        }
+        reverse(res.begin(), res.end());
         return res;
-        
-        
     }
 };
