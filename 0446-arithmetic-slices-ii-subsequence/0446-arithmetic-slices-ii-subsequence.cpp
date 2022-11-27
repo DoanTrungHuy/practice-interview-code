@@ -8,6 +8,9 @@ public:
         for (int i = 1; i < n; ++i) {
             for (int j = 0; j < i; ++j) {
                 ll diff = (ll)nums[i] - nums[j];
+                if (INT_MAX < diff || INT_MIN > diff) {
+                    continue;
+                }
                 int cnt = dp[j].count(diff) ? dp[j][diff] : 0;
                 dp[i][diff] += cnt + 1;
                 ans += cnt;
