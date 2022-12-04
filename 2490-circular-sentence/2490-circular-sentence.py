@@ -5,7 +5,7 @@ class Solution:
         
         n = len(s)
         
-        for i in range(n - 1):
+        for i in range(1, n - 1):
             if i and s[i] == ' ' and s[i - 1] != s[i + 1]:
                 return False
             
