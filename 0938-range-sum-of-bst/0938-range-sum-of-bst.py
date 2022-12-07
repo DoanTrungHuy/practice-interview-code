@@ -12,8 +12,10 @@ class Solution:
     def dfs(self, root, low, high):
         if not root:
             return
+        
         if low <= root.val <= high:
             self.total += root.val
+            
         self.dfs(root.left, low, high)
         self.dfs(root.right, low, high)
         
