@@ -12,6 +12,6 @@ class Solution:
         maxSum = -inf
         
         for u in range(n):
-            maxSum = max(maxSum, vals[u] + sum(sorted([vals[v] for v in adj[u]])[::-1][:k]))
+            maxSum = max(maxSum, vals[u] + sum(sorted([vals[v] for v in adj[u]])[-k:]))
             
         return maxSum
