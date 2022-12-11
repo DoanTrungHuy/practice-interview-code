@@ -13,8 +13,7 @@ class Solution:
                 return 0
             l = dfs(root.left)
             r = dfs(root.right)
-            currValue = root.val + l + r
-            self.maxValue = max(self.maxValue, currValue)
+            self.maxValue = max(self.maxValue, root.val + l + r)
             return max(root.val + max(l, r), 0)
         
         dfs(root)
