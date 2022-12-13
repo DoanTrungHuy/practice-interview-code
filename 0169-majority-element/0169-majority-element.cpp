@@ -6,10 +6,15 @@ public:
         int candidate = nums[0];
         for (int i = 1; i < n; ++i) {
             if (!vote) {
-                vote = 0;
+                vote = 1;
                 candidate = nums[i];
             }
-            vote += candidate == nums[i] ? 1 : -1;
+            else if (candidate == nums[i]) {
+                vote++;
+            }
+            else {
+                vote--;
+            }
         }
         return candidate;
     }
