@@ -9,7 +9,7 @@ class Solution:
             return
         
         for j in range(1, n + 1):
-            if self.flag[j] == 0 and (i % j == 0 or j % i == 0):
+            if not self.flag[j] and (i % j == 0 or j % i == 0):
                 self.flag[j] = True
                 self.backTracking(n, i + 1)
                 self.flag[j] = False
