@@ -26,7 +26,6 @@ class Solution:
                             newStates = 2
                         elif d < nums[i]:
                             newStates = 0
-                            
                     dp[i + 1][newStates] += dp[i][states]
                     
         ans = 0
