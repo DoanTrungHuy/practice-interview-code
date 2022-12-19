@@ -12,10 +12,8 @@ class Solution:
             v = findUnion(v)
             if u != v:
                 parent[v] = u
-                return False
-            return True
         
         for u, v in edges:
             group(u, v)
             
-        return group(source, destination)
+        return findUnion(source) == findUnion(destination)
