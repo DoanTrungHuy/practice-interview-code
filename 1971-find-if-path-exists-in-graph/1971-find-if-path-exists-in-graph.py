@@ -1,18 +1,21 @@
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
-        visited = [False] * n
-        adj = defaultdict(list)
+        parent = [v for v in range(n)]
+        
+        def findUnion(u):
+            if u != parent[u]:
+                parent[u] = findUnion(parent[u])
+            return parent[u]
+        
+        def group(u, v):
+            u = findUnion(u)
+            v = findUnion(v)
+            if u != v:
+                parent[v] = u
+                return False
+            return True
         
         for u, v in edges:
-            adj[u].append(v)
-            adj[v].append(u)
+            group(u, v)
             
-        def dfs(u):
-            visited[u] = True
-            for v in adj[u]:
-                if not visited[v]:
-                    dfs(v)
-                    
-        dfs(source)
-        
-        return visited[destination]
+        return group(source, destination)
