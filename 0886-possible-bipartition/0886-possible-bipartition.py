@@ -15,6 +15,7 @@ class Solution:
         for i in range(1, n + 1):
             if visited[i]:
                continue
+            
             dq.append(i)
             color[i] = BLUE
             
