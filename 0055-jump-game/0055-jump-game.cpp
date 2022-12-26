@@ -4,7 +4,6 @@ public:
         int n = nums.size();
         vector<bool> dp(n);
         dp[0] = true;
-        // O(N^2)
         for (int i = 1; i < n; ++i) {
             for (int j = i - 1; j >= 0; --j) {
                 if (dp[j] and nums[j] + j >= i) {
