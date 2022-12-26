@@ -2,13 +2,17 @@ class Solution {
 public:
     bool canJump(vector<int>& nums) {
         int n = nums.size();
-        int maxDist = 0;
-        for (int i = 0; i < n; ++i) {
-            if (i > maxDist) {
-                return false;
+        vector<bool> dp(n);
+        dp[0] = true;
+        // O(N^2)
+        for (int i = 1; i < n; ++i) {
+            for (int j = i - 1; j >= 0; --j) {
+                if (dp[j] and nums[j] + j >= i) {
+                    dp[i] = true;
+                    break;
+                }
             }
-            maxDist = max(maxDist, i + nums[i]);
         }
-        return true;
+        return dp[n - 1];
     }
 };
