@@ -9,4 +9,4 @@ class Solution:
             heappush(heap, -ceil(-heappop(heap) / 2))
             k -= 1
 
-        return sum([-x for x in heap])
+        return -sum(heap)
