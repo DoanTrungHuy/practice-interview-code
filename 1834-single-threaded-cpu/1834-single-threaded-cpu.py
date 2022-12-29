@@ -1,11 +1,5 @@
 class Solution:
     def getOrder(self, tasks: List[List[int]]) -> List[int]:
-        # 1--2
-        #    2-------6
-        #      3----5
-        #         4-5
-
-        # -> 0 2 3 1
 
         n = len(tasks)
         tasks = sorted([(tasks[i][0], tasks[i][1], i) for i in range(n)])
