@@ -10,18 +10,14 @@ class Solution:
         self.d = total // k
         flags = [0] * k
         self.check = False
+        matchsticks.sort(reverse = True)
         
         def backTracking(i):
             if self.check:
                 return
             
             if i == n:
-                a = flags[0]
-                b = flags[1]
-                c = flags[2]
-                d = flags[3]
-                if a == b and b == c and c == d:
-                    self.check = True
+                self.check = True
                 return
             
             seen = set()
@@ -31,13 +27,10 @@ class Solution:
                     continue
                 if flags[j] + matchsticks[i] > self.d:
                     continue
-                    
                 seen.add(flags[j])
                 flags[j] += matchsticks[i]
                 backTracking(i + 1)
                 flags[j] -= matchsticks[i]
-                
-                if not flags[j]: break
                 
         backTracking(0)
                 
