@@ -7,7 +7,7 @@ class Solution:
         
         n = len(matchsticks)
         k = 4
-        d = total // k
+        self.d = total // k
         flags = [0] * k
         self.check = False
         
@@ -16,7 +16,11 @@ class Solution:
                 return
             
             if i == n:
-                if flags[0] == flags[1] and flags[1] == flags[2] and flags[2] == flags[3]:
+                a = flags[0]
+                b = flags[1]
+                c = flags[2]
+                d = flags[3]
+                if a == b and b == c and c == d:
                     self.check = True
                 return
             
@@ -25,7 +29,7 @@ class Solution:
             for j in range(k):
                 if flags[j] in seen:
                     continue
-                if flags[j] + matchsticks[i] > d:
+                if flags[j] + matchsticks[i] > self.d:
                     continue
                 seen.add(flags[j])
                 flags[j] += matchsticks[i]
