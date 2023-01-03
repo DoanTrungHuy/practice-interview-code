@@ -29,11 +29,12 @@ class Solution:
                     continue
                 if flags[j] + nums[i] > d:
                     continue
+                    
                 flags[j] += nums[i]
                 backTracking(i + 1)
                 flags[j] -= nums[i]
-                if not flags[j]:
-                    break
+                
+                if not flags[j]: break
         
         backTracking(0)
         return self.check
