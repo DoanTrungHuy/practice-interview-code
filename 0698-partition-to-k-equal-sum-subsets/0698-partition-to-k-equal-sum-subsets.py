@@ -1,41 +1,24 @@
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
-        n = len(nums)
-        total = sum(nums)
-        
-        if total % k != 0 or n < k:
+        if len(nums) < k or sum(nums) % k != 0 or max(nums) > sum(nums) // k:
             return False
-        
-        d = total // k
-        flags = [0] * k
-        self.check = False
+        target = sum(nums)//k
+
         nums.sort(reverse = True)
-        
-        def backTracking(i):
-            if self.check:
-                return
-            
-            if i == n:
-                for j in range(k):
-                    if flags[j] != d:
-                        return
-                self.check = True
-                return
-            
-            seen = set()
-            
-            for j in range(k):
-                if flags[j] in seen:
-                    continue
-                if flags[j] + nums[i] > d:
-                    continue
-                    
-                flags[j] += nums[i]
-                backTracking(i + 1)
-                flags[j] -= nums[i]
-                
-                if not flags[j]: break
-        
-        backTracking(0)
-        return self.check
-                
+        edge = [0]*k
+
+        def dfs(index):
+            if index == len(nums):
+                return True
+            seen = [] # record the searched summ
+            for i in range(k):
+                if edge[i] in seen: continue
+                if edge[i] + nums[index] <= target:
+                    seen.append(edge[i])
+                    edge[i] += nums[index]
+                    if dfs(index + 1):
+                        return True
+                    edge[i] -= nums[index]
+            return False
+
+        return dfs(0)
