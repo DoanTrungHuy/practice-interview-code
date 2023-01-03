@@ -14,8 +14,8 @@ class Solution:
             
             for d in range(maxi + 1):    
                 newTight = tight and nums[i] == d
-                newMask = mask if mask == 0 and d == 0 else (mask | (1 << d))
                 newRep = rep or (mask & (1 << d))
+                newMask = mask if mask == 0 and d == 0 else (mask | (1 << d))
                 ans += dp(i + 1, newTight, newRep, newMask)
                     
             return ans
