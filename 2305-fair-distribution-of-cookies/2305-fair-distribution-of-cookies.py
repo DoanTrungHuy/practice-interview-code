@@ -12,7 +12,7 @@ class Solution:
             seen = set()
             
             for j in range(k):
-                if self.flags[j] + cookies[i] > self.minDiff:
+                if self.flags[j] + cookies[i] >= self.minDiff:
                     continue
                 if self.flags[j] in seen:
                     continue
