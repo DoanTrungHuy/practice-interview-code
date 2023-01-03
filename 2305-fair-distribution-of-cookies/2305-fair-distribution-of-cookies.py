@@ -1,16 +1,26 @@
 class Solution:
     def distributeCookies(self, cookies: List[int], k: int) -> int:
         n = len(cookies)
-        flag = [0] * k
+        self.flags = [0] * k
+        self.minDiff = inf
         
-        def backTracking(i, minDiff):
+        def backTracking(i):
             if i == n:
-                return max(flag)
+                self.minDiff = min(self.minDiff, max(self.flags))
+                return
+            
+            seen = set()
+            
             for j in range(k):
-                flag[j] += cookies[i]
-                minDiff = min(minDiff, backTracking(i + 1, minDiff))
-                flag[j] -= cookies[i]
-                if not flag[j]: break
-            return minDiff
-                
-        return backTracking(0, inf)
+                if self.flags[j] + cookies[i] > self.minDiff:
+                    continue
+                if self.flags[j] in seen:
+                    continue
+                    
+                seen.add(self.flags[j])
+                self.flags[j] += cookies[i]
+                backTracking(i + 1)
+                self.flags[j] -= cookies[i]
+        
+        backTracking(0)
+        return self.minDiff
