@@ -2,7 +2,7 @@ class Solution:
     def minimumTimeRequired(self, jobs: List[int], k: int) -> int:
         n = len(jobs)
         flags = [0] * k
-        self.minDiff = sys.maxsize
+        self.minDiff = inf
         
         def backTracking(i):
             if i == n:
