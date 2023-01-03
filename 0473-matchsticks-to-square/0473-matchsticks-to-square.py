@@ -31,10 +31,13 @@ class Solution:
                     continue
                 if flags[j] + matchsticks[i] > self.d:
                     continue
+                    
                 seen.add(flags[j])
                 flags[j] += matchsticks[i]
                 backTracking(i + 1)
                 flags[j] -= matchsticks[i]
+                
+                if not flags[j]: break
                 
         backTracking(0)
                 
