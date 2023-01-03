@@ -6,7 +6,7 @@ class Solution:
         @cache
         def dp(i, tight, rep, mask):
             if i == sz:
-                return 1 if rep else 0
+                return not not rep
             
             ans = 0
             
