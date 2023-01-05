@@ -13,6 +13,7 @@ class Solution:
                 if total == target:
                     ans.add((nums[i], nums[l], nums[r]))
                     r -= 1
+                    l += 1
                 elif total > target:
                     r -= 1
                 else:
