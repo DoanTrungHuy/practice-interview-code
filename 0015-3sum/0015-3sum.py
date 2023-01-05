@@ -12,7 +12,7 @@ class Solution:
                 total = nums[l] + nums[r]
                 if total == target:
                     ans.add((nums[i], nums[l], nums[r]))
-                    l += 1
+                    r -= 1
                 elif total > target:
                     r -= 1
                 else:
