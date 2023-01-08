@@ -8,7 +8,7 @@ class Solution:
             x2, y2 = p2
             if x1 - x2 == 0:
                 return inf
-            return (y1 - y2)/(x1-  x2)
+            return (y1 - y2)/(x1 - x2)
         
         ans = 1
         for i, p1 in enumerate(points):
