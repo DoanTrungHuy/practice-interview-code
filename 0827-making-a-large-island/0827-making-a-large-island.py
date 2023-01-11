@@ -29,11 +29,9 @@ class Solution:
                 if self.grid[r][c] and self.components[r][c] == -1:
                     self.size[flag] = 0
                     self.dfs(r, c, flag)
-                    print(self.size[flag])
                     flag += 1
                     
         ans = 0
-        
         for r in range(self.n):
             for c in range(self.n):
                 if not self.grid[r][c]:
