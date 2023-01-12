@@ -6,7 +6,7 @@ class Solution:
             adj[a].append(b)
             adj[b].append(a)
             
-        self.res = [0] * n
+        self.res = [0 for _ in range(n)]
         
         def dfs(node: int, parent: int) -> List[int]:
             cnt = [0 for _ in range(26)]
