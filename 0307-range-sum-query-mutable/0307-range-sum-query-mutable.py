@@ -3,7 +3,7 @@ class SegmentTree:
         self.n = len(nums)
         self.tree = [0] * 4 * self.n
         for idx, val in enumerate(nums):
-            self.update(1, 1, self.n, idx + 1, val)
+            self.update(1, 0, self.n - 1, idx, val)
         
     def update(self, node, left, right, index, val):
         if not left <= index <= right:
@@ -33,10 +33,10 @@ class NumArray:
         self.it = SegmentTree(nums)
 
     def update(self, index: int, val: int) -> None:
-        self.it.update(1, 1, self.n, index + 1, val)
+        self.it.update(1, 0, self.n - 1, index, val)
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.it.sumRange(1, 1, self.n, left + 1, right + 1)
+        return self.it.sumRange(1, 0, self.n - 1, left, right)
 
 
 # Your NumArray object will be instantiated and called as such:
