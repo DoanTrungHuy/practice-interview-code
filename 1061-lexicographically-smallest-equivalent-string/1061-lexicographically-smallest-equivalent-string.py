@@ -1,17 +1,29 @@
 class Solution:
+    def __init__(self):
+        self.parent = []
+        
+    def find(self, u: int) -> int:
+        if u == self.parent[u]:
+            return u
+        return self.find(self.parent[u])
+    
+    def union(self, u: int, v: int) -> None:
+        u = self.find(u)
+        v = self.find(v)
+        if u != v:
+            if v < u:
+                self.parent[u] = v
+            else:
+                self.parent[v] = u
+        
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
-        adj = defaultdict(list)
+        n = len(baseStr)
+        self.parent = [0 for _ in range(26)]
+        
+        for u in range(26):
+            self.parent[u] = u
         
         for u, v in zip(s1, s2):
-            adj[u].append(v)
-            adj[v].append(u)
+            self.union(ord(u) - ord('a'), ord(v) - ord('a'))
             
-        def dfs(u: int, seen: set) -> int:
-            seen.add(u)
-            res = u
-            for v in adj[u]:
-                if v not in seen:
-                    res = min(res, dfs(v, seen))
-            return res
-        
-        return ''.join([dfs(char, set()) for char in baseStr])
+        return ''.join([chr(self.find(ord(char) - ord('a')) + ord('a')) for char in baseStr])
