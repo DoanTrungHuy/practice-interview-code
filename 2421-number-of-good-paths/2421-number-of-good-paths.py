@@ -39,4 +39,3 @@ class Solution:
                 cnt[find(u)] += 1
                 
         return ans + n
-        
