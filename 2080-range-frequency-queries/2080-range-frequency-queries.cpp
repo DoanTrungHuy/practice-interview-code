@@ -9,43 +9,10 @@ public:
         }
     }
     
-    int lb(vector<int> &v, int target) {
-        int n = v.size();
-        int l = 0, r = n - 1;
-        int res = n;
-        while (l <= r) {
-            int m = (l + r) >> 1;
-            if (v[m] < target) {
-                l = m + 1;
-            }
-            else {
-                res = m;
-                r = m - 1;
-            }
-        }
-        return res;
-    }
-
-    int ub(vector<int> &v, int target) {
-        int n = v.size();
-        int l = 0, r = n - 1;
-        int res = n;
-        while (l <= r) {
-            int m = (l + r) >> 1;
-            if (v[m] <= target) {
-                l = m + 1;
-            }
-            else {
-                res = m;
-                r = m - 1;
-            }
-        }
-        return res;
-    }
-    
     int query(int left, int right, int value) {
         vector<int> &v = um[value];
-        int idx1 = ub(v, right), idx2 = lb(v, left);
+        int idx1 = upper_bound(v.begin(), v.end(), right) - v.begin();
+        int idx2 = lower_bound(v.begin(), v.end(), left) - v.begin();
         return idx1 - idx2;
     }
 };
