@@ -9,4 +9,4 @@ class Solution:
             ans = min(ans, pref + suff)
             pref += c == '1'
             
-        return min(ans, pref + suff)
+        return ans
