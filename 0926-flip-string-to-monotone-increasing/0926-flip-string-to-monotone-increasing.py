@@ -1,16 +1,12 @@
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
         n = len(s)
-        pref, suff = [0] * (n + 2), [0] * (n + 2)
-        ans = inf
+        pref, suff = 0, s.count('0')
+        ans = n
         
-        for i in range(1, n + 1):
-            pref[i] = pref[i - 1] + (s[i - 1] == '1')
+        for c in s:
+            suff -= c == '0'
+            ans = min(ans, pref + suff)
+            pref += c == '1'
             
-        for i in range(n, 0, -1):
-            suff[i] = suff[i + 1] + (s[i - 1] == '0')
-            
-        for i in range(1, n + 2):
-            ans = min(ans, pref[i - 1] + suff[i])
-            
-        return ans
+        return min(ans, pref + suff)
