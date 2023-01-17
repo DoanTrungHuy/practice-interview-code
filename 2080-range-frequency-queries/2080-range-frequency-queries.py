@@ -10,8 +10,8 @@ class RangeFreqQuery:
             self.hashMap[arr[i]].add(i)
 
     def query(self, left: int, right: int, value: int) -> int:
-        c = self.hashMap[value]
-        return c.bisect_right(right) - c.bisect_left(left)
+        treeMap = self.hashMap[value]
+        return treeMap.bisect_right(right) - treeMap.bisect_left(left)
 
 
 # Your RangeFreqQuery object will be instantiated and called as such:
