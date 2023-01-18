@@ -23,7 +23,6 @@ class Solution:
             visited.add(u)
             res += dist
             for dv, v in adj[u]:
-                if v not in visited:
-                    heappush(heap, (dv, v))
+                heappush(heap, (dv, v))
                 
         return res
