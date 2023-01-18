@@ -11,18 +11,18 @@ class Solution:
                 adj.append((dist, i, j))
                 
         adj.sort()
-        self.parent = list(range(n))
+        parent = list(range(n))
         
         def find(u: int) -> int:
-            if u != self.parent[u]:
-                self.parent[u] = find(self.parent[u])
-            return self.parent[u]
+            if u != parent[u]:
+                parent[u] = find(parent[u])
+            return parent[u]
         
         def union(u: int, v: int) -> bool:
             u = find(u)
             v = find(v)
             if u != v:
-                self.parent[u] = v
+                parent[u] = v
                 return True
             return False
         
