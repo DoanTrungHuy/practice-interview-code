@@ -13,17 +13,16 @@ class Solution:
                 res += dfs(x + dx[i], y + dy[i])
             return res
         
-        for i in range(n):
-            for j in range(m):
-                if grid[i][j]:
-                    if i == 0 or j == 0 or i == n - 1 or j == m - 1:
-                        dfs(i, j)
-                    
         cnt = 0
         
         for i in range(n):
             for j in range(m):
+                cnt += grid[i][j]
+        
+        for i in range(n):
+            for j in range(m):
                 if grid[i][j]:
-                    cnt += dfs(i, j)
+                    if i == 0 or j == 0 or i == n - 1 or j == m - 1:
+                        cnt -= dfs(i, j)
                     
         return cnt
