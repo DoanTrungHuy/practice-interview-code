@@ -1,6 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        adj = defaultdict(list)
+        adj = list()
         n = len(points)
         
         for i in range(n):
@@ -8,22 +8,30 @@ class Solution:
                 x1, y1 = points[i]
                 x2, y2 = points[j]
                 dist = abs(x1 - x2) + abs(y1 - y2)
-                adj[i].append((dist, j))
-                adj[j].append((dist, i))
+                adj.append((dist, i, j))
                 
-        heap = [(0, 0)]
-            
-        res = 0
-        visited = set()
+        adj.sort()
+        parent = list(range(n))
         
-        while len(visited) < n:
-            dist, u = heappop(heap)
-            if u in visited:
-                continue
-            visited.add(u)
-            res += dist
-            for dv, v in adj[u]:
-                if v not in visited:
-                    heappush(heap, (dv, v))
+        def find(u: int) -> int:
+            if u != parent[u]:
+                parent[u] = find(parent[u])
+            return parent[u]
+        
+        def union(u: int, v: int) -> bool:
+            u = find(u)
+            v = find(v)
+            if u != v:
+                parent[u] = v
+                return True
+            return False
+        
+        m = len(adj)
+        ans = 0
+        
+        for i in range(m):
+            dist, u, v = adj[i]
+            if union(u, v):
+                ans += dist
                 
-        return res
+        return ans
