@@ -2,9 +2,9 @@ class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         n, m = len(heights), len(heights[0])
         
-        pacific = [[False for _ in range(205)] for _ in range(205)]
+        pacific = [[False for _ in range(m)] for _ in range(n)]
         
-        atlantic = [[False for _ in range(205)] for _ in range(205)]
+        atlantic = [[False for _ in range(m)] for _ in range(n)]
         
         def dfs1(x: int, y: int) -> None:
             pacific[x][y] = True
