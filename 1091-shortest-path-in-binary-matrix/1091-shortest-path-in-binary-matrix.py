@@ -13,6 +13,7 @@ class Solution:
         
         if grid[0][0] == 0:
             dq.append((0, 0, 1))
+            grid[0][0] = 1
         
         while dq:
             x, y, d = dq.popleft()
