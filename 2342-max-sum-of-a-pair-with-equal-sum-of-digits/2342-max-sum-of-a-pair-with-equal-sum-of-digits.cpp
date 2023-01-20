@@ -1,7 +1,8 @@
 class Solution {
 public:
     int maximumSum(vector<int>& nums) {
-        unordered_map<int, vector<int>> um;
+        unordered_map<int, int> um;
+        int res = -1;
         for (int num : nums) {
             int totalDigit = 0;
             int dummy = num;
@@ -9,20 +10,11 @@ public:
                 totalDigit += dummy % 10;
                 dummy /= 10;
             }
-            um[totalDigit].push_back(num); 
-        }
-        int res = 0;
-        for (auto it : um) {
-            vector<int> v = it.second;
-            int n = v.size();
-            int vj = v[0];
-            int maxTwoSum = 0;
-            for (int i = 1; i < n; ++i) {
-                maxTwoSum = max(maxTwoSum, v[i] + vj);
-                vj = max(vj, v[i]);
+            if (um.count(totalDigit)) {
+                res = max(res, um[totalDigit] + num);
             }
-            res = max(res, maxTwoSum);
+            um[totalDigit] = max(um[totalDigit], num);
         }
-        return res == 0 ? -1 : res;
+        return res;
     }
 };
