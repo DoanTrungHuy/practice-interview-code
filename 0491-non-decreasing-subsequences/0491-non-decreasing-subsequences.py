@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         ans = set()
         
-        for mask in range(1 << n):
+        for mask in range(1, 1 << n):
             tmp = []
             flag = True
             for i in range(n):
