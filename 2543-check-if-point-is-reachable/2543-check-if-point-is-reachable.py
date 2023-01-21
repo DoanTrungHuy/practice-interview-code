@@ -5,8 +5,4 @@ class Solution:
             tx >>= 1
         while ty & 1 == 0:
             ty >>= 1
-        g = math.gcd(tx, ty)
-        if g == 1:
-            return True
-        else:
-            return False
+        return math.gcd(tx, ty) == 1
