@@ -14,5 +14,5 @@ class Solution:
                 elif cnt[nums[j - 1]] > 2:
                     trimmed += 1
                 dp[j] = min(dp[j], dp[i] + k + trimmed)
-                
+            
         return dp[n]
