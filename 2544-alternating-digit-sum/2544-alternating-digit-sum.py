@@ -1,19 +1,15 @@
 class Solution:
     def alternateDigitSum(self, n: int) -> int:
         answ = 0
-        flag = False
+        sign = -1
         
         if len(str(n)) & 1:
-            flag = True
+            sign = 1
         
         while n > 0:
-            d = n % 10
-            if flag:
-                answ += d
-                flag = False
-            else:
-                answ -= d
-                flag = True
+            d = sign * (n % 10)
+            answ += d
             n //= 10
+            sign *= -1
             
         return answ
