@@ -7,6 +7,7 @@ class Solution:
             if u == n - 1:
                 ans.append(path)
                 return
+
             for v in graph[u]:
                 dfs(v, path + [v])
 
