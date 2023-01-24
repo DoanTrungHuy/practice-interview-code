@@ -10,9 +10,8 @@ class Trie:
     def insert(self, word: str, diff: int) -> None:
         root = self.root
         for char in word:
-            root.total += diff
             root = root.children[char]
-        root.total += diff
+            root.total += diff
         
     def find(self, prefix: str) -> int:
         root = self.root
