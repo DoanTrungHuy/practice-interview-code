@@ -1,3 +1,7 @@
+#define WHITE 0
+#define GRAY 1
+#define BLACK 2
+
 class Solution {
 private:
     vector<vector<int>> graph;
@@ -6,35 +10,35 @@ private:
         
 public:
     bool dfs(int u) {
-        if (color[u] == 2) {
+        if (color[u] == BLACK) {
             return true;
         }
-        if (color[u] == 1) {
+        if (color[u] == GRAY) {
             return false;
         }
-        color[u] = 1;
+        color[u] = GRAY;
         for (int v : graph[u]) {
             bool check = dfs(v);
             if (!check) {
                 return false;
             }
         }
-        color[u] = 2;
+        color[u] = BLACK;
         return true;
     }
     vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
         this->graph = graph;
         this->n = (int)graph.size();
-        color.resize(n, 0);
+        color.resize(n, WHITE);
         
         for (int i = 0; i < n; ++i) {
             if (graph[i].size() == 0) {
-                color[i] = 2;
+                color[i] = BLACK;
             }
         }
         
         for (int i = 0; i < n; ++i) {
-            if (color[i] == 0) {
+            if (color[i] == WHITE) {
                 dfs(i);
             }
         }
@@ -42,7 +46,7 @@ public:
         vector<int> ans;
         
         for (int i = 0; i < n; ++i) {
-            if (color[i] == 2) {
+            if (color[i] == BLACK) {
                 ans.push_back(i);
             }
         }
