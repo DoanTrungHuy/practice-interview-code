@@ -11,7 +11,7 @@ class Solution:
             total += diff
             target.append(diff)
         
-        nums1 = sorted(nums1)
+        nums1.sort()
         ans = total
         n = len(nums1)
         
