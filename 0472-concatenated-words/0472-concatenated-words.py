@@ -34,6 +34,7 @@ class Solution:
         for word in words:
             trie.insert(word)
         
+        @cache
         def dfs(i, n, word, cnt):
             root = trie.root
             for j in range(i, n):
