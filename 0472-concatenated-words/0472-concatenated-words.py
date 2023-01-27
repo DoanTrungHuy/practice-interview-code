@@ -37,6 +37,8 @@ class Solution:
         def dfs(i, n, word, cnt):
             root = trie.root
             for j in range(i, n):
+                if word[j] not in root.children:
+                    return False
                 root = root.children[word[j]]
                 if root.isEndWord:
                     if j == n - 1: 
