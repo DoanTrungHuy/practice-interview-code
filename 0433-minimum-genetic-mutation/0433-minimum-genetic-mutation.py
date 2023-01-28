@@ -1,32 +1,28 @@
-class Solution {
-public:
-    int minMutation(string start, string end, vector<string>& bank) {
-        queue<string> mq;
-        mq.push(start);
-        unordered_map<string, bool> visited;
-        int step = 0;
-        while (!mq.empty()) {
-            int n = mq.size();
-            while (n--) {
-                string word = mq.front();
-                mq.pop();
-                if (word == end) {
-                    return step;
-                }
-                for (int i = 0; i < 8; ++i) {
-                    char tmp = word[i];
-                    for (int j = 0; j < 4; ++j) {
-                        word[i] = "ACGT"[j];
-                        if (!visited[word] and find(bank.begin(), bank.end(), word) != bank.end()) {
-                            mq.push(word);
-                            visited[word] = true;
-                        }
-                    }
-                    word[i] = tmp;
-                }
-            }
-            step++;
-        }
-        return -1;
-    }
-};
+class Solution:
+    def minMutation(self, start: str, end: str, bank: List[str]) -> int:
+        dq = deque([start])
+        visited = set([start])
+        step = 0
+        bank = set(bank)
+        
+        while dq:
+            n = len(dq)
+            for _ in range(n):
+                gene = dq.popleft()
+                if gene == end:
+                    return step
+                visited.add(gene)
+                m = len(gene)
+                gene = list(gene)
+                for i in range(m):
+                    tmp = gene[i]
+                    for char in 'ACGT':
+                        gene[i] = char
+                        dummy = ''.join(gene)
+                        if dummy in bank and dummy not in visited:
+                            dq.append(dummy)
+                    gene[i] = tmp
+                    
+            step += 1
+            
+        return -1
