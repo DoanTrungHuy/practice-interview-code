@@ -1,10 +1,10 @@
-using ll = long long;
-const ll base = 4;
-const ll mod = 1e9 + 7;
-const ll limit = 9;
-
 class Solution {
 public:
+    using ll = long long;
+    const ll base = 4;
+    const ll mod = 1e9 + 7;
+    const ll limit = 9;
+    
     vector<string> findRepeatedDnaSequences(string s) {
         int n = (int)s.size();
         if (n < 10) {
@@ -27,9 +27,7 @@ public:
             int l = i;
             int r = i + limit;
             if (++um[(h[r] - h[l - 1]*p[r - l + 1] + mod*mod) % mod] == 2) {
-                l--;
-                r--;
-                ans.push_back(s.substr(l, r - l + 1));
+                ans.push_back(s.substr(l - 1, r - l + 1));
             }
         }
         return ans;
