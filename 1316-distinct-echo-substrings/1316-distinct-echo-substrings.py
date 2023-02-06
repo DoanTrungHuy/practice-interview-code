@@ -16,14 +16,17 @@ class Solution:
         
         s = set()
             
-        for i in range(0, n):
+        for i in range(1, n + 1):
             j = 2
-            while i + j <= n:
+            while i + j - 1 <= n:
                 m = i + j // 2
-                lval = getHash(i + 1, m);
-                rval = getHash(m + 1, i + j)
+                lval = getHash(i, m - 1);
+                rval = getHash(m, i + j - 1)
                 if lval == rval:
                     s.add(lval)
                 j += 2
                 
         return len(s)
+    
+        # "abcabcabc"
+        #  1
