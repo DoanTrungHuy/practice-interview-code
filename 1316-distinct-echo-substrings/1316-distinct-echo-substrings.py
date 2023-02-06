@@ -27,6 +27,3 @@ class Solution:
                 j += 2
                 
         return len(s)
-    
-        # "abcabcabc"
-        #  1  4
