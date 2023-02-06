@@ -5,10 +5,10 @@ class Solution:
         h = [0 for _ in range(n + 1)]
         p = [1 for _ in range(n + 1)]
         
-        base, mod = 256, 10**9 + 7
+        base, mod = 28, 10**9 + 7
         
         for i in range(1, n + 1):
-            h[i] = (h[i - 1]*base + ord(text[i - 1])) % mod
+            h[i] = (h[i - 1]*base + ord(text[i - 1]) - ord('a') + 1) % mod
             p[i] = (p[i - 1]*base) % mod
             
         def getHash(l: int, r: int) -> int:
