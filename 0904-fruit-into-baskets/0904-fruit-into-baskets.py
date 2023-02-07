@@ -11,7 +11,6 @@ class Solution:
                 if h[fruits[j]] == 0:
                     del h[fruits[j]]
                 j += 1
-                
             ans = max(ans, i - j + 1)
             
         return ans
