@@ -8,7 +8,7 @@ class Solution:
             cnt[v] += 1
             res = max(res, c)
         
-        dp = [('HUY_DEP_TRAI', 0)] + dp + [('HUY_DEP_TRAI', 0)]
+        dp = [('$', 0)] + dp + [('$', 0)]
         n = len(dp)
         
         for i in range(1, n - 1):
