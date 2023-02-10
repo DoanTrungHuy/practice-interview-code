@@ -1,7 +1,16 @@
 class Solution:
-     def distinctNames(self, A: List[str]) -> int:
-         m, A, s = defaultdict(Counter), set(A), ascii_lowercase
-         for w in A:
-             for x in s:
-                 if x + w[1:] not in A: m[x][w[0]] += 1
-         return sum(m[w[0]][x] if x + w[1:] not in A else 0 for x in s for w in A)
+    def distinctNames(self, ideas: List[str]) -> int:
+        s = [set() for _ in range(26)]
+        ideas = set(ideas)
+        
+        for idea in ideas:
+            s[ord(idea[0]) - ord('a')].add(idea[1:])
+            
+        ans = 0
+            
+        for i in range(25):
+            for j in range(i + 1, 26):
+                dup = len(s[i] & s[j])
+                ans += 2 * (len(s[i]) - dup) * (len(s[j]) - dup)
+                
+        return ans
