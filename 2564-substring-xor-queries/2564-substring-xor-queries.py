@@ -6,8 +6,10 @@ class Solution:
             val = a ^ b
             val = bin(val)[2:]
             if val in s:
-                ans.append([s.index(val) , s.index(val) + len(val) - 1])
+                i = s.index(val)
+                k = len(val)
+                ans.append([i , i + k - 1])
             else:
                 ans.append([-1,-1])
                 
-        return ans if ans else [[-1,-1]]
+        return ans
