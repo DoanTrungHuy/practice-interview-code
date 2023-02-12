@@ -12,13 +12,13 @@ public:
         if (!head) {
             return false;
         }
-        ListNode *slow = head, *fast = head->next;
-        while (slow != nullptr and fast != nullptr and fast->next != nullptr) {
+        ListNode *slow = head, *fast = head;
+        while (fast != nullptr and fast->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next->next;
             if (slow == fast) {
                 return true;
             }
-            slow = slow->next;
-            fast = fast->next->next;
         }
         return false;
     }
