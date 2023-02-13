@@ -4,7 +4,7 @@ public:
         int n = mat.size();
         int m = mat[0].size();
         
-        if ((n*m) > (r*c) or (n*m) < (r*c)) {
+        if (!(r*c == n*m)) {
             return mat;
         }
         
