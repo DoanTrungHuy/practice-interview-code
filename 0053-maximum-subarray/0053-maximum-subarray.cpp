@@ -1,13 +1,20 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int maxSub = nums[0];
-        int ans = nums[0];
-        int n = nums.size();
-        for (int i = 1; i < n; ++i) {
-            maxSub = max(nums[i], maxSub + nums[i]);
-            ans = max(ans, maxSub);
+        // Time: O(N)
+        // Ky thuat Kadane
+        
+        int maxSum = 0, ans = INT_MIN;
+        
+        for (int num : nums) {
+            maxSum = max(maxSum + num, num);
+            ans = max(ans, maxSum);
         }
+        
+        // nums = [-2,1,-3,4,-1,2,1,-5,4]
+        // maxSum = -2, num = 1
+        // max(-2 + 1, 1)
+        
         return ans;
     }
 };
