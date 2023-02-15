@@ -16,7 +16,5 @@ class Solution:
         while k > 0:
             num.append(k % 10)
             k //= 10
-            
-        num = num[::-1]
-        
-        return num
+
+        return num[::-1]
