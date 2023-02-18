@@ -1,15 +1,12 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        int cnt1[26] = {0}, cnt2[26] = {0};
-        for (char c : ransomNote) {
-            cnt1[c - 'a']++;
-        }
+        int cnt[26] = {0};
         for (char c : magazine) {
-            cnt2[c - 'a']++;
+            cnt[c - 'a']++;
         }
         for (char c : ransomNote) {
-            if (cnt1[c - 'a'] > cnt2[c - 'a']) {
+            if (cnt[c - 'a']-- <= 0) {
                 return false;
             }
         }
