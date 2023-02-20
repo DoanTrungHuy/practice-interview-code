@@ -9,20 +9,12 @@ public:
                 cnt++;
             }
             else{ 
-                long long sum = 0; 
-                for(long long j = 1;j <= cnt; j++) {
-                    sum += j; 
-                }
-                ans += sum; 
+                ans += cnt * (cnt + 1) / 2; 
                 cnt = 0; 
             } 
         } 
         if(nums[n - 1] == 0){ 
-            long long sum = 0; 
-            for(long long j = 1; j <= cnt; j++) {
-                sum += j; 
-            }
-            ans += sum; 
+            ans += cnt * (cnt + 1) / 2; 
         } 
         return ans; 
     } 
