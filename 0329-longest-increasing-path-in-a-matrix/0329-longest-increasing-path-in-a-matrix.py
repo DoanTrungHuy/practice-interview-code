@@ -16,7 +16,7 @@ class Solution:
             dp[x][y] = ans
             return ans
         ans = 0
-        for i in range(r):
-            for j in range(c):
-                ans = max(ans, dfs(i, j))
+        for x in range(r):
+            for y in range(c):
+                ans = max(ans, dfs(x, y))
         return ans
