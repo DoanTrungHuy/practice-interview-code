@@ -53,7 +53,7 @@ public:
     }
     
     ll get() {
-        return tree[1];
+        return 1LL * tree[1];
     }
 };
 
