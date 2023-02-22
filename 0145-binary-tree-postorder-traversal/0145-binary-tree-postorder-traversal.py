@@ -9,6 +9,6 @@ class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
-        r = self.postorderTraversal(root.left)
-        l = self.postorderTraversal(root.right)
-        return r + l + [root.val]
+        l = self.postorderTraversal(root.left)
+        r = self.postorderTraversal(root.right)
+        return l + r + [root.val]
