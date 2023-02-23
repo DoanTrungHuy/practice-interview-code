@@ -14,4 +14,5 @@ class Solution:
             if not h:
                 break
             w -= heappop(h)
+            
         return w
