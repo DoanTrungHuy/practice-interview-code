@@ -1,24 +1,33 @@
-class Solution {
-public:
-    string getHint(string secret, string guess) {
-        int n = secret.size();
-        int cntSec[10] = {}, cntGue[10] = {};
-        int bulls = 0, cows = 0;
-        
-        for (int i = 0; i < n; ++i) {
-            if (secret[i] == guess[i]) {
-                bulls++;
-            }
-            else {
-                cntSec[secret[i] - '0']++;
-                cntGue[guess[i] - '0']++;
-            }
-        }
-        
-        for (int i = 0; i < 10; ++i) {
-            cows += min(cntSec[i], cntGue[i]);
-        }
-        
-        return to_string(bulls) + 'A' + to_string(cows) + 'B';
+/**
+ * @param {string} secret
+ * @param {string} guess
+ * @return {string}
+ */
+
+var getHint = function(secret, guess) {
+    let cntS = Array(10).fill(0), cntG = Array(10).fill(0);
+    
+    for (let i = 0; i < 10; ++i) {
+        cntS[i] = 0;
+        cntG[i] = 0;
     }
+    
+    let n = secret.length;
+    let bulls = 0, cows = 0;
+    
+    for (let i = 0; i < n; ++i) {
+        if (secret[i] == guess[i]) {
+            bulls++;
+        }
+        else {
+            cntS[secret[i] - '0']++;
+            cntG[guess[i] - '0']++;
+        }
+    }
+    
+    for (let i = 0; i < 10; ++i) {
+        cows += Math.min(cntS[i], cntG[i]);
+    }
+    
+    return `${bulls}A${cows}B`;
 };
