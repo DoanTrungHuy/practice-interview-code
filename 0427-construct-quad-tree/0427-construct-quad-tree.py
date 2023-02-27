@@ -13,9 +13,6 @@ class Node:
 class Solution:
     def construct(self, grid: List[List[int]]) -> 'Node':
         def dfs(x, y, size):
-            if size == 1:
-                return Node(grid[x][y], 1, None, None, None, None)
-            
             isDuplicate = True
             
             for i in range(x, x + size):
@@ -37,4 +34,3 @@ class Solution:
             return Node(grid[x][y], 1, None, None, None, None)
         
         return dfs(0, 0, len(grid))
-            
