@@ -3,6 +3,7 @@ public:
     int maxLength(vector<string>& arr) {
         int n = arr.size();
         int ans = 0;
+        
         for (int mask = 0; mask < (1 << n); ++mask) {
             int seen = 0, len = 0;
             bool flag = false;
