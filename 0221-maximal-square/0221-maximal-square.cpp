@@ -24,7 +24,6 @@ public:
                 }
                 edge = max(edge, dp[i][j]);
             }
-            cout << '\n';
         }
         
         return edge*edge;
