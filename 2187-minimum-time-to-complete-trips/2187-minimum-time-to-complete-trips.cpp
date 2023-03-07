@@ -8,7 +8,6 @@ public:
         return trip;
     }
     long long minimumTime(vector<int>& time, int totalTrips) {
-        sort(time.begin(), time.end());
         const int n = time.size();
         long long l = 1, r = 1e14;
         long long ans = r;
