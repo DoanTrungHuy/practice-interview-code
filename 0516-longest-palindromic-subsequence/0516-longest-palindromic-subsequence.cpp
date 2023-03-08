@@ -4,11 +4,7 @@ public:
         int n = s.size();
         vector<vector<int>> dp(n + 1, vector<int>(n + 1));
         
-        string t;
-        
-        for (int i = n - 1; i >= 0; --i) {
-            t += s[i];
-        }
+        string t = string(s.rbegin(), s.rend());
         
         for (int i = 1; i <= n; ++i) {
             for (int j = 1; j <= n; ++j) {
