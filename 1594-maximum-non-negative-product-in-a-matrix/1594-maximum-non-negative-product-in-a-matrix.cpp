@@ -28,6 +28,7 @@ public:
                 }
             }
         }
+        
         const int mod = 1e9 + 7;
         int res = dp2[n - 1][m - 1] % mod;
         return res < 0 ? -1 : res;
