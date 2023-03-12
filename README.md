@@ -1,6 +1,6 @@
 <div>
-    Luyện tập code mỗi ngày để rèn luyện tư duy giải quyết vấn đề.
-    Trong đây sẽ có những vẫn đề về tham lam, quy hoạch động, đồ thị và các giải thuật, cấu trúc dữ liệu, kỹ thuật khác.
+    Practice coding every day to train your problem-solving mindset.
+    In it, there will be problems about greed, dynamic programming, graphs and algorithms, data structures, other techniques.
 </div>
 <div>
     <h3> 
