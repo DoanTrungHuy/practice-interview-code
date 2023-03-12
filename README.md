@@ -1,6 +1,5 @@
 <div>
-    Practice coding every day to train your problem-solving mindset.
-    In it, there will be problems about greed, dynamic programming, graphs and algorithms, data structures, other techniques.
+    Practice coding every day to train your problem-solving mindset. Includes lessons on gready, dynamic programming, graphs and algorithms, data structures and other       techniques.
 </div>
 <div>
     <h4> 
