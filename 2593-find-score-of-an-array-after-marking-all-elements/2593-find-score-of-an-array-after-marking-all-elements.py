@@ -16,7 +16,9 @@ class Solution:
             if get[1] not in visited:
                 score += get[0]
                 visited.add(get[1])
-                visited.add(get[1] + 1)
-                visited.add(get[1] - 1)
+                if get[1] + 1 < n:
+                    visited.add(get[1] + 1)
+                if get[1] - 1 >= 0:
+                    visited.add(get[1] - 1)
         
         return score
