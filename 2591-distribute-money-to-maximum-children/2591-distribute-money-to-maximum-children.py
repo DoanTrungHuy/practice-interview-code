@@ -6,7 +6,7 @@ class Solution:
         ans = 0
         
         for child in range(1, children + 1):
-            if money - 8 >= children - child:
+            if money - 8 >= children - child and children - child >= 0:
                 money -= 8
                 ans += 1
             else:
