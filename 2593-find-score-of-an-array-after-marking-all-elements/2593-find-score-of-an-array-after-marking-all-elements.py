@@ -12,14 +12,11 @@ class Solution:
         n = len(nums)
             
         for i, num in enumerate(nums):                
-            if heap:
-                get = heappop(heap)
-                if get not in visited:
-                    score += get[0]
-                    visited.add((num, get[1]))
-                    if get[1] - 1 >= 0:
-                        visited.add((nums[get[1] - 1], get[1] - 1))
-                    if get[1] + 1 < n:
-                        visited.add((nums[get[1] + 1], get[1] + 1))
+            get = heappop(heap)
+            if get[1] not in visited:
+                score += get[0]
+                visited.add(get[1])
+                visited.add(get[1] + 1)
+                visited.add(get[1] - 1)
         
         return score
