@@ -2,7 +2,7 @@ class Solution:
     def repairCars(self, ranks: List[int], cars: int) -> int:
         ranks.sort()
         
-        left, right = 1, pow(10, 18)
+        left, right = 1, pow(10, 14)
         ans = 0
         
         while left <= right:
