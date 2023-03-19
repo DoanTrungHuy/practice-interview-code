@@ -5,16 +5,16 @@ class Solution:
         self.check = False
         oo = 1000
         
-        def dfs(x, y, step, k):
+        def dfs(x, y, step):
             for dx, dy in DIR:
                 nx = x + dx
                 ny = y + dy
                 if 0 <= nx < n and 0 <= ny < n and grid[nx][ny] == step:
                     grid[nx][ny] = oo
-                    dfs(nx, ny, step + 1, k + 1)
+                    dfs(nx, ny, step + 1)
                     break
             
-        dfs(0, 0, 1, 0)
+        dfs(0, 0, 1)
         
         cnt = 0
         
