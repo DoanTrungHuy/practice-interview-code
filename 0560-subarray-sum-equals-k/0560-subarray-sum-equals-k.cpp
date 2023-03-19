@@ -1,15 +1,16 @@
-class Solution:
-    def subarraySum(self, nums: List[int], k: int) -> int:
-        hashMap = defaultdict(int)
-        total = 0
-        hashMap[0] = 1
-        ans = 0
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int, int> pref;
+        pref[0] = 1;
+        int sum = 0, ans = 0;
         
-        # pref[i] - prefix[j] == k
+        for (int num : nums) {
+            sum += num;
+            ans += pref[sum - k];
+            pref[sum]++;
+        }
         
-        for num in nums:
-            total += num
-            ans += hashMap[total - k]
-            hashMap[total] += 1
-            
-        return ans
+        return ans;
+    }
+};
