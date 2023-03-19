@@ -4,17 +4,16 @@ class Solution:
         nums.sort()
         self.ans = 0
         
-        def dfs(i, cnt, item):
+        def dfs(i, cnt):
             if i == n:
-                if item > 0:
-                    self.ans += 1
+                self.ans += 1
                 return
             if cnt[nums[i] - k] == 0:
                 cnt[nums[i]] += 1
-                dfs(i + 1, cnt, item + 1)
+                dfs(i + 1, cnt)
                 cnt[nums[i]] -= 1
-            dfs(i + 1, cnt, item + 1)
+            dfs(i + 1, cnt)
             
-        dfs(0, defaultdict(int), 0)
+        dfs(0, defaultdict(int))
         
         return self.ans - 1
