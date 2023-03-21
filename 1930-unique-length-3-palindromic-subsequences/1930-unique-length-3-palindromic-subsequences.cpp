@@ -3,7 +3,11 @@ public:
     int countPalindromicSubsequence(string s) {
         int cnt = 0;
         
+        // Time: O(26 * n) -> 1s
+        // Space: O(26)
+        
         for (char c = 'a'; c <= 'z'; ++c) {
+            // string::npos -> 10^19
             unsigned int idx1 = s.find(c);
             unsigned int idx2 = s.rfind(c);
             
