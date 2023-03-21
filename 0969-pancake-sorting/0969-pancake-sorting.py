@@ -15,4 +15,3 @@ class Solution:
             ans.append(n - i)
             
         return ans
-        
