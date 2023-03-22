@@ -3,13 +3,8 @@ public:
     int maxProduct(vector<int>& nums) {        
         int n = nums.size();
         int dp[n][2];
+        dp[0][0] = dp[0][1] = nums[0];
         int ans = nums[0];
-        
-        for (int i = 0; i < n; ++i) {
-            for (int state = 0; state <= 1; ++state) {
-                dp[i][state] = nums[i];
-            }
-        }
         
         for (int i = 1; i < n; ++i) {
             for (int state = 0; state <= 1; ++state) {
