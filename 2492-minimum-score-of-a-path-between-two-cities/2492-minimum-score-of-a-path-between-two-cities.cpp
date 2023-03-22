@@ -15,18 +15,18 @@ public:
         }
         
         vector<int> dist(n + 1, INT_MAX);
-        priority_queue<pi, vector<pi>, greater<pi>> pq;
+        queue<pi> mq;
         
-        pq.push({0, 1});
+        mq.push({0, 1});
         
-        while (!pq.empty()) {
-            auto [du, u] = pq.top();
-            pq.pop();
+        while (!mq.empty()) {
+            auto [du, u] = mq.front();
+            mq.pop();
             
             for (auto [dv, v] : adj[u]) {
                 if (dv < dist[v] or dist[u] < dist[v]) {
                     dist[v] = min(dv, dist[u]);
-                    pq.push({dist[v], v});
+                    mq.push({dist[v], v});
                 }
             }
         }
