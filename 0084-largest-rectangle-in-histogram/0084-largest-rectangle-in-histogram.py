@@ -21,8 +21,6 @@ class Solution:
                 suffMinIndex[i] = stack[-1]
             stack.append(i)
             
-        print(prefMinIndex, suffMinIndex)
-            
         ans = 0
             
         for i in range(n):
