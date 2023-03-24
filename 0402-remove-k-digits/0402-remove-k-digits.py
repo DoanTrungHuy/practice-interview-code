@@ -8,7 +8,7 @@ class Solution:
                 k -= 1
             stack.append(d)
             
-        while stack and k > 0:
+        while k > 0:
             stack.pop()
             k -= 1
             
