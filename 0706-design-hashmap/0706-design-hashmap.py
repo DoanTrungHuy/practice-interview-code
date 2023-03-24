@@ -40,10 +40,12 @@ class MyHashMap:
         
         if head == None:
             return
+        
         if head.key == key:
             self.contains[h] = head.next
             return
         currNode = head
+        
         while currNode.next:
             if currNode.next.key == key:
                 currNode.next = currNode.next.next
