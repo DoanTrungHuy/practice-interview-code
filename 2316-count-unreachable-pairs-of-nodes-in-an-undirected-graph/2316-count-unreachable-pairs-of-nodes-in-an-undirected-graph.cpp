@@ -1,40 +1,39 @@
-class Solution { 
-private: 
-    long long dfs(int node, vector<int> adj[], vector<bool> &vis){ 
-        vis[node] = 1; 
-        int len = 1; 
-        for(auto itr : adj[node]){ 
-            if(!vis[itr]){ 
-                len += dfs(itr, adj, vis); 
-            } 
-        } 
-        return len; 
-    } 
-public: 
-    long long countPairs(int n, vector<vector<int>>& edges) { 
-        vector<int> adj[n]; 
-        for(auto it : edges){ 
-            adj[it[0]].push_back(it[1]); 
-            adj[it[1]].push_back(it[0]); 
-        } 
-        vector<int> cmp; 
-        vector<bool> vis(n, 0); 
-        for(int i = 0; i < n; i++){ 
-            if(!vis[i]){ 
-                long long len = dfs(i, adj, vis); 
-                cmp.push_back(len); 
-            } 
-        } 
-        int m = cmp.size(); 
-        vector<int> suf(m, 0); 
-        suf[m - 1] = 0; 
-        for(int i = m - 2; i >= 0; i--){ 
-            suf[i] = suf[i + 1] + cmp[i + 1]; 
-        } 
-        long long ans = 0; 
-        for(int i = 0; i < m; i++){ 
-            ans += (cmp[i]*1LL*suf[i]); 
-        } 
-        return ans; 
-    } 
+class Solution {
+private:
+    vector<vector<int>> adj;
+    vector<bool> visited;
+    
+public:
+    long long dfs(int u) {
+        visited[u] = true;
+        int len = 1;
+        for (int v : adj[u]) {
+            if (!visited[v]) {
+                len += dfs(v);
+            }
+        }
+        return len;
+    }
+    long long countPairs(int n, vector<vector<int>>& edges) {
+        adj.resize(n), visited.resize(n, false);
+        
+        for (vector<int> edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            adj[u].push_back(v);
+            adj[v].push_back(u);
+        }
+        
+        long long ans = 0, totalNode = 0;
+        
+        for (int u = 0; u < n; ++u) {
+            if (!visited[u]) {
+                int cnt = dfs(u);
+                ans += cnt * totalNode;
+                totalNode += cnt;
+            }
+        }
+        
+        return ans;
+    }
 };
