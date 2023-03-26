@@ -1,8 +1,35 @@
 class Solution:
     def minOperations(self, nums: List[int], queries: List[int]) -> List[int]:
+        n = len(nums)
+        m = len(queries)
+        
         nums.sort()
-        ans, n, prefix = [], len(nums), [0] + list(accumulate(nums))
-        for x in queries:
-            i, j = bisect_left(nums, x), bisect_right(nums, x)
-            ans.append(x * i - prefix[i] + prefix[n] - prefix[j] - x * (n - j))
+        prefSum = [nums[0]]
+        
+        for i in range(1, n):
+            prefSum.append(prefSum[-1] + nums[i])
+            
+        ans = []
+            
+        for q in queries:
+            if nums[0] > q:
+                ans.append(prefSum[n - 1] - n * q)
+            elif nums[n - 1] < q:
+                ans.append(n * q - prefSum[n - 1])
+            else:
+                low = 0
+                high = n - 1
+                l = low
+                
+                while low <= high:
+                    mid = (low + high) // 2
+                    if nums[mid] <= q:
+                        l = mid
+                        low = mid + 1
+                    else:
+                        high = mid - 1
+                
+                a = (l + 1) * q - prefSum[l] + (prefSum[n - 1] - prefSum[l]) - (n - 1 - l) * q
+                ans.append(a)
+            
         return ans
