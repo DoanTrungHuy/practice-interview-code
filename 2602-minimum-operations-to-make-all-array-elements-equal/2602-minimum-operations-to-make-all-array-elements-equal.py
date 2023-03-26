@@ -17,16 +17,7 @@ class Solution:
             elif nums[n - 1] < q:
                 ans.append(n * q - prefSum[n - 1])
             else:
-                low, high = 0, n - 1
-                l = low
-                
-                while low <= high:
-                    mid = (low + high) // 2
-                    if nums[mid] <= q:
-                        l = mid
-                        low = mid + 1
-                    else:
-                        high = mid - 1
+                l = bisect_right(nums, q) - 1
                         
                 ans.append((l + 1) * q - prefSum[l] + (prefSum[n - 1] - prefSum[l]) - (n - 1 - l) * q)
             
