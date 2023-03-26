@@ -17,8 +17,7 @@ class Solution:
             elif nums[n - 1] < q:
                 ans.append(n * q - prefSum[n - 1])
             else:
-                low = 0
-                high = n - 1
+                low, high = 0, n - 1
                 l = low
                 
                 while low <= high:
@@ -28,8 +27,7 @@ class Solution:
                         low = mid + 1
                     else:
                         high = mid - 1
-                
-                a = (l + 1) * q - prefSum[l] + (prefSum[n - 1] - prefSum[l]) - (n - 1 - l) * q
-                ans.append(a)
+                        
+                ans.append((l + 1) * q - prefSum[l] + (prefSum[n - 1] - prefSum[l]) - (n - 1 - l) * q)
             
         return ans
