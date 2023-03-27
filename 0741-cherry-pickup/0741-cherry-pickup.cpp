@@ -1,4 +1,4 @@
-const int maxn = 52;
+const int maxn = 51;
 int dp[maxn][maxn][maxn][maxn];
 
 class Solution {
