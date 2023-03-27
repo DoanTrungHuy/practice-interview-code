@@ -1,8 +1,10 @@
+const int maxn = 52;
+int dp[maxn][maxn][maxn][maxn];
+
 class Solution {
 private:
     int n;
     vector<vector<int>> grid;
-    vector<vector<vector<vector<int>>>> dp;
     
 public:
     int dfs(int r1, int c1, int r2, int c2) {
@@ -41,7 +43,7 @@ public:
     
     int cherryPickup(vector<vector<int>>& grid) {
         this->n = grid.size();
-        dp.resize(n, vector<vector<vector<int>>> (n, vector<vector<int>> (n, vector<int> (n, -1))));
+        memset(dp, -1, sizeof(dp));
         this->grid = grid;
         return max(dfs(0, 0, 0, 0), 0);
     }
