@@ -1,47 +1,48 @@
 class Solution {
+private:
+    int n;
+    vector<vector<int>> grid;
+    vector<vector<vector<vector<int>>>> dp;
+    
 public:
-    
-    
-    int solve(vector<vector<int>>& g,int n,int i1,int j1,int i2,int j2,vector<vector<vector<vector<int>>>> &dp){
-        if(i1>=n || j1>=n  || i2>=n || j2>=n){
+    int dfs(int r1, int c1, int r2, int c2) {
+        if (r1 == n or c1 == n or r2 == n or c2 == n) {
             return -1e8;
         }
         
-        if(g[i1][j1] == -1 || g[i2][j2] == -1){
+        if (grid[r1][c1] == -1 or grid[r2][c2] == -1) {
             return -1e8;
         }
         
-        if(i1 == n-1 && j1 == n-1){
-            return g[i1][j1];
+        if (dp[r1][c1][r2][c2] != -1) {
+            return dp[r1][c1][r2][c2];
         }
         
-        if(dp[i1][j1][i2][j2] != -1){
-            return dp[i1][j1][i2][j2];
+        if (r1 == n - 1 and c1 == n - 1 and r2 == n - 1 and c2 == n - 1) {
+            return grid[r1][c1];
         }
         
-        int val = 0;
+        int rr = dfs(r1, c1 + 1, r2, c2 + 1);
+        int dd = dfs(r1 + 1, c1, r2 + 1, c2);
+        int dr = dfs(r1 + 1, c1, r2, c2 + 1);
+        int rd = dfs(r1, c1 + 1, r2 + 1, c2);
         
-        if(i1 == i2 && j1 == j2){
-            val = g[i1][j1];
+        int maxComb = max({rr, dd, dr, rd});
+        
+        if (r1 == r2 and c1 == c2) {
+            maxComb += grid[r1][c1];
+        }
+        else {
+            maxComb += grid[r1][c1] + grid[r2][c2];
         }
         
-        else{
-            val = g[i1][j1] + g[i2][j2];
-        }
-        
-        int downDown =solve(g,n,i1+1,j1,i2+1,j2,dp);
-        int downRight =solve(g,n,i1+1,j1,i2,j2+1,dp);
-        int rightDown =solve(g,n,i1,j1+1,i2+1,j2,dp);
-        int rightRight =solve(g,n,i1,j1+1,i2,j2+1,dp);
-        
-        
-        return dp[i1][j1][i2][j2]=val+max(max(downDown,downRight),max(rightDown,rightRight));
+        return dp[r1][c1][r2][c2] = maxComb;
     }
     
-    int cherryPickup(vector<vector<int>>& g) {
-        int n = g.size();
-        vector<vector<vector<vector<int>>>> dp(n,vector<vector<vector<int>>> (n,vector<vector<int>> (n,vector<int> (n,-1))));
-        
-        return max(0,solve(g,n,0,0,0,0,dp));
+    int cherryPickup(vector<vector<int>>& grid) {
+        this->n = grid.size();
+        dp.resize(n, vector<vector<vector<int>>> (n, vector<vector<int>> (n, vector<int> (n, -1))));
+        this->grid = grid;
+        return max(dfs(0, 0, 0, 0), 0);
     }
 };
