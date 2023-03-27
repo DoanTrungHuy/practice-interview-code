@@ -7,11 +7,11 @@ private:
 public:
     int dfs(int r1, int c1, int r2, int c2) {
         if (r1 == n or c1 == n or r2 == n or c2 == n) {
-            return -1e8;
+            return INT_MIN;
         }
         
         if (grid[r1][c1] == -1 or grid[r2][c2] == -1) {
-            return -1e8;
+            return INT_MIN;
         }
         
         if (dp[r1][c1][r2][c2] != -1) {
