@@ -1,35 +1,43 @@
+int dp[1 << 15][150];
+
 class Solution {
 private:
-    vector<int> subsets;
-    int ans, n;
+    int n, target;
     
 public:
-    void dfs(int i, vector<int> &tasks, int sessionTime) {
-        if (i == n) {
-            ans = min(ans, (int)subsets.size());
-            return;
+    int dfs(int mask, int sum, vector<int>& tasks, int sessionTime) {
+        if (mask == target) {
+            return 1;
         }
         
-        if (subsets.size() >= ans) {
-            return;
+        if (dp[mask][sum] != -1) {
+            return dp[mask][sum];
         }
         
-        for (int j = 0; j < subsets.size(); ++j) {
-            if (subsets[j] + tasks[i] <= sessionTime) {
-                subsets[j] += tasks[i];
-                dfs(i + 1, tasks, sessionTime);
-                subsets[j] -= tasks[i];
+        int ans = INT_MAX;
+        
+        for (int i = 0; i < n; ++i) {
+            if (mask & (1 << i)) {
+                continue;
+            }
+            
+            int newMask = mask | (1 << i);
+            
+            if (sum + tasks[i] > sessionTime) {
+                ans = min(ans, 1 + dfs(newMask, tasks[i], tasks, sessionTime));
+            }
+            else {
+                ans = min(ans, dfs(newMask, sum + tasks[i], tasks, sessionTime));
             }
         }
         
-        subsets.push_back(tasks[i]);
-        dfs(i + 1, tasks, sessionTime);
-        subsets.pop_back();
+        return dp[mask][sum] = ans;
     }
+    
     int minSessions(vector<int>& tasks, int sessionTime) {
-        ans = INT_MAX;
         n = tasks.size();
-        dfs(0, tasks, sessionTime);
-        return ans;
+        target = (1 << n) - 1;
+        memset(dp, -1, sizeof(dp));
+        return dfs(0, 0, tasks, sessionTime);
     }
 };
