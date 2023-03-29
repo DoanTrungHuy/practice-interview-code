@@ -5,7 +5,7 @@ private:
 public:
     const int limit = 10000;
     
-    void dfs(int i, int n, int lSum, int rSum, int dp[]) {
+    void dfs(int i, int n, int lSum, int rSum, unordered_map<int, int> &dp) {
         if (i == n) {
             int distance = lSum - rSum + (limit >> 1);
             dp[distance] = max(dp[distance], lSum);
@@ -17,10 +17,7 @@ public:
     }
     
     int tallestBillboard(vector<int>& rods) {
-        int lSubset[limit + 1], rSubset[limit + 1];
-        memset(lSubset, -1, sizeof(lSubset));
-        memset(rSubset, -1, sizeof(rSubset));
-        
+        unordered_map<int, int> lSubset, rSubset;
         this->rods = rods;
         
         int n = rods.size();
@@ -31,9 +28,9 @@ public:
         
         int ans = 0;
         
-        for (int i = 0; i <= limit; ++i) {
-            if (lSubset[i] != -1 and rSubset[limit - i] != -1) {
-                ans = max(ans, lSubset[i] + rSubset[limit - i]);
+        for (auto [key, value] : lSubset) {
+            if (rSubset.count(limit - key)) {
+                ans = max(ans, lSubset[key] + rSubset[limit - key]);
             }
         }
         
