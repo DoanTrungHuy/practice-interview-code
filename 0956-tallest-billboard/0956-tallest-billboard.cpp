@@ -32,8 +32,8 @@ public:
         int ans = 0;
         
         for (int i = 0; i <= limit; ++i) {
-            if (lSubset[i] != -1 and rSubset[10000 - i] != -1) {
-                ans = max(ans, lSubset[i] + rSubset[10000 - i]);
+            if (lSubset[i] != -1 and rSubset[limit - i] != -1) {
+                ans = max(ans, lSubset[i] + rSubset[limit - i]);
             }
         }
         
