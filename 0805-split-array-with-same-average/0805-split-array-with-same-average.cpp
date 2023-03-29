@@ -39,7 +39,7 @@ public:
                         continue;
                     }
                     
-                    double sum2 = sum * (len1 + len2) / n - sum1; 
+                    double sum2 = (sum * (len1 + len2)) / n - sum1; 
                     
                     if (allSubset2[len2].count(sum2)) {
                         return true;
