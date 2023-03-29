@@ -3,6 +3,7 @@ public:
     unordered_map<int, unordered_set<double>> masking(vector<int> nums) {
         int n = nums.size();
         int m = (1 << n);
+        
         unordered_map<int, unordered_set<double>> ans;
         
         for (int mask = 0; mask < m; ++mask) {
