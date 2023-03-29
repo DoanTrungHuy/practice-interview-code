@@ -3,9 +3,11 @@ private:
     vector<int> rods;
     
 public:
+    const int limit = 10000;
+    
     void dfs(int i, int n, int lSum, int rSum, int dp[]) {
         if (i == n) {
-            int distance = lSum - rSum + 5000;
+            int distance = lSum - rSum + limit / 2;
             dp[distance] = max(dp[distance], lSum);
             return;
         }
@@ -15,7 +17,6 @@ public:
     }
     
     int tallestBillboard(vector<int>& rods) {
-        const int limit = 10000;
         int lSubset[limit + 1], rSubset[limit + 1];
         memset(lSubset, -1, sizeof(lSubset));
         memset(rSubset, -1, sizeof(rSubset));
@@ -29,8 +30,6 @@ public:
         dfs(mid, n, 0, 0, rSubset);
         
         int ans = 0;
-        
-        // lSubset + rSubset = distance
         
         for (int i = 0; i <= limit; ++i) {
             if (lSubset[i] != -1 and rSubset[10000 - i] != -1) {
