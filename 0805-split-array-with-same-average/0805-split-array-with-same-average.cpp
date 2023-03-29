@@ -6,14 +6,14 @@ public:
         unordered_map<int, unordered_set<double>> ans;
         
         for (int mask = 0; mask < m; ++mask) {
-            int sum = 0, cnt = 0;
+            int sum = 0, len = 0;
             for (int i = 0; i < n; ++i) {
                 if (mask & (1 << i)) {
-                    cnt++;
+                    len++;
                     sum += nums[i];
                 }
             }
-            ans[cnt].insert(sum);
+            ans[len].insert(sum);
         }
         
         return ans;
