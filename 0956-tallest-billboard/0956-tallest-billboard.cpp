@@ -7,7 +7,7 @@ public:
     
     void dfs(int i, int n, int lSum, int rSum, int dp[]) {
         if (i == n) {
-            int distance = lSum - rSum + limit / 2;
+            int distance = lSum - rSum + (limit >> 1);
             dp[distance] = max(dp[distance], lSum);
             return;
         }
