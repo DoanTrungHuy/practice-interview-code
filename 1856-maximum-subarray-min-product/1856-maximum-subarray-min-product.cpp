@@ -7,7 +7,7 @@ private:
     
 public:
     SegmentTree(int n, vector<int> nums) {
-        tree.resize(4 * n, INT_MAX);
+        tree.resize(4 * n, -1);
         this->nums = nums;
         build(1, 0, n - 1);
     }
@@ -26,7 +26,7 @@ public:
     
     int getMin(int id, int left, int right, int qLeft, int qRight) {
         if (qRight < left or right < qLeft) {
-            return INT_MAX;
+            return -1;
         }
         
         if (qLeft <= left and right <= qRight) {
@@ -36,10 +36,10 @@ public:
         int mid = (left + right) / 2;
         int l = getMin(id * 2, left, mid, qLeft, qRight);
         int r = getMin(id * 2 + 1, mid + 1, right, qLeft, qRight);
-        if (l == INT_MAX) {
+        if (l == -1) {
             return r;
         }
-        else if (r == INT_MAX) {
+        else if (r == -1) {
             return l;
         }
         return nums[l] < nums[r] ? l : r;
