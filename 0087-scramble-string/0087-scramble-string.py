@@ -1,36 +1,17 @@
-class Solution {
-private:
-    unordered_map<string, bool> dp;
-    
-public:
-    bool isScramble(string s1, string s2) {
-        int n = s1.size();
+class Solution:
+    @cache
+    def isScramble(self, s1: str, s2: str) -> bool:
+        n = len(s1)
         
-        if (s1 == s2) {
-            return true;
-        }
+        if s1 == s2:
+            return True
+        if n == 1:
+            return False
         
-        if (n == 1) {
-            return false;
-        }
-        
-        string key = s1 + ',' + s2;
-        
-        if (dp.count(key)) {
-            return dp[key];
-        }
-        
-        for (int i = 1; i < n; ++i) {
-            if (isScramble(s1.substr(0, i), s2.substr(0, i))
-               and isScramble(s1.substr(i), s2.substr(i))) {
-                return dp[key] = true;
-            }
-            if (isScramble(s1.substr(0, i), s2.substr(n - i))
-               and isScramble(s1.substr(i), s2.substr(0, n - i))) {
-                return dp[key] = true;
-            }
-        }
-        
-        return dp[key] = false;
-    }
-};
+        for i in range(1, n):
+            if self.isScramble(s1[:i], s2[:i]) and self.isScramble(s1[i:], s2[i:]):
+                return True
+            if self.isScramble(s1[:i], s2[n - i:]) and self.isScramble(s1[i:], s2[:n - i]):
+                return True
+            
+        return False
