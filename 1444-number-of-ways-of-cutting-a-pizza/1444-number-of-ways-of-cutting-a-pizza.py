@@ -18,7 +18,7 @@ class Solution:
         
         def dfs(i, j, k):
             if k == 1:
-                return int(count(i + 1, j + 1, n, m) >= 1)
+                return int(count(i + 1, j + 1, n, m) > 0)
             
             if (i, j, k) in dp:
                 return dp[(i, j, k)]
@@ -26,16 +26,16 @@ class Solution:
             ans = 0
             
             for r in range(i + 1, n):
-                if count(i + 1, j + 1, r, m) >= 1:
-                    ans += dfs(r, j, k - 1) % mod
+                if count(i + 1, j + 1, r, m) > 0:
+                    ans = (ans + dfs(r, j, k - 1)) % mod
                     
             for c in range(j + 1, m):
-                if count(i + 1, j + 1, n, c) >= 1:
-                    ans += dfs(i, c, k - 1) % mod
+                if count(i + 1, j + 1, n, c) > 0:
+                    ans = (ans + dfs(i, c, k - 1)) % mod
                     
-            dp[(i, j, k)] = ans % mod
+            dp[(i, j, k)] = ans
             
-            return dp[(i, j, k)]
+            return ans
         
         return dfs(0, 0, k)
         
