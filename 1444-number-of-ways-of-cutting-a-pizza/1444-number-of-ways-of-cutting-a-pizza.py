@@ -14,7 +14,7 @@ class Solution:
         def count(r1, c1, r2, c2):
             return p[r2][c2] - p[r1 - 1][c2] - p[r2][c1 - 1] + p[r1 - 1][c1 - 1]
         
-        @cache        
+        @lru_cache(None)        
         def dfs(i, j, k):
             if k == 1:
                 return int(count(i + 1, j + 1, n, m) > 0)
