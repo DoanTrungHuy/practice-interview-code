@@ -35,7 +35,7 @@ class Solution:
                     
             dp[(i, j, k)] = ans % mod
             
-            return ans % mod
+            return dp[(i, j, k)]
         
         return dfs(0, 0, k)
         
