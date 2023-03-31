@@ -4,9 +4,8 @@ class Solution:
         h = defaultdict(int)
         
         for i in range(n):
-            h[nums[i] & nums[i]] += 1
-            for j in range(i + 1, n):
-                h[nums[i] & nums[j]] += 2
+            for j in range(n):
+                h[nums[i] & nums[j]] += 1
                 
         ans = 0
         
