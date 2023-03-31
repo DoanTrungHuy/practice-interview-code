@@ -14,14 +14,10 @@ class Solution:
         def count(r1, c1, r2, c2):
             return p[r2][c2] - p[r1 - 1][c2] - p[r2][c1 - 1] + p[r1 - 1][c1 - 1]
         
-        dp = {}
-        
+        @cache        
         def dfs(i, j, k):
             if k == 1:
                 return int(count(i + 1, j + 1, n, m) > 0)
-            
-            if (i, j, k) in dp:
-                return dp[(i, j, k)]
             
             ans = 0
             
@@ -33,8 +29,6 @@ class Solution:
                 if count(i + 1, j + 1, n, c) > 0:
                     ans = (ans + dfs(i, c, k - 1)) % mod
                     
-            dp[(i, j, k)] = ans
-            
             return ans
         
         return dfs(0, 0, k)
