@@ -14,8 +14,8 @@ class Solution:
         def count(r1, c1, r2, c2):
             return p[r2][c2] - p[r1 - 1][c2] - p[r2][c1 - 1] + p[r1 - 1][c1 - 1]
         
-        @lru_cache(None)        
-        def dfs(i, j, k):
+        @cache        
+        def dp(i, j, k):
             if k == 1:
                 return int(count(i + 1, j + 1, n, m) > 0)
             
@@ -23,12 +23,12 @@ class Solution:
             
             for r in range(i + 1, n):
                 if count(i + 1, j + 1, r, m) > 0:
-                    ans = (ans + dfs(r, j, k - 1)) % mod
+                    ans = (ans + dp(r, j, k - 1)) % mod
                     
             for c in range(j + 1, m):
                 if count(i + 1, j + 1, n, c) > 0:
-                    ans = (ans + dfs(i, c, k - 1)) % mod
+                    ans = (ans + dp(i, c, k - 1)) % mod
                     
             return ans
         
-        return dfs(0, 0, k)
+        return dp(0, 0, k)
