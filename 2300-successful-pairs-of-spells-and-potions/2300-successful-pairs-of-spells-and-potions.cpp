@@ -17,7 +17,7 @@ public:
         vector<int> ans = {};
         int n = potions.size();
         for(int spell: spells) {
-          ans.push_back(search(potions, (long long)ceil(success * 1.0 / spell)));
+          ans.push_back(search(potions, (long long)(success + spell - 1) / spell));
         }
         return ans;
     }
