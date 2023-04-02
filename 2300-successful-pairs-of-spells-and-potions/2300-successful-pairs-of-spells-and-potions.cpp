@@ -8,7 +8,7 @@ public:
         {
             long long k = ceil(double(success*1.0 / spells[i]));
             
-            auto id = lower_bound(potions.begin(), potions.end(),k);
+            auto id = lower_bound(potions.begin(), potions.end(), k);
             ans.push_back(potions.size() - (id - potions.begin()));
         }
             
