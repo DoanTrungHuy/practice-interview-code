@@ -13,14 +13,9 @@ public:
         }
         int mask = 0;
         int ans = INT_MAX;
-        for (int j = i; j < n; ++j) {
-            if (!(mask & (1 << (s[j] - 'a')))) {
-                mask |= (1 << (s[j] - 'a'));
-                ans = min(ans, 1 + dfs(s, j + 1));
-            }
-            else {
-                break;
-            }
+        for (int j = i; j < n and !(mask & (1 << (s[j] - 'a'))); ++j) {
+            mask |= (1 << (s[j] - 'a'));
+            ans = min(ans, 1 + dfs(s, j + 1));
         }
         return dp[i] = ans;
     }
