@@ -11,11 +11,11 @@ public:
         if (dp[i] != -1) {
             return dp[i];
         }
-        int cnt[26] = {};
+        int mask = 0;
         int ans = INT_MAX;
         for (int j = i; j < n; ++j) {
-            if (cnt[s[j] - 'a'] == 0) {
-                cnt[s[j] - 'a']++;
+            if (!(mask & (1 << (s[j] - 'a')))) {
+                mask |= (1 << (s[j] - 'a'));
                 ans = min(ans, 1 + dfs(s, j + 1));
             }
             else {
