@@ -3,6 +3,8 @@ private:
     unordered_map<int, int> tree;
     
 public:
+    const int MAXQUERY = 1e9;
+    
     CountIntervals() {
         
     }
@@ -22,7 +24,7 @@ public:
     }
     
     void add(int left, int right) {
-        update(1, 1, 1e9, left, right);
+        update(1, 1, MAXQUERY, left, right);
     }
     
     int count() {
