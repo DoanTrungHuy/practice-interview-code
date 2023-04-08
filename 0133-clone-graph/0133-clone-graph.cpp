@@ -25,6 +25,7 @@ public:
         if (node == nullptr) {
             return nullptr;
         }
+        
         unordered_map<Node*, Node*> hash;
         queue<Node *> mq;
         mq.push(node);
