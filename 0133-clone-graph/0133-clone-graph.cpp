@@ -20,22 +20,26 @@ public:
 */
 
 class Solution {
-private:
-    unordered_map<Node *, Node *> hash;
-    
 public:
     Node* cloneGraph(Node* node) {
-        if (!node) {
+        if (node == nullptr) {
             return nullptr;
         }
+        unordered_map<Node*, Node*> hash;
+        queue<Node *> mq;
+        mq.push(node);
         Node *newNode = new Node(node->val);
         hash[node] = newNode;
-        for (Node *neighbor : node->neighbors) {
-            if (hash.find(neighbor) != hash.end()) {
-                newNode->neighbors.push_back(hash[neighbor]);
-            }
-            else {
-                newNode->neighbors.push_back(cloneGraph(neighbor));
+        
+        while (!mq.empty()) {
+            Node *curr = mq.front();
+            mq.pop();
+            for (Node * neighbor : curr->neighbors) {
+                if (!hash.count(neighbor)) {
+                    hash[neighbor] = new Node(neighbor->val);
+                    mq.push(neighbor);
+                }
+                hash[curr]->neighbors.push_back(hash[neighbor]);
             }
         }
         return newNode;
