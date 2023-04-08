@@ -29,8 +29,7 @@ public:
         unordered_map<Node*, Node*> hash;
         queue<Node *> mq;
         mq.push(node);
-        Node *newNode = new Node(node->val);
-        hash[node] = newNode;
+        hash[node] = new Node(node->val);
         
         while (!mq.empty()) {
             Node *curr = mq.front();
@@ -43,6 +42,7 @@ public:
                 hash[curr]->neighbors.push_back(hash[neighbor]);
             }
         }
-        return newNode;
+        
+        return hash[node];
     }
 };
