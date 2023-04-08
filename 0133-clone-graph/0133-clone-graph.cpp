@@ -22,7 +22,7 @@ public:
 class Solution {
 public:
     Node* cloneGraph(Node* node) {
-        if (node == nullptr) {
+        if (!node) {
             return nullptr;
         }
         
