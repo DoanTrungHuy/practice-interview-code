@@ -15,13 +15,13 @@ public:
             const int m = indexs.size();
             ll len = 0, sum = 0;
             for (int i = 0; i < m; ++i) {
-                len++, sum += indexs[i];
                 ans[indexs[i]] += len * indexs[i] - sum;
+                len++, sum += indexs[i];
             }
             len = 0, sum = 0;
             for (int i = m - 1; i >= 0; --i) {
-                len++, sum += indexs[i];
                 ans[indexs[i]] += sum - len * indexs[i];
+                len++, sum += indexs[i];
             }
         }
         
