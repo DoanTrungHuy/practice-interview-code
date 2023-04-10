@@ -1,23 +1,22 @@
 class Solution:
     def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:
         adj = defaultdict(list)
+        n = len(colors)
         
         for u, v in edges:
             adj[u].append(v)
             
-        visited, path = set(), set()
-        n = len(colors)
+        visited, path = [False for _ in range(n)], [False for _ in range(n)]
         count = [26 * [0] for _ in range(n)]
         
         def dfs(u):
-            if u in path:
+            if path[u]:
                 return float('inf')
             
-            if u in visited:
+            if visited[u]:
                 return 0
             
-            path.add(u)
-            visited.add(u)
+            path[u], visited[u] = True, True
             indexColor = ord(colors[u]) - ord('a')
             count[u][indexColor] = 1
             
@@ -31,7 +30,7 @@ class Solution:
                         int(indexColor == i) + count[v][i]
                     )
             
-            path.remove(u)
+            path[u] = False
             
             return max(count[u])
             
