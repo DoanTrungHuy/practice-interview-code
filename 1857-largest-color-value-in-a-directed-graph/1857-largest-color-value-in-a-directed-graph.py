@@ -8,10 +8,11 @@ class Solution:
             
         visited, path = [False for _ in range(n)], [False for _ in range(n)]
         count = [26 * [0] for _ in range(n)]
+        DUPLICATE = float('inf')
         
         def dfs(u):
             if path[u]:
-                return float('inf')
+                return DUPLICATE
             
             if visited[u]:
                 return 0
@@ -21,8 +22,8 @@ class Solution:
             count[u][indexColor] = 1
             
             for v in adj[u]:
-                if dfs(v) == float('inf'):
-                    return float('inf')
+                if dfs(v) == DUPLICATE:
+                    return DUPLICATE
                 
                 for i in range(26):
                     count[u][i] = max(
