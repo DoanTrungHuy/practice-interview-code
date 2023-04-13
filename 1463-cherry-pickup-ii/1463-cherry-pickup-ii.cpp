@@ -14,6 +14,12 @@ public:
                         ? grid[r][c1] 
                         : grid[r][c1] + grid[r][c2];
                     
+                    if (r == 0) {
+                        if (!(c1 == 0 and c2 == m - 1)) {
+                            continue;
+                        }
+                    }
+                    
                     if (r == n - 1) {
                         dp[r][c1][c2] = collectCherry;
                         continue;
