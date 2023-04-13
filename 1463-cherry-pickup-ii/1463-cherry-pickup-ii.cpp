@@ -4,7 +4,7 @@ public:
         const int n = grid.size(), m = grid[0].size();
         
         int dp[n][m][m];
-        memset(dp, -1, sizeof(dp));
+        memset(dp, 0, sizeof(dp));
         int DIR[3] = {-1, 0, 1};
         
         for (int r = n - 1; r >= 0; --r) {
