@@ -3,12 +3,10 @@ class Solution:
         n = len(piles)
         memo = {}
         
+        @lru_cache(None)
         def dp(i, k):
             if i == n or k == 0:
                 return 0
-            
-            if (i, k) in memo:
-                return memo[(i, k)]
             
             res = dp(i + 1, k)        
             currPiles = 0
@@ -17,8 +15,6 @@ class Solution:
                 currPiles += piles[i][j]
                 res = max(res, currPiles + dp(i + 1, k - j - 1))
             
-            memo[(i, k)] = res
-                
             return res
         
         return dp(0, k)
