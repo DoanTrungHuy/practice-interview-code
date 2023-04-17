@@ -15,10 +15,12 @@ public:
         
         int dp[m + 1][n + 1];
         memset(dp, 0, sizeof(dp));
-        dp[m][n] = 1;
+        
+        for (int i = 0; i <= m; ++i) {
+            dp[i][n] = 1;
+        }
         
         for (int i = m - 1; i >= 0; --i) {
-            dp[i][n] = 1;
             for (int j = n - 1; j >= 0; --j) {
                 dp[i][j] = (int)(((long)dp[i + 1][j] + (long)dp[i + 1][j + 1] * freq[i][target[j] - 'a']) % MOD);
             }
