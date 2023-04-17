@@ -22,7 +22,7 @@ public:
         
         for (int i = m - 1; i >= 0; --i) {
             for (int j = n - 1; j >= 0; --j) {
-                dp[i][j] = (int)(((long)dp[i + 1][j] + (long)dp[i + 1][j + 1] * freq[i][target[j] - 'a']) % MOD);
+                dp[i][j] = ((long)dp[i + 1][j] + (long)dp[i + 1][j + 1] * freq[i][target[j] - 'a']) % MOD;
             }
         }
         
