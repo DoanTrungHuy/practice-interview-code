@@ -1,20 +1,29 @@
-class Solution:
-    def numWays(self, words: List[str], target: str) -> int:
-        MOD = 10**9 + 7
-        m, n = len(words[0]), len(target)
+class Solution {
+public:
+    int numWays(vector<string>& words, string target) {
+        const int m = words[0].size(), n = target.size();
+        const int MOD = 1e9 + 7;
         
-        freq = [Counter() for _ in range(m)]
+        int freq[m][26];
+        memset(freq, 0, sizeof(freq));
         
-        for word in words:
-            for i, char in enumerate(word):
-                freq[i][char] += 1
+        for (string word : words) {
+            for (int j = 0; j < m; ++j) {
+                freq[j][word[j] - 'a']++;
+            }
+        }
         
-        @lru_cache(None)
-        def dp(i, j):
-            if j == n:
-                return 1
-            if i == m:
-                return 0
-            return (dp(i + 1, j) + dp(i + 1, j + 1) * freq[i][target[j]]) % MOD
+        int dp[m + 1][n + 1];
+        memset(dp, 0, sizeof(dp));
+        dp[m][n] = 1;
         
-        return dp(0, 0)
+        for (int i = m - 1; i >= 0; --i) {
+            dp[i][n] = 1;
+            for (int j = n - 1; j >= 0; --j) {
+                dp[i][j] = (int)(((long)dp[i + 1][j] + (long)dp[i + 1][j + 1] * freq[i][target[j] - 'a']) % MOD);
+            }
+        }
+        
+        return dp[0][0];
+    }
+};
