@@ -7,7 +7,7 @@ class Solution:
         
         for dx in [-1, 0, 1]:
             for dy in [-1, 0, 1]:
-                for spill in range(0, 8):
+                for spill in range(1, 8):
                     nx = x + dx*spill
                     ny = y + dy*spill
                     
