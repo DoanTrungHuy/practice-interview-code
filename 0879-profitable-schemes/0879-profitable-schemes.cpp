@@ -1,20 +1,28 @@
-class Solution:
-    def profitableSchemes(self, n: int, minProfit: int, group: List[int], profit: List[int]) -> int:
-        MOD = 10**9 + 7
-        memo = {}
+class Solution {
+public:
+    int profitableSchemes(int n, int minProfit, vector<int>& group, vector<int>& profit) {
+        const int m = group.size();
+        const int MAXPROFIT = 101, MOD = 1e9 + 7;
+        int dp[m + 1][MAXPROFIT + 1][n + 1];
+        memset(dp, 0, sizeof(dp));
         
-        def dp(i, p, n):
-            if i == len(group):
-                return 1 if p >= minProfit else 0
-            
-            if (i, p, n) in memo:
-                return memo[(i, p, n)]
-            
-            res = dp(i + 1, p, n) % MOD
-            if n - group[i] >= 0:
-                res = (res + dp(i + 1, min(p + profit[i], 101), n - group[i])) % MOD
-                
-            memo[(i, p, n)] = res
-            return res
+        for (int p = minProfit; p <= MAXPROFIT; ++p) {
+            for (int k = 0; k <= n; ++k) {
+                dp[m][p][k] = 1;
+            }
+        }
         
-        return dp(0, 0, n)
+        for (int i = m - 1; i >= 0; --i) {
+            for (int p = 0; p <= MAXPROFIT; ++p) {
+                for (int k = 0; k <= n; ++k) {
+                    dp[i][p][k] = dp[i + 1][p][k] % MOD;
+                    if (k - group[i] >= 0) {
+                        dp[i][p][k] = (dp[i][p][k] + dp[i + 1][min(p + profit[i], MAXPROFIT)][k - group[i]]) % MOD;
+                    }
+                }
+            }
+        }
+        
+        return dp[0][0][n];
+    }
+};
