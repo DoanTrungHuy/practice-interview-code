@@ -1,23 +1,25 @@
-class Solution {
-public:
-    int numberOfArrays(string s, int k) {
-        vector<int> dp(s.size(), -1);
-        return dfs(s, k, 0, dp);
-    }
-    int dfs(const string& s, long k, int i, vector<int>& dp) {
-        if (i == s.size()) return 1;
-        if (s[i] == '0') return 0;
-        if (dp[i] != -1) return dp[i];
-        int ans = 0;
-        long num = 0;
-        for (int j = i; j < s.size(); j++) {
-            num = num * 10 + s[j] - '0';
-            if (num > k) {
-                break;
-            }
-            ans += dfs(s, k, j + 1, dp);
-            ans %= 1000000007;
-        }
-        return dp[i] = ans;
-    }
-};
+class Solution:
+    def numberOfArrays(self, s: str, k: int) -> int:
+        MOD = 10**9 + 7
+        n = len(s)
+        
+        @lru_cache(None)
+        def dp(i):
+            if i == n:
+                return 1
+            
+            if s[i] == '0':
+                return 0
+            
+            ans = 0
+            num = 0
+            
+            for j in range(i, n):
+                num = num*10 + (ord(s[j]) - ord('0'))
+                if num > k:
+                    break
+                ans = (ans + dp(j + 1)) % MOD
+                
+            return ans
+        
+        return dp(0)
