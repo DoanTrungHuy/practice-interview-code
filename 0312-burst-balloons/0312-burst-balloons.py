@@ -5,6 +5,8 @@ class Solution:
         
         @lru_cache(None)
         def dp(i, j):
+            if i >= j:
+                return 0
             ans = 0
             for k in range(i + 1, j):
                 ans = max(ans, nums[i] * nums[k] * nums[j] + dp(i, k) + dp(k, j))
