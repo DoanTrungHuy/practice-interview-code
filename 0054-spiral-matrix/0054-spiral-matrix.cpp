@@ -25,10 +25,16 @@ public:
                 ans.push_back(matrix[d][col]);
             }
             d--;
+            if (d < u) {
+                break;
+            }
             for (int row = d; row >= u; --row) {
                 ans.push_back(matrix[row][l]);
             }
             l++;
+            if (l > r) {
+                break;
+            }
         }
         
         return ans;
