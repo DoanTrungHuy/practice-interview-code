@@ -1,5 +1,9 @@
 class Solution:
     def maxScore(self, nums: List[int]) -> int:
+        @lru_cache(None)
+        def gcd(x, y):
+            return math.gcd(x, y)
+        
         m = len(nums)
         n = m // 2
         memo = defaultdict(int)
