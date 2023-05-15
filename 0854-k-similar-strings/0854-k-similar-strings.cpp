@@ -25,6 +25,14 @@ public:
         this->s1 = s1;
         this->s2 = s2;
         this->n = s1.size();
+        string t1, t2;
+        for (int i = 0; i < n; ++i) {
+            if (s1[i] == s2[i]) {
+                t1 += s1[i];
+                t2 += s2[i];
+            }
+        }
+        s1 = t1, s2 = t2;
         return dfs(0);
     }
 };
