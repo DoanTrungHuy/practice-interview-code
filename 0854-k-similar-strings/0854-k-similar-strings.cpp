@@ -13,8 +13,11 @@ public:
         }
         int ans = 1e9;
         for (int j = i + 1; j < n; ++j) {
+            if (s1[j] == s2[j]) {
+                continue;
+            }
             swap(s1[i], s1[j]);
-            if (s1[i] == s2[i] and s1[i] != s2[j]) {
+            if (s1[i] == s2[i]) {
                 ans = min(ans, 1 + dfs(i + 1));
             }
             swap(s1[i], s1[j]);
