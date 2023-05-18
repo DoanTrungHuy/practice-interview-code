@@ -15,11 +15,8 @@ class Solution:
             
         n = len(listNode)
         
-        if n == k:
-            listNode = listNode[::-1]
-        else:
-            for i in range(0, n + 1, k):
-                listNode[i - k:i] = listNode[i - k:i][::-1]
+        for i in range(0, n + 1, k):
+            listNode[i - k:i] = listNode[i - k:i][::-1]
         
         answNode = ListNode(0)
         dummNode = answNode
