@@ -21,6 +21,6 @@ class Solution:
             
         for s in range(2, LIMIT_REPEAT + 1):
             line[s] += line[s - 1]
-            ans = min(ans, line[s] + (m - line[s])*2  - repeat[s])
+            ans = min(ans, n - line[s] - repeat[s])
             
         return ans
