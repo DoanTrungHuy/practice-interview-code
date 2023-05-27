@@ -6,25 +6,25 @@ private:
 public:
     int memo[2][101][101];
 
-    int dp(bool alice, int i, int M) {
+    int dp(bool Alice, int i, int M) {
         if (i == n) {
             return 0;
         }
-        if (memo[alice][i][M] != -1) {
-            return memo[alice][i][M];
+        if (memo[Alice][i][M] != -1) {
+            return memo[Alice][i][M];
         }
-        int ans = alice ? 0 : INT_MAX;
+        int ans = Alice ? 0 : INT_MAX;
         int total = 0;
         for (int X = 1; X <= 2 * M and X + i - 1 != n; ++X) {
             total += piles[i + X - 1];
-            if (alice) {
-                ans = max(ans, total + dp(!alice, i + X, max(X, M)));
+            if (Alice) {
+                ans = max(ans, total + dp(!Alice, i + X, max(X, M)));
             }
             else {
-                ans = min(ans, dp(!alice, i + X, max(X, M)));
+                ans = min(ans, dp(!Alice, i + X, max(X, M)));
             }
         }
-        return memo[alice][i][M] = ans;
+        return memo[Alice][i][M] = ans;
     }
 
     int stoneGameII(vector<int>& piles) {
