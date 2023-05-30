@@ -1,5 +1,5 @@
 const int MAXN = 1e5;
-int sieve[MAXN + 2];
+int sieve[MAXN + 1];
 
 class Solution {
 private:
