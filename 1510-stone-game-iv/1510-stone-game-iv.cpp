@@ -5,12 +5,12 @@ class Solution {
 public:
     bool dp(int n) {
         if (n == 0) {
-            return false;
+            return 0;
         }
         if (memo[n] != -1) {
             return memo[n];
         }
-        for (int k = 1; k * k <= n; ++k) {
+        for (int k = 1; k*k <= n; ++k) {
             if (!dp(n - k*k)) {
                 return memo[n] = 1;
             }
