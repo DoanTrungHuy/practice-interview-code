@@ -18,9 +18,8 @@ public:
                 cnt[2]--;
                 sum += 2;
             }
-            else if (cnt[0] and (sum + 3) % 3 != 0) {
+            else if (cnt[0] and sum % 3 != 0) {
                 cnt[0]--;
-                sum += 3;
             }
             else {
                 return i & 1;
