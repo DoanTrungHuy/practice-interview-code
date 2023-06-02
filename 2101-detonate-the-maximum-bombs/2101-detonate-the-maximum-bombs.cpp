@@ -33,7 +33,6 @@ public:
                 ll rj = bombs[j][2];
                 if (ri*ri >= (xi - xj)*(xi - xj) + (yi - yj)*(yi - yj)) {
                     adj[i].push_back(j);
-                    cout << i << ' ' << j << '\n';
                 }
             }
         }
