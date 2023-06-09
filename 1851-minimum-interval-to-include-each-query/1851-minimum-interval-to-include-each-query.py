@@ -22,8 +22,7 @@ class Solution:
                 if choose == 1:
                     sizes.add(size_or_index)
                 elif choose == 2:
-                    if size_or_index in sizes:
-                        sizes.remove(size_or_index)
+                    sizes.remove(size_or_index)
                 elif choose == 3:
                     if sizes:
                         ans[size_or_index] = sizes[0]
