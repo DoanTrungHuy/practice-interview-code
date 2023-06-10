@@ -2,6 +2,17 @@ using ll = long long;
 
 class Solution {
 public:
+    ll sum(ll element, ll space) {
+        if (element >= space) {
+            ll remain = element - space;
+            return element*(element + 1)/2 - (remain)*(remain + 1)/2;
+        }
+        else {
+            ll remain = space - element;
+            return element*(element + 1)/2 + remain;
+        }
+    }
+    
     int maxValue(int n, int index, int maxSum) {
         ll left = 1, right = maxSum;
         ll spaceLeft = index;
@@ -10,27 +21,9 @@ public:
         
         while (left <= right) {
             ll mid = left + (right - left)/2;
-            ll sumLeft = 0, sumRight = 0, element = mid - 1;
+            ll element = mid - 1;
             
-            if (element >= spaceRight) {
-                ll remain = element - spaceRight;
-                sumRight = element*(element + 1)/2 - (remain)*(remain + 1)/2;
-            }
-            else {
-                ll remain = spaceRight - element;
-                sumRight = element*(element + 1)/2 + remain;
-            }
-            
-            if (element >= spaceLeft) {
-                ll remain = element - spaceLeft;
-                sumLeft = element*(element + 1)/2 - (remain)*(remain + 1)/2;
-            }
-            else {
-                ll remain = spaceLeft - element;
-                sumLeft = element*(element + 1)/2 + remain;
-            }
-            
-            ll total = sumLeft + 1LL*mid + sumRight;
+            ll total = sum(element, spaceLeft) + 1LL*mid + sum(element, spaceRight);
             
             if (total <= maxSum) {
                 res = mid;
