@@ -1,6 +1,8 @@
-class Solution:
-    def isFascinating(self, n: int) -> bool:
-        t = list(str(n) + str(2*n) + str(3*n))
-        t.sort()
-        t = ''.join(t)
-        return '123456789' == t
+class Solution {
+public:
+    bool isFascinating(int n) {
+        string num = to_string(n) + to_string(2*n) + to_string(3*n);
+        sort(num.begin(), num.end());
+        return num == "123456789";
+    }
+};
