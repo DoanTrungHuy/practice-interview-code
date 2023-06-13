@@ -56,7 +56,7 @@ public:
                 line.insert({y1, y2});
             }
             else {
-                line.erase(line.find({y1, y2}));
+                line.erase(line.lower_bound({y1, y2}));
             }
             
             prev = curr;
