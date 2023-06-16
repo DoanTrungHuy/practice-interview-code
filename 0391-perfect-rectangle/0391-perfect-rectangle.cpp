@@ -11,7 +11,7 @@ public:
         ll xMax = INT_MIN, yMax = INT_MIN;
         ll xMin = INT_MAX, yMin = INT_MAX;
         
-        for (vector<int> &rectangle : rectangles) {
+        for (vector<int> rectangle : rectangles) {
             ll x1 = rectangle[0];
             ll y1 = rectangle[1];
             ll x2 = rectangle[2];
@@ -32,7 +32,7 @@ public:
         
         multiset<pair<ll, ll>> line;
         
-        for (vector<ll> &event : events) {
+        for (vector<ll> event : events) {
             ll curr = event[0];
             ll choose = event[1];
             ll y1 = event[2], y2 = event[3];
