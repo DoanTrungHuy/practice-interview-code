@@ -1,6 +1,6 @@
 using ll = long long;
 
-ll memo[2001][2001];
+ll memo[1001][2001];
 const ll MOD = 1e9 + 7;
 
 class Solution {
