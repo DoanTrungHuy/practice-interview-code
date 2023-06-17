@@ -35,7 +35,7 @@ public:
             }
         }
         int n = left.size(), m = right.size();
-        return ((C(n, n + m) * dac(left) % MOD) * dac(right)) % MOD;
+        return ((C(m, n + m) * dac(left) % MOD) * dac(right)) % MOD;
     }
     
     int numOfWays(vector<int>& nums) {
