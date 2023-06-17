@@ -1,41 +1,45 @@
+using ll = long long;
+
+ll memo[2001][2001];
+const ll MOD = 1e9 + 7;
+
 class Solution {
 public:
-    int numOfWays(vector<int>& nums) {
-        int m = nums.size();
-        
-        table.resize(m + 1);
-        for(int i = 0; i < m + 1; ++i) {
-            table[i] = vector<long long>(i + 1, 1);
-            for(int j = 1; j < i; ++j) {
-                table[i][j] = (table[i - 1][j - 1] + table[i - 1][j]) % mod;
-            }
-        }
-        
-        return (dfs(nums) - 1) % mod;
-    }
-    
-private:
-    vector<vector<long long>> table;
-    long long mod = 1e9 + 7;
-    
-    long long dfs(vector<int> &nums){
-        int m = nums.size();
-        if(m < 3) {
+    ll C(int k, int n) {
+        if (n == k or k == 0) {
             return 1;
         }
-
-        vector<int> leftNodes, rightNodes;
-        for(int i = 1; i < m; ++i){
-            if (nums[i] < nums[0]) {
-                leftNodes.push_back(nums[i]);
-            } else {
-                rightNodes.push_back(nums[i]);
+        if (k == 1) {
+            return n;
+        }
+        if (memo[n][k] != -1) {
+            return memo[n][k];
+        }
+        return memo[n][k] = (C(k - 1, n - 1) + C(k, n - 1)) % MOD;
+    }
+    
+    ll dac(vector<int> nums) {
+        if (nums.size() <= 2) {
+            return 1;
+        }
+        vector<int> left, right;
+        for (int num : nums) {
+            if (num == nums[0]) {
+                continue;
+            }
+            else if (num < nums[0]) {
+                left.push_back(num);
+            }
+            else {
+                right.push_back(num);
             }
         }
-		
-        long long leftWays = dfs(leftNodes) % mod;
-        long long rightWays = dfs(rightNodes) % mod;
-		
-        return (((leftWays * rightWays) % mod) * table[m - 1][leftNodes.size()]) % mod;
+        int n = left.size(), m = right.size();
+        return ((C(n, n + m) * dac(left) % MOD) * dac(right)) % MOD;
+    }
+    
+    int numOfWays(vector<int>& nums) {
+        memset(memo, -1, sizeof(memo));
+        return (int)dac(nums) - 1;
     }
 };
