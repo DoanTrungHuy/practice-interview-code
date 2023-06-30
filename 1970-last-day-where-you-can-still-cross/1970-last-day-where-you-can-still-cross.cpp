@@ -50,7 +50,7 @@ public:
         this->cells = cells;
         this->row = row, this->col = col;
         
-        int left = 0, right = cells.size() - 1;
+        int left = 0, right = cells.size();
         int ans = 0;
         
         while (left <= right) {
