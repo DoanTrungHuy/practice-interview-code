@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int helper(string answerKey, int k, char c) {
+    int helper(string &answerKey, int k, char c) {
         int l = 0, cnt = 0;
         int n = answerKey.size();
         int ans = 0;
