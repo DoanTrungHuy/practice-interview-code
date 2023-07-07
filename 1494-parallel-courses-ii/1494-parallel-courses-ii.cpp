@@ -6,12 +6,20 @@ private:
     vector<vector<int>> relations;
     
 public:
+    int popcount(int num) {
+        int cnt = 0;
+        while (num) {
+            cnt += num & 1;
+            num >>= 1;
+        }
+        return cnt;
+    }
     vector<vector<int>> combination(vector<int> &nextState, int k) {
         int m = nextState.size();
         vector<vector<int>> ans;
         
         for (int mask = 0; mask < (1 << m); ++mask) {
-            if (__builtin_popcount(mask) != k) {
+            if (popcount(mask) != k) {
                 continue;
             }
             vector<int> tmp;
