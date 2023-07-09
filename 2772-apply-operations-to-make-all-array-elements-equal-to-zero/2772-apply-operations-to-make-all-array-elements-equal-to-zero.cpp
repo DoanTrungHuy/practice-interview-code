@@ -8,18 +8,22 @@ public:
             if (i > 0) {
                 line[i] += line[i - 1];
             }
-            int curr = nums[i] + line[i];
-            if (curr < 0) {
+            nums[i] += line[i];
+            if (nums[i] < 0) {
                 return false;
             }
-            if (curr == 0) {
+            if (nums[i] == 0) {
                 continue;
             }
             if (i + k <= n) {
-                line[i] -= curr;
-                line[i + k] += curr;
+                line[i] -= nums[i];
+                line[i + k] += nums[i];
+                nums[i] = 0;
             }
-            if (nums[i] + line[i] != 0) {
+        }
+        
+        for (int i = 0; i < n; ++i) {
+            if (nums[i]) {
                 return false;
             }
         }
