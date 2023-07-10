@@ -7,7 +7,6 @@ private:
     
 public:
     const ll base = 131;
-    const ll mod = 1;
     
     string get_str(int k) {
         unordered_set<ll> flag;
