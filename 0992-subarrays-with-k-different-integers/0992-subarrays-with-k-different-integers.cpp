@@ -21,7 +21,6 @@ public:
     }
     
     int subarraysWithKDistinct(vector<int>& nums, int k) {
-        cout << sliding_window(nums, k);
         return sliding_window(nums, k) - sliding_window(nums, k - 1);
     }
 };
