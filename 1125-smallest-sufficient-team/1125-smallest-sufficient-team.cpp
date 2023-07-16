@@ -8,7 +8,7 @@ public:
     long long memo[61][1 << 16];
     
     long long dp(int i, int mask) {
-        if (mask == 0) {
+        if (mask == ((1 << m) - 1)) {
             return 0LL;
         }
         
@@ -23,8 +23,8 @@ public:
         long long not_take = dp(i + 1, mask);
         long long take = (1LL << n) - 1;
         
-        if ((mask & ~pMask[i]) != mask) {
-            take = (1LL << i) | dp(i + 1, mask & ~pMask[i]);
+        if ((mask | pMask[i]) != mask) {
+            take = (1LL << i) | dp(i + 1, mask | pMask[i]);
         }
         
         if (__builtin_popcountll(take) <= __builtin_popcountll(not_take)) {
@@ -51,11 +51,9 @@ public:
             pMask.push_back(mask);
         }
         
-        long long mask = dp(0, (1 << m) - 1);
+        long long mask = dp(0, 0);
         
         vector<int> ans;
-        
-        cout << mask << ' ';
 
         for (int i = 0; i < n; ++i) {
             if (mask & (1LL << i)) {
