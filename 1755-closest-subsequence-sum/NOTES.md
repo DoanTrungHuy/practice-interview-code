@@ -1,2 +1,3 @@
--7, -2, 5
-3, 5, 8
+sum1 + sum2 = goal
+​
+sum2 = goal - sum1
