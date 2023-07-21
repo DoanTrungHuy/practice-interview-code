@@ -33,9 +33,13 @@ public:
             if (it != sub_sums_case2.end()) {
                 diff = min(diff, abs(goal - num1 - *it));
             }
-            if (it != sub_sums_case2.begin()) {
-                it--;
+            
+            if (it == sub_sums_case2.begin()) {
+                continue;
             }
+            
+            --it;
+            
             if (it != sub_sums_case2.end()) {
                 diff = min(diff, abs(goal - num1 - *it));
             }
