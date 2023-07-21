@@ -1,3 +1,3 @@
 diff1 + diff2 <= diff
-diff1 + diff2 <= 0
+diff1 <= -diff2
 ​
