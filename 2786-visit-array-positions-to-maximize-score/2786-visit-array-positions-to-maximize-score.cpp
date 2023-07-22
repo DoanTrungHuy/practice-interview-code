@@ -1,44 +1,37 @@
 class Solution {
-private:
-    vector<int> nums;
-    int n, x;
-    
 public:
-    long long memo[100005][2];
-    
-    long long dp(int i, bool isOdd) {
-        if (i == n) {
-            return 0;
-        }
+    long long maxScore(vector<int>& nums, int x) {
+        int n = nums.size();
+        long long dp[2][n];
         
-        if (memo[i][isOdd] != -1) {
-            return memo[i][isOdd];
-        }
+        dp[0][0] = dp[1][0] = -1e18;
         
-        long long res1 = dp(i + 1, isOdd);
-        
-        long long res2;
-        
-        
-        if (i == 0) {
-            res2 = nums[i] + dp(i + 1, isOdd);
-        }
-        else if ((nums[i]&1 and isOdd) or ((nums[i]&1)^1 and isOdd^1)) {
-            res2 = dp(i + 1, isOdd) + nums[i];
+        if (nums[0] % 2 == 0) {
+            dp[0][0] = nums[0];
         }
         else {
-            res2 = dp(i + 1, isOdd^1) + nums[i] - x;
+            dp[1][0] = nums[0];
         }
         
-        return memo[i][isOdd] = max(res1, res2);
-    }
-    
-    long long maxScore(vector<int>& nums, int x) {
-        memset(memo, -1, sizeof(memo));
-        this->nums = nums;
-        this->x = x;
-        this-> n = nums.size();
+        for (int i = 1; i < n; ++i) {
+            if (nums[i] % 2 == 0) {
+                dp[0][i] = max({
+                    dp[0][i - 1],
+                    dp[0][i - 1] + nums[i],
+                    dp[1][i - 1] + nums[i] - x
+                });
+                dp[1][i] = dp[1][i - 1];
+            }
+            else {
+                dp[1][i] = max({
+                    dp[1][i - 1],
+                    dp[1][i - 1] + nums[i],
+                    dp[0][i - 1] + nums[i] - x
+                });
+                dp[0][i] = dp[0][i - 1];
+            }
+        }
         
-        return dp(0, nums[0]&1);
+        return max(dp[0][n - 1], dp[1][n - 1]);
     }
 };
