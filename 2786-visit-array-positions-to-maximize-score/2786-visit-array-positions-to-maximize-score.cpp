@@ -13,8 +13,6 @@ public:
             dp[1][0] = nums[0];
         }
         
-        long long ans = nums[0];
-        
         for (int i = 1; i < n; ++i) {
             if (nums[i] % 2 == 0) {
                 dp[0][i] = max({
@@ -32,10 +30,8 @@ public:
                 });
                 dp[0][i] = dp[0][i - 1];
             }
-            
-            ans = max(dp[0][i], dp[1][i]);
         }
         
-        return ans;
+        return max(dp[0][n - 1], dp[1][n - 1]);
     }
 };
