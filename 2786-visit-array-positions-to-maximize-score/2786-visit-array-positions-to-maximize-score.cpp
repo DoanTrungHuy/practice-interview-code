@@ -22,21 +22,15 @@ public:
                     dp[0][i - 1] + nums[i],
                     dp[1][i - 1] + nums[i] - x
                 });
-                dp[1][i] = max({
-                    dp[1][i - 1],
-                    dp[0][i - 1] + nums[i] - x
-                });
+                dp[1][i] = dp[1][i - 1];
             }
             else {
-                dp[0][i] = max({
-                    dp[0][i - 1],
-                    dp[1][i - 1] + nums[i] - x
-                });
                 dp[1][i] = max({
                     dp[1][i - 1],
                     dp[1][i - 1] + nums[i],
                     dp[0][i - 1] + nums[i] - x
                 });
+                dp[0][i] = dp[0][i - 1];
             }
             
             ans = max(dp[0][i], dp[1][i]);
