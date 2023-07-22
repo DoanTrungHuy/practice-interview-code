@@ -16,10 +16,8 @@ public:
         return true;
     }
     
-    int MOD = 1e9 + 7;
-    
+    const int MOD = 1e9 + 7;
     using ll = long long;
-    
     ll memo[1 << 10][31];
     
     ll dp(int mask, int num) {
