@@ -1,10 +1,10 @@
 class Solution {
 public:
     long long maxArrayValue(vector<int>& nums) {
+        using ll = long long;
+        vector<ll> ll_nums(nums.begin(), nums.end());
         const int n = nums.size();
-        long long ans = nums[n - 1];
-        
-        vector<long long> ll_nums(nums.begin(), nums.end());
+        ll ans = nums[n - 1];
         
         for (int i = n - 2; i >= 0; --i) {
             if (ll_nums[i] <= ll_nums[i + 1]) {
