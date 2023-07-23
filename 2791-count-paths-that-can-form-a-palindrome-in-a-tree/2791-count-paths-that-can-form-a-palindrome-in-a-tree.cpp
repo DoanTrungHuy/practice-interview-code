@@ -23,7 +23,6 @@ public:
     
     long long countPalindromePaths(vector<int>& parent, string s) {
         this->s = s;
-        
         int n = parent.size();
         adj.resize(n + 1);
         
