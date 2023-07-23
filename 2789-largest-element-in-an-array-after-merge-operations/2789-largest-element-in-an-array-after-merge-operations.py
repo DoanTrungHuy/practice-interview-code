@@ -1,11 +1,18 @@
-class Solution:
-    def maxArrayValue(self, nums: List[int]) -> int:
-        n = len(nums)
-        ans = nums[n - 1]
+class Solution {
+public:
+    long long maxArrayValue(vector<int>& nums) {
+        const int n = nums.size();
+        long long ans = nums[n - 1];
         
-        for i in range(n - 2, -1, -1):
-            if nums[i] <= nums[i + 1]:
-                nums[i] = nums[i] + nums[i + 1]
-            ans = max(ans, nums[i])
-            
-        return ans
+        vector<long long> ll_nums(nums.begin(), nums.end());
+        
+        for (int i = n - 2; i >= 0; --i) {
+            if (ll_nums[i] <= ll_nums[i + 1]) {
+                ll_nums[i] += ll_nums[i + 1];
+            }
+            ans = max(ans, ll_nums[i]);
+        }
+        
+        return ans;
+    }
+};
