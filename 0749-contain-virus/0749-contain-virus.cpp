@@ -86,7 +86,7 @@ public:
         
         while (true) {
             map<int, set<pair<int, int>>> partition_affect;
-            map<int, int> cnt_partition;
+            map<int, int> outline;
             
             for (int i = 0; i < m; ++i) {
                 for (int j = 0; j < n; ++j) { 
@@ -102,7 +102,7 @@ public:
                         }
                         
                         partition_affect[dsu.find(i*n + j)].insert({ni, nj});
-                        cnt_partition[dsu.find(i*n + j)]++;
+                        outline[dsu.find(i*n + j)]++;
                     }
                 }
             }
@@ -121,7 +121,7 @@ public:
                 }
             }
             
-            ans += cnt_partition[max_num];
+            ans += outline[max_num];
             
             dsu.set_parent_of(max_num, -1);
             
