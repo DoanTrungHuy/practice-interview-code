@@ -26,6 +26,7 @@ public:
             );
         }
     }
+    
     bool PredictTheWinner(vector<int>& nums) {
         this->nums = nums;
         this->n = nums.size();
