@@ -21,13 +21,11 @@ public:
         this->batteries = batteries;
         
         ll left = 1, right = 1e14;
-        ll ans = 1;
         
         while (left <= right) {
             ll mid = (left + right) / 2;
             
             if (f(mid)) {
-                ans = mid;
                 left = mid + 1;
             }
             else {
@@ -35,6 +33,6 @@ public:
             }
         }
         
-        return ans;
+        return left - 1;
     }
 };
