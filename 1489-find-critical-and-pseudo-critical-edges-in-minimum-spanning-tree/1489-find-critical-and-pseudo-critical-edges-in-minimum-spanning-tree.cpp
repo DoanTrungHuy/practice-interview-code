@@ -43,10 +43,12 @@ public:
     int calc_mst(int i, int p = -1) {
         DSU dsu(n);
         int s = 0;
+        int c = 0;
         
         if (p != -1) {
             s += edges[p][2];
             dsu._union(edges[p][0], edges[p][1]);
+            c++;
         }
         
         int m = edges.size();
@@ -57,13 +59,15 @@ public:
             }
             if (dsu._union(edges[j][0], edges[j][1])) {
                 s += edges[j][2];
+                c++;
+            }
+            if (c == n - 1) {
+                break;
             }
         }
         
-        for (int i = 1; i < n; ++i) {
-            if (dsu.find(0) != dsu.find(i)) {
-                return INT_MAX;
-            }
+        if (c != n - 1) {
+            return INT_MAX;
         }
         
         return s;
