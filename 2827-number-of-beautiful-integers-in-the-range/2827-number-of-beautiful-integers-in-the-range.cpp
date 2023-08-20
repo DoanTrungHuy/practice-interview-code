@@ -7,7 +7,7 @@ private:
 public:
     int dp(string &s, int i, bool isZero, bool tight, int c1, int c2, int total = 0) {
         if (i == s.size()) {
-            return c1 == c2 and total % k == 0;
+            return c1 == c2 and !total;
         }    
         if (memo[i][isZero][tight][c1][c2][total] != -1) {
             return memo[i][isZero][tight][c1][c2][total];
