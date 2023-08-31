@@ -56,6 +56,7 @@ public:
             
             if (start == 0) {
                 ans = min(ans, dp(i));
+                break;
             }
         }
         
