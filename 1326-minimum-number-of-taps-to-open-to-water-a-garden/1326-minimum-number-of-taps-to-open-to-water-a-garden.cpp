@@ -48,17 +48,11 @@ public:
             return a[0] < b[0];
         });
         
-        int ans = INF;
-        
-        for (int i = 0; i < m; ++i) {
-            int start = events[i][0];
-            int end = events[i][1];
-            
-            if (start == 0) {
-                ans = min(ans, dp(i));
-                break;
-            }
+        if (events[0][0] != 0) {
+            return -1;
         }
+        
+        int ans = min(INF, dp(0));
         
         return ans == INF ? -1 : ans;
     }
