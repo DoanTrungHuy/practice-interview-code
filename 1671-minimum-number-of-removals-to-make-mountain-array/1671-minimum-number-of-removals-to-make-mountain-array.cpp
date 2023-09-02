@@ -2,34 +2,42 @@ class Solution {
 public:
     int minimumMountainRemovals(vector<int>& nums) {
         const int n = nums.size();
-        int dp[2][n];
+        vector<int> dp[2], max_len[2];
+        max_len[0].resize(n);
+        max_len[1].resize(n);
         
         for (int i = 0; i < n; ++i) {
-            dp[0][i] = 1;
-            for (int j = 0; j < i; ++j) {
-                if (nums[i] > nums[j]) {
-                    dp[0][i] = max(dp[0][i], dp[0][j] + 1);
-                }
+            auto it = lower_bound(dp[0].begin(), dp[0].end(), nums[i]);
+            if (it == dp[0].end()) {
+                dp[0].push_back(nums[i]);
+                max_len[0][i] = dp[0].size();
+            }
+            else {
+                *it = nums[i];
+                max_len[0][i] = distance(dp[0].begin(), it) + 1;
             }
         }
         
         for (int i = n - 1; i >= 0; --i) {
-            dp[1][i] = 1;
-            for (int j = i + 1; j < n; ++j) {
-                if (nums[i] > nums[j]) {
-                    dp[1][i] = max(dp[1][i], dp[1][j] + 1);
-                }
+            auto it = lower_bound(dp[1].begin(), dp[1].end(), nums[i]);
+            if (it == dp[1].end()) {
+                dp[1].push_back(nums[i]);
+                max_len[1][i] = dp[1].size();
+            }
+            else {
+                *it = nums[i];
+                max_len[1][i] = distance(dp[1].begin(), it) + 1;
             }
         }
         
-        int lis_ = 0;
+        int LIS_ = 0;
         
         for (int i = 1; i < n - 1; ++i) {
-            if (dp[0][i] > 1 and dp[1][i] > 1) {
-                lis_ = max(lis_, dp[0][i] + dp[1][i] - 1);
+            if (max_len[0][i] > 1 and max_len[1][i] > 1) {
+                LIS_ = max(LIS_, max_len[0][i] + max_len[1][i] - 1);
             }
         }
         
-        return n - lis_;
+        return n - LIS_;
     }
 };
