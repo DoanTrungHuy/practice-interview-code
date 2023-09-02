@@ -14,6 +14,7 @@ public:
         for (int i = 0; i < n; ++i) {
             auto it = lower_bound(dp.begin(), dp.end(), envelopes[i][1]);
             if (it == dp.end()) {
+                cout << "push = " << envelopes[i][1] << '\n';
                 dp.push_back(envelopes[i][1]);
             }
             else {
