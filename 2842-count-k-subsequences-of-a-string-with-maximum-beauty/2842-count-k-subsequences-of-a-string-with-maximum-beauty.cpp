@@ -25,44 +25,44 @@ public:
     }
     
     int countKSubsequencesWithMaxBeauty(string s, int k) {
-        unordered_map<int, ll> f;
+        unordered_map<char, ll> cnt_characters;
         
-        for (const char c : s) {
-            f[c - 'a']++;
+        for (char c : s) {
+            cnt_characters[c]++;
         }
         
-        if (f.size() < k) {
-            return 0LL;
+        if (cnt_characters.size() < k) {
+            return 0;
         }
         
-        p[0] = 1LL;
+        map<int, ll> cnt_freqs;
+        
+        for (const auto [_, c] : cnt_characters) {
+            cnt_freqs[c]++;
+        }
+        
+        p[0] = 1;
         for (int i = 1; i < MN; ++i) {
             p[i] = (p[i - 1] * i) % MOD;
         }
         
-        priority_queue<int> pq;
-        
-        for (const auto &[_, cnt] : f) {
-            pq.push(cnt);
-        }
-        
         ll ans = 1LL;
         
-        while (k > 0) {
-            ll occ = pq.top(), cnt = 0;
-            while (!pq.empty() and occ == pq.top()) {
-                cnt++;
-                pq.pop();
-            }
-            if (k >= cnt) {
-                (ans *= exp(occ, cnt)) %= MOD;
+        for (auto it = cnt_freqs.rbegin(); it != cnt_freqs.rend(); ++it) {
+            ll frq = it->first;
+            ll occ = it->second;
+            
+            if (k >= occ) {
+                ans = (ans * exp(frq, occ)) % MOD;
+                k -= occ;
             }
             else {
-                (ans *= (exp(occ, k) * C(cnt, k)) % MOD) %= MOD;
+                ans = (ans * C(occ, k)) % MOD;
+                ans = (ans * exp(frq, k)) % MOD;
+                break;
             }
-            k -= cnt;
         }
         
-        return (int) ans;
+        return ans;
     }
 };
