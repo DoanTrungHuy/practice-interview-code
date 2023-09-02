@@ -52,15 +52,10 @@ public:
                 if (k == 0) {
                     int total_equal = 0;
                     int p = -1; 
-                    for (int j = i; j <= 25; j++) {
+                    for (int j = 0; j <= 25; j++) {
                         if (cnt[j] == cnt[i]) {
                             total_equal++; 
                             p = j; 
-                        }
-                    }
-                    for (int j = i - 1; j >= 0; j--) {
-                        if (cnt[j] == cnt[i]) {
-                            total_equal++; 
                         }
                     }
                     (ans *= C(total_equal, p - i + 1)) %= MOD;
