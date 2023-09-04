@@ -63,7 +63,7 @@ public:
         }
         
         depth.resize(n);
-        m = log2(n) + 1;
+        m = ceil(log2(n));
         par.resize(n, vector<int>(m + 1, -1));
         clr.resize(n, vector<int>(MW + 1));
         dfs(0, -1, 1);
