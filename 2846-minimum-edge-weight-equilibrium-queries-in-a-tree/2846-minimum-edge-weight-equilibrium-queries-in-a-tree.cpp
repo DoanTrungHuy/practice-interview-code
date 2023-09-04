@@ -16,7 +16,7 @@ public:
             if (v == p) {
                 continue;
             }
-            for (int i = 1; i <= MW; ++i) {
+            for (int i = 0; i < MW; ++i) {
                 clr[v][i] = clr[u][i] + (i == w);
             }
             dfs(v, u, c + 1);
@@ -58,6 +58,7 @@ public:
             int u = edge[0];
             int v = edge[1];
             int w = edge[2];
+            w--;
             adj[u].push_back({v, w});
             adj[v].push_back({u, w});
         }
@@ -65,7 +66,7 @@ public:
         depth.resize(n);
         m = ceil(log2(n));
         par.resize(n, vector<int>(m + 1, -1));
-        clr.resize(n, vector<int>(MW + 1));
+        clr.resize(n, vector<int>(MW));
         dfs(0, -1, 1);
         
         for (int j = 1; j <= m; ++j) {
@@ -85,7 +86,7 @@ public:
             int v = queries[j][1];
             int node_lca = get_node_lca(u, v);
             int len = depth[u] + depth[v] - 2 * depth[node_lca];
-            for (int i = 1; i <= MW; ++i) {
+            for (int i = 0; i < MW; ++i) {
                 int try_num = (clr[u][i] + clr[v][i] - 2 * clr[node_lca][i]);
                 ans[j] = min(ans[j], len - try_num);
             }
