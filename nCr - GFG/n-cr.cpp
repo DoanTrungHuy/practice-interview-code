@@ -9,30 +9,34 @@ using namespace std;
 
 class Solution{
 public:
+    long long int PowMod(long long int x,long long int n,long long int M)
+	{
+	    if (n == 0) {
+	        return 1;
+	    }
+	    long long int res = PowMod(x, n / 2, M);
+	    res = (res * res) % M;
+	    if (n & 1) {
+	        return (res * x) % M;
+	    }
+	    return res;
+	}
+	
     int nCr(int n, int r){
         if (r > n) {
             return 0;
         }
         using ll = long long;
-        ll dp[n + 1][r + 1];
-        memset(dp, 0, sizeof(dp));
         const ll MOD = 1e9 + 7;
-        
-        for (int i = 0; i <= n; ++i) {
-            for (int j = 0; j <= r; ++j) {
-                if (j == 0) {
-                    dp[i][j] = 1;
-                }
-                else if (i == 0) {
-                    dp[i][j] = 0;
-                }
-                else {
-                    dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j]) % MOD;
-                }
-            }
+        ll p[n + 1];
+        p[0] = 1;
+        for (int i = 1; i <= n; ++i) {
+            p[i] = (p[i - 1] * i) % MOD;
         }
-        
-        return (int)dp[n][r];
+        ll res = p[n];
+        res = (res * PowMod(p[n - r], MOD - 2, MOD)) % MOD;
+        res = (res * PowMod(p[r], MOD - 2, MOD)) % MOD;
+        return res;
     }
 };
 
