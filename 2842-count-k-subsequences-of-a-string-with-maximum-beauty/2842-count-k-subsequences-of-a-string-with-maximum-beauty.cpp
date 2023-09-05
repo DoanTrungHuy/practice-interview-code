@@ -16,53 +16,56 @@ public:
         }
         return res;
     }
-    
-    ll C(ll n, ll k) {
+
+    ll nCr(ll n, ll r) {
         ll res = p[n];
-        res = (res * exp(p[n - k], MOD - 2)) % MOD;
-        res = (res * exp(p[k], MOD - 2)) % MOD;
+        res = (res * exp(p[n - r], MOD - 2)) % MOD;
+        res = (res * exp(p[r], MOD - 2)) % MOD;
         return res;
     }
-    
+
     int countKSubsequencesWithMaxBeauty(string s, int k) {
-        unordered_map<char, ll> cnt_characters;
-        
+        unordered_map<char, ll> f;
+
         for (char c : s) {
-            cnt_characters[c]++;
+            f[c]++;
         }
-        
-        if (cnt_characters.size() < k) {
+
+        if (k > f.size()) {
             return 0;
         }
-        
-        map<int, ll> cnt_freqs;
-        
-        for (const auto [_, c] : cnt_characters) {
-            cnt_freqs[c]++;
+
+        priority_queue<ll> pq;
+
+        for (const auto [character, freq] : f) {
+            pq.push(freq);
         }
-        
-        p[0] = 1;
+
+        p[0] = 1LL;
+
         for (int i = 1; i < MN; ++i) {
             p[i] = (p[i - 1] * i) % MOD;
         }
-        
+
         ll ans = 1LL;
-        
-        for (auto it = cnt_freqs.rbegin(); it != cnt_freqs.rend(); ++it) {
-            ll frq = it->first;
-            ll occ = it->second;
-            
-            if (k >= occ) {
-                ans = (ans * exp(frq, occ)) % MOD;
-                k -= occ;
+
+        while (k > 0) {
+            ll num_way = pq.top();
+            int cnt_num_of_freq = 0;
+            while (!pq.empty() and pq.top() == num_way) {
+                cnt_num_of_freq++;
+                pq.pop();
+            }
+            if (k >= cnt_num_of_freq) {
+                ans = (ans * exp(num_way, cnt_num_of_freq)) % MOD;
+                k -= cnt_num_of_freq;
             }
             else {
-                ans = (ans * C(occ, k)) % MOD;
-                ans = (ans * exp(frq, k)) % MOD;
+                ans = (ans * ((nCr(cnt_num_of_freq, k) * exp(num_way, k)) % MOD)) % MOD;
                 break;
             }
         }
-        
-        return ans;
+
+        return (int) ans;
     }
 };
