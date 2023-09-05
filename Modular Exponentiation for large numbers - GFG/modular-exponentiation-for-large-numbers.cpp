@@ -6,15 +6,15 @@ using namespace std;
 class Solution
 {
 	public:
-		long long int PowMod(long long int x,long long int n,long long int M)
+		long long int PowMod(long long int x,long long int n,long long int MOD)
 		{
 		    if (n == 0) {
 		        return 1;
 		    }
-		    long long int res = PowMod(x, n / 2, M);
-		    res = (res * res) % M;
+		    long long int res = PowMod(x, n / 2, MOD);
+		    res = (res * res) % MOD;
 		    if (n & 1) {
-		        return (res * x) % M;
+		        return (res * x) % MOD;
 		    }
 		    return res;
 		}
