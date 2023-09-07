@@ -21,26 +21,24 @@ public:
         vector<int> ans(n - 1);
         
         for (int mask = 1; mask < (1 << n); ++mask) {
-            vector<int> v;
+            int max_dist = 0;
+            int cnt_vertex = 0, cnt_edge = 0;
             
             for (int i = 0; i < n; ++i) {
-                if (mask & (1 << i)) {
-                    v.push_back(i);
+                if ((mask & (1 << i)) == 0) {
+                    continue;
+                }
+                cnt_vertex++;
+                for (int j = i + 1; j < n; ++j) {
+                    if ((mask & (1 << j)) == 0) {
+                        continue;
+                    }
+                    cnt_edge += dp[i][j] == 1;
+                    max_dist = max(max_dist, dp[i][j]);
                 }
             }
             
-            int max_dist = 0;
-            int m = v.size();
-            int cnt_edge = 0;
-            
-            for (int i = 0; i < m; ++i) {
-                for (int j = i + 1; j < m; ++j) {
-                    cnt_edge += dp[v[i]][v[j]] == 1;
-                    max_dist = max(max_dist, dp[v[i]][v[j]]);
-                }
-            }
-            
-            if (max_dist != 0 and cnt_edge == m - 1) {
+            if (max_dist != 0 and cnt_edge == cnt_vertex - 1) {
                 ans[max_dist - 1]++;
             }
         }
