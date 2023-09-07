@@ -13,7 +13,7 @@ public:
         for (int k = 0; k < n; ++k) {
             for (int u = 0; u < n; ++u) {
                 for (int v = 0; v < n; ++v) {
-                    if (u == v) {
+                    if (u == v or k == v or k == u) {
                         continue;
                     }
                     dp[u][v] = min(dp[u][v], dp[u][k] + dp[k][v]);
