@@ -22,6 +22,9 @@ public:
     }
     
     int dfs(int node) {
+        if (adj[node].size() == 0) {
+            return 1;
+        }
         for (int child : adj[node]) {
             dfs(child);
             sz[node] += sz[child];
