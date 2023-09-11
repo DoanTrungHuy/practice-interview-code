@@ -48,13 +48,15 @@ public:
         ft[1] = FenwickTree(n);
         
         for (int i = 0; i < n; ++i) {
-            left_smaller[i] = ft[0].count(mapping[i] - 1);
-            ft[0].update(mapping[i], 1);
+            int j = mapping[i];
+            left_smaller[i] = ft[0].count(j - 1);
+            ft[0].update(j, 1);
         }
         
         for (int i = n - 1; i >= 0; --i) {
-            right_larger[i] = ft[1].count(n - 1) - ft[1].count(mapping[i]);
-            ft[1].update(mapping[i], 1);
+            int j = mapping[i];
+            right_larger[i] = ft[1].count(n - 1) - ft[1].count(j);
+            ft[1].update(j, 1);
         }
         
         long long ans = 0;
