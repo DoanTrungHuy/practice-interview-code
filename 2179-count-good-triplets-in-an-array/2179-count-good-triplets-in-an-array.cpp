@@ -27,11 +27,11 @@ public:
 class Solution {
 public:
     long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {
-        unordered_map<int, int> um;
+        unordered_map<int, int> mapping;
         const int n = nums1.size();
         
         for (int i = 0; i < n; ++i) {
-            um[nums2[i]] = i; 
+            mapping[nums2[i]] = i; 
         }
         
         vector<int> left_smaller(n), right_larger(n);
@@ -42,13 +42,13 @@ public:
         ft[1] = FenwickTree(n);
         
         for (int i = 0; i < n; ++i) {
-            int j = um[nums1[i]];
+            int j = mapping[nums1[i]];
             left_smaller[i] = ft[0].count(j - 1);
             ft[0].update(j, 1);
         }
         
         for (int i = n - 1; i >= 0; --i) {
-            int j = um[nums1[i]];
+            int j = mapping[nums1[i]];
             right_larger[i] = ft[1].count(n - 1) - ft[1].count(j);
             ft[1].update(j, 1);
         }
