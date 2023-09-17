@@ -5,17 +5,27 @@ using namespace std;
 
 // } Driver Code Ends
 // User function Template for C++
+
+
+const int MOD = 1e9 + 7;
+
 class Solution {
-  public:
-    int nthFibonacci(int n){
-        int f[n + 1];
-        f[0] = 0;
-        f[1] = 1;
-        const int MOD = 1e9 + 7;
-        for (int i = 0; i <= n - 2; ++i) {
-            f[i + 2] = (f[i + 1] + f[i]) % MOD;
+private:
+    vector<int> memo;
+    
+public:
+    int dp(int n) {
+        if (n <= 1) {
+            return n;
         }
-        return f[n];
+        if (memo[n] != -1) {
+            return memo[n];
+        }
+        return memo[n] = (dp(n - 1) + dp(n - 2)) % MOD;
+    }
+    int nthFibonacci(int n){
+        memo.resize(n + 1, -1);
+        return dp(n);
     }
 };
 
