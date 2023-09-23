@@ -4,6 +4,7 @@ public:
         sort(words.begin(), words.end(), [](const string a, const string b) {
             return a.size() < b.size();
         });
+        
         const int n = words.size();
         int dp[n];
         int ans = 0;
