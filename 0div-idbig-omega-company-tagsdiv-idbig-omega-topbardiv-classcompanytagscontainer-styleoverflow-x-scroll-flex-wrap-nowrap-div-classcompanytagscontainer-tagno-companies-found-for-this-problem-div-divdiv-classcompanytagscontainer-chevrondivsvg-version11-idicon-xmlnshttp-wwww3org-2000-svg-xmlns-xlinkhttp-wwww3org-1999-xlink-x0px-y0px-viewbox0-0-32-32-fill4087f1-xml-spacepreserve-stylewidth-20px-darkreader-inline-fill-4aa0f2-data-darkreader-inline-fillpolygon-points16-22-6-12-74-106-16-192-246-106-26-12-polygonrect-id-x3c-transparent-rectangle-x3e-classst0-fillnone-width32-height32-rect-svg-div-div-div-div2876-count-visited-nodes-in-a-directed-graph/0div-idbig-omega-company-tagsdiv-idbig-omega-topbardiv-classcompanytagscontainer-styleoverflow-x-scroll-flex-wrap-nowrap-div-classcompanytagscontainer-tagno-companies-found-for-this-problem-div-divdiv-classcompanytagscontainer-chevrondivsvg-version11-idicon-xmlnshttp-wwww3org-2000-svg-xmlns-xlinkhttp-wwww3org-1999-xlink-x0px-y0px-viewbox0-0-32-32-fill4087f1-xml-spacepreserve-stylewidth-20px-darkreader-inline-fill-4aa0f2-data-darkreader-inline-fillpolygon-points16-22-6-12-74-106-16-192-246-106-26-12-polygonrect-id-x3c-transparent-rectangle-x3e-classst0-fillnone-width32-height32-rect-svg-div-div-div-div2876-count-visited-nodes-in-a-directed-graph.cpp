@@ -6,9 +6,6 @@ private:
     stack<int> st;
     unordered_map<int, int> group;
     vector<int> num_scc;
-    vector<vector<int>> adj_dag;
-    vector<bool> visited;
-    vector<int> dp;
     
 public:
     void dfs(int u) {
@@ -39,17 +36,6 @@ public:
         }
     }
     
-    void dfs_dag(int u) {
-        visited[u] = true;
-        dp[u] = group[u];
-        for (int v : adj_dag[u]) {
-            if (!visited[v]) {
-                dfs_dag(v);
-            }
-            dp[u] += dp[v];
-        }
-    };
-    
     vector<int> countVisitedNodes(vector<int>& edges) {
         const int n = edges.size();
         adj.resize(n);
@@ -71,31 +57,37 @@ public:
             group[num_scc[i]]++;
         }
         
-        adj_dag.resize(n + 1);
-        
-        int indegree[n + 1];
-        memset(indegree, 0, sizeof(indegree));
+        const int LOG = 1 + log2(n);
+        vector<vector<pair<int, int>>> parent(idSCC + 1, vector<pair<int, int>>(LOG + 1, {-1, 0}));
         
         for (int i = 0; i < n; ++i) {
             if (num_scc[i] != num_scc[edges[i]]) {
-                adj_dag[num_scc[i]].push_back(num_scc[edges[i]]);
-                indegree[num_scc[edges[i]]]++;
+                parent[num_scc[i]][0].first = num_scc[edges[i]];
+                parent[num_scc[i]][0].second = group[num_scc[edges[i]]];
             }
         }
         
-        visited.resize(n, false);
+        for (int j = 1; j <= LOG; ++j) {
+            for (int i = 1; i <= idSCC; ++i) {
+                if (parent[i][j - 1].first != -1) {
+                    parent[i][j].first = parent[parent[i][j - 1].first][j - 1].first;
+                    parent[i][j].second = parent[i][j - 1].second + parent[parent[i][j - 1].first][j - 1].second; 
+                }
+            }
+        }
         
-        dp.resize(n + 1);
         vector<int> ans(n);
         
         for (int i = 0; i < n; ++i) {
-            if (indegree[num_scc[i]] == 0) {
-                dfs_dag(num_scc[i]);
+            int step = group[num_scc[i]];
+            int node = num_scc[i];
+            for (int j = LOG; j >= 0; --j) {
+                if (parent[node][j].first != -1) {
+                    step += parent[node][j].second;
+                    node = parent[node][j].first;
+                }
             }
-        }
-        
-        for (int i = 0; i < n; ++i) {
-            ans[i] = dp[num_scc[i]];
+            ans[i] = step;
         }
         
         return ans;
