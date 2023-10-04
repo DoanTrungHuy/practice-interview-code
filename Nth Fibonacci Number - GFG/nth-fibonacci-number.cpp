@@ -10,22 +10,15 @@ using namespace std;
 const int MOD = 1e9 + 7;
 
 class Solution {
-private:
-    vector<int> memo;
-    
 public:
-    int dp(int n) {
-        if (n <= 1) {
-            return n;
-        }
-        if (memo[n] != -1) {
-            return memo[n];
-        }
-        return memo[n] = (dp(n - 1) + dp(n - 2)) % MOD;
-    }
     int nthFibonacci(int n){
-        memo.resize(n + 1, -1);
-        return dp(n);
+        int f[n + 1];
+        f[0] = 0;
+        f[1] = 1;
+        for (int i = 2; i <= n; ++i) {
+            f[i] = (f[i - 1] + f[i - 2]) % MOD;
+        }
+        return f[n];
     }
 };
 
