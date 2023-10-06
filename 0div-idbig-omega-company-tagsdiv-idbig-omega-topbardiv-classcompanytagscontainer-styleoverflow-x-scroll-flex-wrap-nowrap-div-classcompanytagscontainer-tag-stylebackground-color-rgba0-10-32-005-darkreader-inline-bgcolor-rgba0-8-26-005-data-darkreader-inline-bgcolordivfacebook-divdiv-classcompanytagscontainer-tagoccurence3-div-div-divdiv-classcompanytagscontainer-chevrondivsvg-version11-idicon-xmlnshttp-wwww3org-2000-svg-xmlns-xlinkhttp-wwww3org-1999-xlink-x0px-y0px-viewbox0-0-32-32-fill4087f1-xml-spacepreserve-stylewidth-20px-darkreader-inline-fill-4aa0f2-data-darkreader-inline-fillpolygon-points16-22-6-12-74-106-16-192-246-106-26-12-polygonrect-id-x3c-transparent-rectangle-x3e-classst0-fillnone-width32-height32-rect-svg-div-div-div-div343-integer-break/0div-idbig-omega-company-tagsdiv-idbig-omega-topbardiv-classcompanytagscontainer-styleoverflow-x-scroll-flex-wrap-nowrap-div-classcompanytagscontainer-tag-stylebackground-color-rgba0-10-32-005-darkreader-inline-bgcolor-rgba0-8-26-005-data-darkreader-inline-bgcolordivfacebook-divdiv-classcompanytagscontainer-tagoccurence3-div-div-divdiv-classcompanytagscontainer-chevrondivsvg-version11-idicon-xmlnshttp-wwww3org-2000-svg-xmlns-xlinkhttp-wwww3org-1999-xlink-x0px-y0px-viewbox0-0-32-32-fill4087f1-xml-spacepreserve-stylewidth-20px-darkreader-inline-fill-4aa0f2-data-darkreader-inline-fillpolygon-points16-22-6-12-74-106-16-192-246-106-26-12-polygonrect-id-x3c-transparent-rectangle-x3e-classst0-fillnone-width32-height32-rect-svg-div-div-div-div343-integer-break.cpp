@@ -1,13 +1,13 @@
-int memo[59][59][59];
+int memo[59][59][2];
 
 class Solution {
 private:
     int n;
     
 public:
-    int dp(int i, int s, int c) {
+    int dp(int i, int s, bool c) {
         if (s == 0) {
-            return c > 1;
+            return c;
         }
         if (s < 0 or i > n) {
             return 0;
@@ -17,7 +17,7 @@ public:
         }
         int ans = 0;
         for (int j = i; j <= n; ++j) {
-            ans = max(ans, j*dp(j, s - j, c + 1));
+            ans = max(ans, j*dp(j, s - j, c and j != n));
         }
         return memo[i][s][c] = ans;
     }
@@ -25,6 +25,6 @@ public:
     int integerBreak(int n) {
         this->n = n;
         memset(memo, -1, sizeof(memo));
-        return dp(1, n, 0);
+        return dp(1, n, 1);
     }
 };
