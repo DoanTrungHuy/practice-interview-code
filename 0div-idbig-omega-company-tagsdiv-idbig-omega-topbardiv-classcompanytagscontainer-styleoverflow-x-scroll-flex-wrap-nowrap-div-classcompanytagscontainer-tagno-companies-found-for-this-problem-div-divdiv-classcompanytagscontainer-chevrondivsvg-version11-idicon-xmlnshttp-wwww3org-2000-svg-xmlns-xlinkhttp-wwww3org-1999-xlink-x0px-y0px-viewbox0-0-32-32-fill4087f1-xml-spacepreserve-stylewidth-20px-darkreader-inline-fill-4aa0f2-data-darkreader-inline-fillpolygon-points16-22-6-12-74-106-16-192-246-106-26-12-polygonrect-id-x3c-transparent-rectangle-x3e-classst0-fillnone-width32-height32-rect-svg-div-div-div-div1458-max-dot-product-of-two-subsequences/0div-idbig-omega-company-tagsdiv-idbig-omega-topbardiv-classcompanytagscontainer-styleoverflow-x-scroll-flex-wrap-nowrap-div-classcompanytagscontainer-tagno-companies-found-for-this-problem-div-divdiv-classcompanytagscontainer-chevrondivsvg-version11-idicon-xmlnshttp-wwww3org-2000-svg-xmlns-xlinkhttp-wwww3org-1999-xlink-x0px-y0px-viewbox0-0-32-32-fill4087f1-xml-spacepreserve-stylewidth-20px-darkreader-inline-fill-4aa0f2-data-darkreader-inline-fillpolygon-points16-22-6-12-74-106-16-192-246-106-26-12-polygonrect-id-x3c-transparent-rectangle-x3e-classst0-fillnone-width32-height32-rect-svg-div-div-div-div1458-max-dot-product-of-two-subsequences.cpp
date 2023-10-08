@@ -31,7 +31,6 @@ public:
         int max_pos = dp(0, 0);
         if (max_pos == 0) {
             return max({
-                nums1[n - 1]*nums2[m - 1],
                 nums1[0]*nums2[m - 1],
                 nums1[n - 1]*nums2[0],
                 nums1[0]*nums2[0],
