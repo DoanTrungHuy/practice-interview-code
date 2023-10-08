@@ -33,7 +33,6 @@ public:
             return max({
                 nums1[0]*nums2[m - 1],
                 nums1[n - 1]*nums2[0],
-                nums1[0]*nums2[0],
             });
 
         }
