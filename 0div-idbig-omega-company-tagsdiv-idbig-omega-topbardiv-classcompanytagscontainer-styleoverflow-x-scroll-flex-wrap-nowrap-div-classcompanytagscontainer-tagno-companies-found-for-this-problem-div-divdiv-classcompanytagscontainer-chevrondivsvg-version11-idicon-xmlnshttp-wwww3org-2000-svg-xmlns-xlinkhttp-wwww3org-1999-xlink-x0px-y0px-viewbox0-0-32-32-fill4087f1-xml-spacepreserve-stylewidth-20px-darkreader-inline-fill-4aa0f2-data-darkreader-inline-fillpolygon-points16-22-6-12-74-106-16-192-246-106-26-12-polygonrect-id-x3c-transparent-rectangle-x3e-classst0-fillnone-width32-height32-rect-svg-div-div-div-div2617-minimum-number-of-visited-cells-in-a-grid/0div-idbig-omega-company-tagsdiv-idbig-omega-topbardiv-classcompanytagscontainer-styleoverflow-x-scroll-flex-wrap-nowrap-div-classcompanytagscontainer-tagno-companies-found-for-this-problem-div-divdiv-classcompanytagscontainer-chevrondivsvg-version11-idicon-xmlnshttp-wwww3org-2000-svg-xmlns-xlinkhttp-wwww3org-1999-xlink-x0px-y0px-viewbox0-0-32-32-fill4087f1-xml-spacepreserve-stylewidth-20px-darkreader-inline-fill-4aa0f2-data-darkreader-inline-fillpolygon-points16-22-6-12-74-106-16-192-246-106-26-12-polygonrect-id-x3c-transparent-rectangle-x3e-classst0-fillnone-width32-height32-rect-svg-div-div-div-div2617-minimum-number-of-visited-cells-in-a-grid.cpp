@@ -62,6 +62,9 @@ public:
                 }
                 else {
                     dp[i][j] = INT_MAX;
+                    if (grid[i][j] == 0) {
+                        continue;
+                    }
                     int right_reward = vers[i].get_min(1, 0, m - 1, j + 1, min(grid[i][j] + j, m - 1));
                     int down_reward = hors[j].get_min(1, 0, n - 1, i + 1, min(grid[i][j] + i, n - 1));
                     if (right_reward == INT_MAX and down_reward == INT_MAX) {
@@ -69,7 +72,6 @@ public:
                     }
                     dp[i][j] = min(dp[i][j], 1 + min(right_reward, down_reward));
                 }
-                
                 vers[i].update(1, 0, m - 1, j, dp[i][j]);
                 hors[j].update(1, 0, n - 1, i, dp[i][j]);
             }
