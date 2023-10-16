@@ -1,5 +1,5 @@
 const int MOD = 1e9 + 7;
-int memo[501][1001];
+int memo[501][501];
 
 class Solution {
 public:
@@ -7,8 +7,8 @@ public:
         if (i == steps) {
             return j == 0;
         }
-        if (memo[i][j + 500] != -1) {
-            return memo[i][j + 500];
+        if (memo[i][j] != -1) {
+            return memo[i][j];
         }
         int ans = dp(i + 1, j, steps, n) % MOD;
         if (j - 1 >= 0) {
@@ -17,7 +17,7 @@ public:
         if (j + 1 < n) {
             ans = (ans + dp(i + 1, j + 1, steps, n)) % MOD;
         }
-        return memo[i][j + 500] = ans;
+        return memo[i][j] = ans;
     }
     
     int numWays(int steps, int arrLen) {
