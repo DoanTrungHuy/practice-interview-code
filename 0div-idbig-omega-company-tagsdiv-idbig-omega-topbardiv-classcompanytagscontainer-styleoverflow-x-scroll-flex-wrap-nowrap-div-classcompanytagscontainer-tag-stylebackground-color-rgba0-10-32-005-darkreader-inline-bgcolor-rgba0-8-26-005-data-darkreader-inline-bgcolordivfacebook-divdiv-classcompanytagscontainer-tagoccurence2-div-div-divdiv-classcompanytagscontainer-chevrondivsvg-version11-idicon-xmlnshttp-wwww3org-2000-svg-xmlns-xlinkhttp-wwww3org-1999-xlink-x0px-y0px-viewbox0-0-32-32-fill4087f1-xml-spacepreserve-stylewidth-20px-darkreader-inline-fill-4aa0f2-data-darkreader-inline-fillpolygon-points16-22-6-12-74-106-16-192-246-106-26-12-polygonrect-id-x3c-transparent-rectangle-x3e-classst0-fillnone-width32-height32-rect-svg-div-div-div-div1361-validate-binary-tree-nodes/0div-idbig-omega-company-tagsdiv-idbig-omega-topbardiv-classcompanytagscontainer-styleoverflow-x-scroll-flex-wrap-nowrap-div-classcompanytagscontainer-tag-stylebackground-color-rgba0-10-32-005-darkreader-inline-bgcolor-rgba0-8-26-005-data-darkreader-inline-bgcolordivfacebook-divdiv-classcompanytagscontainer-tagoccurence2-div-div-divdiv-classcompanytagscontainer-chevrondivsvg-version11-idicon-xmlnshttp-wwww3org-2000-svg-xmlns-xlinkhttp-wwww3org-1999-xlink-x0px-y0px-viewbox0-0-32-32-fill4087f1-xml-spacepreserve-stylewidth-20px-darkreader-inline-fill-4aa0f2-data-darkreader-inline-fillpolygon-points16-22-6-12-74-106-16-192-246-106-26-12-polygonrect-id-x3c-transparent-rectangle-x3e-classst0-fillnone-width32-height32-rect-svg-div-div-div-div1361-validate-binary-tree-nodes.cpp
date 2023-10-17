@@ -7,14 +7,17 @@ public:
                 has_node.insert(child);
             }
         }
+        
         for (int child : rightChild) {
             if (child != -1) {
                 has_node.insert(child);
             }
         }
+        
         if (has_node.size() == n) {
             return false;
         }
+        
         int root = 0;
         for (int i = 0; i < n; ++i) {
             if (!has_node.count(i)) {
@@ -22,6 +25,7 @@ public:
                 break;
             }
         }
+        
         queue<int> mq;
         unordered_set<int> visited;
         mq.push(root);
