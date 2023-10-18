@@ -3,7 +3,7 @@ int memo[MN];
 
 class Solution {
 private:
-    vector<int> max_prev, time;
+    vector<int> time;
     vector<vector<int>> adj;
 
 public:
@@ -11,10 +11,11 @@ public:
         if (memo[u] != -1) {
             return memo[u];
         }
+        int ans = 0;
         for (int v : adj[u]) {
-            max_prev[u] = max(max_prev[u], dfs(v));
+            ans = max(ans, dfs(v));
         }
-        max_prev[u] = memo[u] = max_prev[u] + time[u];
+        memo[u] = ans + time[u];
         return memo[u];
     }
 
@@ -30,12 +31,10 @@ public:
             adj[v].push_back(u);
         }
         memset(memo, -1, sizeof(memo));
-        max_prev.resize(n);
         int res = 0;
         for (int i = 0; i < n; ++i) {
             if (indegree[i] == 0) {
-                dfs(i);
-                res = max(res, max_prev[i]);
+                res = max(res, dfs(i));
             }
         }
         return res;
