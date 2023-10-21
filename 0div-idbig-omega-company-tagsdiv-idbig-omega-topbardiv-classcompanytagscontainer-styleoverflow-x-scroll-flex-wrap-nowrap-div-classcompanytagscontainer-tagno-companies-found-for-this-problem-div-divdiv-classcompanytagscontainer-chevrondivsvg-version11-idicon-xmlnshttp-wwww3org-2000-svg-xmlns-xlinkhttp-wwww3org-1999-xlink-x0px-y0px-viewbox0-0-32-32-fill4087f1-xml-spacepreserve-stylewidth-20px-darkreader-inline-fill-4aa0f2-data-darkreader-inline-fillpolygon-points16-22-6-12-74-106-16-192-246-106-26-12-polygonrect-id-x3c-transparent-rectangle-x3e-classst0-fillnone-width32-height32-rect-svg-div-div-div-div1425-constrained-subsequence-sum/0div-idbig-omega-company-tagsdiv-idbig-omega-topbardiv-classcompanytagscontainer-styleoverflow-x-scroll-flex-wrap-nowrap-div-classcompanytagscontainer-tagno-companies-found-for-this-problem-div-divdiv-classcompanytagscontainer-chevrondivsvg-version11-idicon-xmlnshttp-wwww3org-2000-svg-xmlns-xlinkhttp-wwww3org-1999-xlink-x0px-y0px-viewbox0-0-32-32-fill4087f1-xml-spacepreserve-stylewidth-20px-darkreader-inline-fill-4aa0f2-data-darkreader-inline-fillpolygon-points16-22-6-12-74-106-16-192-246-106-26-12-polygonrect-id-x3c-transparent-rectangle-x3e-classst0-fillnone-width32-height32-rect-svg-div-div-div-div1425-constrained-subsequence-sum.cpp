@@ -44,13 +44,18 @@ public:
         const int n = nums.size();
         SegmentTree st(n);
         int max_sseq = INT_MIN;
+        
         for (int i = 0; i < n; ++i) {
             int max_ps = 0;
             max_ps = st.get_max(1, 0, n - 1, max(0, i - k), i);
             max_ps = max_ps == INT_MIN ? 0 : max_ps;
-            st.update(1, 0, n - 1, i, max(max_ps + nums[i], nums[i]));
-            max_sseq = max(max_sseq, max(max_ps + nums[i], nums[i]));
+            
+            int value = max(max_ps + nums[i], nums[i]);
+            
+            st.update(1, 0, n - 1, i, value);
+            max_sseq = max(max_sseq, value);
         }
+        
         return max_sseq;
     }
 };
