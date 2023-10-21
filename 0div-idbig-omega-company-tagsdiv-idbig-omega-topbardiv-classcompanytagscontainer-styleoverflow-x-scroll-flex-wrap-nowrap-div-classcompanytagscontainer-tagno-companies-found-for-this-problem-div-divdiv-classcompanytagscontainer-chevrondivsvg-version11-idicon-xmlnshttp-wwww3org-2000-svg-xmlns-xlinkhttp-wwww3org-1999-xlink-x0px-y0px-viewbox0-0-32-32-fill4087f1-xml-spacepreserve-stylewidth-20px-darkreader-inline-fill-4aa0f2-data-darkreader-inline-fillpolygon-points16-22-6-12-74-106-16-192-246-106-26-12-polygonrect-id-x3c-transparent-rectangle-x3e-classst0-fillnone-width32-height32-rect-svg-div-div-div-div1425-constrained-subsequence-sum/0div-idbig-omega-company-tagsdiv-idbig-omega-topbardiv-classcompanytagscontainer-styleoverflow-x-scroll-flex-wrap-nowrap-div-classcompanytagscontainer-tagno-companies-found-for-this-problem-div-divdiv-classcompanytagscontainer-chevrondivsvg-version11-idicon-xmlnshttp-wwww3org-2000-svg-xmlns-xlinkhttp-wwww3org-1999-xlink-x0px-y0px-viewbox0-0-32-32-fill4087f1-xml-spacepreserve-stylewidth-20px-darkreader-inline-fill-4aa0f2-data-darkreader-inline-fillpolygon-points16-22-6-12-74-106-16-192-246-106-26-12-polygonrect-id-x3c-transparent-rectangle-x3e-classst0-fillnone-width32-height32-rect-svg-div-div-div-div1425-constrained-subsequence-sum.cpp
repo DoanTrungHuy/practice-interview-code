@@ -12,10 +12,7 @@ public:
             return;
         }
         if (left == right) {
-            if (tree[node] == INT_MIN) {
-                tree[node] = 0;
-            }
-            tree[node] += value;
+            tree[node] = value;
             return;
         }
         int mid = (left + right) >> 1;
