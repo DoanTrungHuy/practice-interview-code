@@ -8,7 +8,7 @@ private:
     
 public:
     
-    int dfs(int i, int s) {
+    int dfs(int s) {
         if (dp.count(s)) {
             return dp[s];
         }
@@ -18,7 +18,7 @@ public:
                 continue;
             }
             if (us.count(s / nums[j])) {
-                ans = (ans + (1LL * dfs(j, s / nums[j]) * dfs(j, nums[j])) % MOD) % MOD;
+                ans = (ans + (1LL * dfs(s / nums[j]) * dfs(nums[j])) % MOD) % MOD;
             }
         }
         return dp[s] = ans;
@@ -35,7 +35,7 @@ public:
         int ans = 0;
         
         for (int i = 0; i < n; ++i) {
-            ans = (ans + dfs(i, nums[i])) % MOD;
+            ans = (ans + dfs(nums[i])) % MOD;
         }
         
         return ans;
