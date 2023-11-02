@@ -38,7 +38,7 @@ public:
         if (!root) {
             return;
         }
-        if (cnt[root] != 0 and memo[root] / cnt[root] == root->val) {
+        if (memo[root] / cnt[root] == root->val) {
             ans++;
         }
         dfs(root->left);
