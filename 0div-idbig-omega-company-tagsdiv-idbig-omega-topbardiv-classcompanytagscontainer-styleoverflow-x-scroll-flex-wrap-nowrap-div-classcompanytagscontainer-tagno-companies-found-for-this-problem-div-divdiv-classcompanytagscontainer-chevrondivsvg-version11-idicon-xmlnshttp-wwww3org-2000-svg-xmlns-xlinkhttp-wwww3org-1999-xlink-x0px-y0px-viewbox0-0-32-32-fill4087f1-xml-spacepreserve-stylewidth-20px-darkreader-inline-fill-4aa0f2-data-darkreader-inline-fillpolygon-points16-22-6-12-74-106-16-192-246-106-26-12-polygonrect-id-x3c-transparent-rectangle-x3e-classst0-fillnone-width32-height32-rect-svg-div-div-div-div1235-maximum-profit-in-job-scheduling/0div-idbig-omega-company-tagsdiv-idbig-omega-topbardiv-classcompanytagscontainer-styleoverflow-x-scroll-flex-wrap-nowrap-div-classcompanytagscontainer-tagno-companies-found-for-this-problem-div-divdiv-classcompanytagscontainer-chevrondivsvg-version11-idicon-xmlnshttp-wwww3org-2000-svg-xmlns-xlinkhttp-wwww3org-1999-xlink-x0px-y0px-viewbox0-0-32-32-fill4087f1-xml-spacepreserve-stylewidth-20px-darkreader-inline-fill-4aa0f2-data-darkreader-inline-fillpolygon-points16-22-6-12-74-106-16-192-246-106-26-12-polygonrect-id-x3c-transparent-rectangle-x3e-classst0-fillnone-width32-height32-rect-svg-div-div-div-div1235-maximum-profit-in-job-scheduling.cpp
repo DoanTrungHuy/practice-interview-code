@@ -57,14 +57,14 @@ public:
              return get<1>(a) < get<1>(b);
         });
         
-        int dp[MAXN] = {};
-        
         for (int i = 0; i < n; ++i) {
             auto [s, e, w] = events[i];
             s = compress[s];
             e = compress[e];
-            dp[e] = max(dp[e], get(1, 1, MAXN, 1, s) + w);
-            update(1, 1, MAXN, e, dp[e]);
+            update(1, 1, MAXN, e, max({
+                get(1, 1, MAXN, e, e),
+                get(1, 1, MAXN, 1, s) + w
+            }));
         }
         
         return get(1, 1, MAXN, 1, MAXN);
