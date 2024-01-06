@@ -31,7 +31,7 @@ public:
     }
     
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
-        const int MAXN = 1e6;
+        const int MAXN = 1e5;
         tree.resize(MAXN*4, 0);
         int n = startTime.size();
         using tp = tuple<int, int, int>;
