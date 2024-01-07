@@ -7,7 +7,7 @@ public:
         
         for (int i = 1; i < n; ++i) {
             for (int j = 0; j < i; ++j) {
-                long long int diff = (long long)nums[i] - nums[j];
+                long long diff = (long long)nums[i] - nums[j];
                 ans += dp[j][diff];
                 dp[i][diff] += dp[j][diff] + 1;
             }
