@@ -55,10 +55,7 @@ public:
     }
     
     long long dad(int left, int right) {
-        if (left == right) {
-            return arr[left];
-        }
-        if (left > right or right < 0 or left >= n) {
+        if (left > right) {
             return 0;
         }
         int idx = get(1, 0, n - 1, left, right);
