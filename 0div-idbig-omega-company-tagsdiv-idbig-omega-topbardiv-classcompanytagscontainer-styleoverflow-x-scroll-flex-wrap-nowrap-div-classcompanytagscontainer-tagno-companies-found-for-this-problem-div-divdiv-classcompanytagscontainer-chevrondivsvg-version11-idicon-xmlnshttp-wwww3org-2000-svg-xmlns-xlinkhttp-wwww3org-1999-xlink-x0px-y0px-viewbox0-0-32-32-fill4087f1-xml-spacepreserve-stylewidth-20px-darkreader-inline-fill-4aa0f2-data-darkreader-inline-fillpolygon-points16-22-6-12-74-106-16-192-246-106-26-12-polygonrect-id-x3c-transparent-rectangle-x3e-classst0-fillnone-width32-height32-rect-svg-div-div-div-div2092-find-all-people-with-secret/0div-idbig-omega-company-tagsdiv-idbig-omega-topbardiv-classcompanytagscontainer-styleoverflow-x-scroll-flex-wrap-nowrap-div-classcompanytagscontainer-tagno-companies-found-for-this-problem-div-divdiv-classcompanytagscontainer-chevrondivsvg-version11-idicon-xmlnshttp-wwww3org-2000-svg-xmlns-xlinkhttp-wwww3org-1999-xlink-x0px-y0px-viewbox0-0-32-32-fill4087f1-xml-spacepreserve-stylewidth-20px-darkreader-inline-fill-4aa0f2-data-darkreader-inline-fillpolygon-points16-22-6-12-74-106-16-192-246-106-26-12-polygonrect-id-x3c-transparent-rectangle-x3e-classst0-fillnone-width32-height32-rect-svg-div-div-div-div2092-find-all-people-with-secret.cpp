@@ -45,10 +45,8 @@ public:
                 _union(u, v);
             }
             for (auto [u, v] : sav) {
-                if (find(u) != find(0)) {
+                if (find(u) != find(0) or find(v) != find(0)) {
                     parent[u] = u;
-                }
-                if (find(v) != find(0)) {
                     parent[v] = v;
                 }
             }
