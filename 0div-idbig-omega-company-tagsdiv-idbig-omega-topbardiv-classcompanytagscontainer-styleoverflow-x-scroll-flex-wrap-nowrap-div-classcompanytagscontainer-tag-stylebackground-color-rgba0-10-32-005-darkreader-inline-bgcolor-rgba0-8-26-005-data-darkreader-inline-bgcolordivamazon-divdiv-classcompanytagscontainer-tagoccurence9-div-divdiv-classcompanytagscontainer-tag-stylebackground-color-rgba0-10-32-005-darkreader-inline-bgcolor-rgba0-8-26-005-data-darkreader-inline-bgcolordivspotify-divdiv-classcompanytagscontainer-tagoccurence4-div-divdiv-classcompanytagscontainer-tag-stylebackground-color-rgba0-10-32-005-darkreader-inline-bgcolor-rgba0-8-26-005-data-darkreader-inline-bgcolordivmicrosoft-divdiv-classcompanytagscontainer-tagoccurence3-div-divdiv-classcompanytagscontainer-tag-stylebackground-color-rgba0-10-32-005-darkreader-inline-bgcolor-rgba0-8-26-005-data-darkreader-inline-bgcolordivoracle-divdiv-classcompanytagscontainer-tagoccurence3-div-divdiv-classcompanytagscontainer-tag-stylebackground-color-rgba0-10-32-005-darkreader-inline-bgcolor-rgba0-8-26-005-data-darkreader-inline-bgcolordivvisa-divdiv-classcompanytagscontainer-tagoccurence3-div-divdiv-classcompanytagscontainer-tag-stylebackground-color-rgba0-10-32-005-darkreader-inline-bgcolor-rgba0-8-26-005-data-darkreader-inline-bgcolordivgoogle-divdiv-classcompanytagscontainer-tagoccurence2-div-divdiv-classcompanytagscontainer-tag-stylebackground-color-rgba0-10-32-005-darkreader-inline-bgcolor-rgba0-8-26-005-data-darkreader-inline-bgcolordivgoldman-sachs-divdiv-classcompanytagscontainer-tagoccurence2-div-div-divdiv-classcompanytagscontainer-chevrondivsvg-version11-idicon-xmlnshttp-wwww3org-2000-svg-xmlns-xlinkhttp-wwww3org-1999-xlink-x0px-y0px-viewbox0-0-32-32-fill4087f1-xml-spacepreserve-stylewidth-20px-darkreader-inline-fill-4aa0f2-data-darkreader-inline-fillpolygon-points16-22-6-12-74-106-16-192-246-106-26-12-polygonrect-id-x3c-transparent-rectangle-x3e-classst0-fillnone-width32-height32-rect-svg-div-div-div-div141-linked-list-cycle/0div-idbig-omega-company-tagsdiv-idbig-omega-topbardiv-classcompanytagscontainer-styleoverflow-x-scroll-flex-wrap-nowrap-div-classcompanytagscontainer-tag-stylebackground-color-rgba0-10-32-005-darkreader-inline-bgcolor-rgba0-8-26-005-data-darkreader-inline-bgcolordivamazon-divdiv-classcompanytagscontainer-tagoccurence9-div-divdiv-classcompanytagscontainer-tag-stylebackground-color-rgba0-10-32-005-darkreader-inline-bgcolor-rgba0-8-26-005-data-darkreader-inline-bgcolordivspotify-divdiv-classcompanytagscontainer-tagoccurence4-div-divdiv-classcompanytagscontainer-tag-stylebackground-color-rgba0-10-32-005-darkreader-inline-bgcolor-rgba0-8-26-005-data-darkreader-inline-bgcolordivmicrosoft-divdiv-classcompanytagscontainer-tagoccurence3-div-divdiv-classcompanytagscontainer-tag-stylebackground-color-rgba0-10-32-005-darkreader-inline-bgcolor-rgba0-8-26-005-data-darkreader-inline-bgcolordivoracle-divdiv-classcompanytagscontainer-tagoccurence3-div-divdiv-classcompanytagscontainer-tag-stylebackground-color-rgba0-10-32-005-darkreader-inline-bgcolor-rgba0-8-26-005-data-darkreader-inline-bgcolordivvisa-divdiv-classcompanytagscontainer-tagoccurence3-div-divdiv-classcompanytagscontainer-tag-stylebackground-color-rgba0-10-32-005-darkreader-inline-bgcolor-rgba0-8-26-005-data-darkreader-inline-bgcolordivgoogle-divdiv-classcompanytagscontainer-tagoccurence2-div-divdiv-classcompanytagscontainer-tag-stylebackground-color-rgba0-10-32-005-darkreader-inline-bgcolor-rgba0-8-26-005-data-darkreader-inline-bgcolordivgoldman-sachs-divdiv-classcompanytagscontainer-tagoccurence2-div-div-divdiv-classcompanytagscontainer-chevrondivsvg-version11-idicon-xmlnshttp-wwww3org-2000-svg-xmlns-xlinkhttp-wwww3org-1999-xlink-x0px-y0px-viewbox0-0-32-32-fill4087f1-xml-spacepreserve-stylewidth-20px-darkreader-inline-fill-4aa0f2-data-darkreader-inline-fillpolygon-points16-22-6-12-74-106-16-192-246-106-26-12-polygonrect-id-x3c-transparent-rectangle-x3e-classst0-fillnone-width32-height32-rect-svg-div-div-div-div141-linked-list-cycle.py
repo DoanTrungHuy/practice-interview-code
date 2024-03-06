@@ -8,10 +8,14 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         if not head:
             return False
-        slow, fast = head, head
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-            if slow == fast:
+        
+        turtle = head
+        rabit = head
+        
+        while rabit != None and rabit.next != None:
+            turtle = turtle.next
+            rabit = rabit.next.next
+            if turtle == rabit:
                 return True
+            
         return False
