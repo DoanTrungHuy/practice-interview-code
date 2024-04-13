@@ -55,7 +55,7 @@ public:
         int n = matrix.size();
         int m = matrix[0].size();
         heights.resize(m);
-        tree.resize(4 * (m + 1));
+        tree.resize(4 * m);
         int max_area = 0;
 
         for (int i = 0; i < n; ++i) {
