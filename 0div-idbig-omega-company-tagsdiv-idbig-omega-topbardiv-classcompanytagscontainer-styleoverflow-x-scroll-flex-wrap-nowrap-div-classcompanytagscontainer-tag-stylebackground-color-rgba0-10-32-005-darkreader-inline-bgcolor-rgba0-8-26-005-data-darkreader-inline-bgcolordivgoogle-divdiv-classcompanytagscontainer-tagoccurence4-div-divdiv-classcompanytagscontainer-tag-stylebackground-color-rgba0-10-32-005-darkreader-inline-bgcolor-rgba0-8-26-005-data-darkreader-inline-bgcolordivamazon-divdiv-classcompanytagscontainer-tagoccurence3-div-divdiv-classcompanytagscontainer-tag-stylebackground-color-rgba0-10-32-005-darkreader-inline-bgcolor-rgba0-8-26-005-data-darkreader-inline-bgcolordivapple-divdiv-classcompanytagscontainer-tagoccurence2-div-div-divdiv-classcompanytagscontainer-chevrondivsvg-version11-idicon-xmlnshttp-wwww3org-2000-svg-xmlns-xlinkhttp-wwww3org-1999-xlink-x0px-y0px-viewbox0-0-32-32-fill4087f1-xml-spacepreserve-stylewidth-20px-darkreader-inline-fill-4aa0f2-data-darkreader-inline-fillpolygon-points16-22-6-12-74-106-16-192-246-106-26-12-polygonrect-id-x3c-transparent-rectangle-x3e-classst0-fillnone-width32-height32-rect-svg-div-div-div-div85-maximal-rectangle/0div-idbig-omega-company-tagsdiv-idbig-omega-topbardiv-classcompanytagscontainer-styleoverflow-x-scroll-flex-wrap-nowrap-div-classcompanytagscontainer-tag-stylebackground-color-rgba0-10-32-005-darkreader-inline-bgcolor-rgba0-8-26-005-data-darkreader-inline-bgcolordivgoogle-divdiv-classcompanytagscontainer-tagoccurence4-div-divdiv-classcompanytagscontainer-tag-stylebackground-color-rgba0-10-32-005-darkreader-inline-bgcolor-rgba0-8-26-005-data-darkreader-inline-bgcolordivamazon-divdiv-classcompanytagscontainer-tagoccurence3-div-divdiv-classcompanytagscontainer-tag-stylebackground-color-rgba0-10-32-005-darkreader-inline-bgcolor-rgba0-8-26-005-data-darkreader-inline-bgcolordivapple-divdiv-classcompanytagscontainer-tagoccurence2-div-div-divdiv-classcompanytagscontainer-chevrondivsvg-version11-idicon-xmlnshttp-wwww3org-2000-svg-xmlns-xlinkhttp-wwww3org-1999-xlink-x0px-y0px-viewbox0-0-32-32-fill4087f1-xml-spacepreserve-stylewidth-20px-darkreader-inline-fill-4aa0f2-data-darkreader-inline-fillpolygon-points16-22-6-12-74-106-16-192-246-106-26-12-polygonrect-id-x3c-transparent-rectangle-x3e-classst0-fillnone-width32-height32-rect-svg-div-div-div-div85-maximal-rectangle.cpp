@@ -23,10 +23,10 @@ public:
     }
 
     int get_index(int node, int left, int right, int q_left, int q_right) {
-        if (q_left > right || left > q_right) {
+        if (q_left > right or left > q_right) {
             return -1;
         }
-        if (q_left <= left && right <= q_right) {
+        if (q_left <= left and right <= q_right) {
             return tree[node];
         }
         int mid = (left + right) / 2;
