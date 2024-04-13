@@ -1,13 +1,10 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
 class Solution {
 private:
     vector<int> tree, heights;
 
+public:
     void update(int node, int left, int right, int index) {
-        if (index < left || index > right) {
+        if (index < left or index > right) {
             return;
         }
         if (left == right) {
@@ -35,25 +32,27 @@ private:
         int mid = (left + right) / 2;
         int left_node = get_index(node*2, left, mid, q_left, q_right);
         int right_node = get_index(node*2 + 1, mid + 1, right, q_left, q_right);
-        if (left_node == -1) return right_node;
-        if (right_node == -1) return left_node;
+        if (left_node == -1) {
+            return right_node;
+        }
+        if (right_node == -1) {
+            return left_node;
+        }
         return (heights[left_node] < heights[right_node]) ? left_node : right_node;
     }
 
-    int calculateMaxArea(int left, int right) {
+    int helper(int left, int right) {
         if (left > right) {
             return 0;
         }
         int mid = get_index(1, 0, heights.size() - 1, left, right);
         int area = heights[mid] * (right - left + 1);
-        int left_area = calculateMaxArea(left, mid - 1);
-        int right_area = calculateMaxArea(mid + 1, right);
+        int left_area = helper(left, mid - 1);
+        int right_area = helper(mid + 1, right);
         return max(area, max(left_area, right_area));
     }
-
-public:
     int maximalRectangle(vector<vector<char>>& matrix) {
-        if (matrix.empty() || matrix[0].empty()) {
+        if (matrix.empty() or matrix[0].empty()) {
             return 0;
         }
         int n = matrix.size();
@@ -67,7 +66,7 @@ public:
                 heights[j] = (matrix[i][j] == '0') ? 0 : heights[j] + 1;
                 update(1, 0, m - 1, j);
             }
-            max_area = max(max_area, calculateMaxArea(0, m - 1));
+            max_area = max(max_area, helper(0, m - 1));
         }
 
         heights.clear();
