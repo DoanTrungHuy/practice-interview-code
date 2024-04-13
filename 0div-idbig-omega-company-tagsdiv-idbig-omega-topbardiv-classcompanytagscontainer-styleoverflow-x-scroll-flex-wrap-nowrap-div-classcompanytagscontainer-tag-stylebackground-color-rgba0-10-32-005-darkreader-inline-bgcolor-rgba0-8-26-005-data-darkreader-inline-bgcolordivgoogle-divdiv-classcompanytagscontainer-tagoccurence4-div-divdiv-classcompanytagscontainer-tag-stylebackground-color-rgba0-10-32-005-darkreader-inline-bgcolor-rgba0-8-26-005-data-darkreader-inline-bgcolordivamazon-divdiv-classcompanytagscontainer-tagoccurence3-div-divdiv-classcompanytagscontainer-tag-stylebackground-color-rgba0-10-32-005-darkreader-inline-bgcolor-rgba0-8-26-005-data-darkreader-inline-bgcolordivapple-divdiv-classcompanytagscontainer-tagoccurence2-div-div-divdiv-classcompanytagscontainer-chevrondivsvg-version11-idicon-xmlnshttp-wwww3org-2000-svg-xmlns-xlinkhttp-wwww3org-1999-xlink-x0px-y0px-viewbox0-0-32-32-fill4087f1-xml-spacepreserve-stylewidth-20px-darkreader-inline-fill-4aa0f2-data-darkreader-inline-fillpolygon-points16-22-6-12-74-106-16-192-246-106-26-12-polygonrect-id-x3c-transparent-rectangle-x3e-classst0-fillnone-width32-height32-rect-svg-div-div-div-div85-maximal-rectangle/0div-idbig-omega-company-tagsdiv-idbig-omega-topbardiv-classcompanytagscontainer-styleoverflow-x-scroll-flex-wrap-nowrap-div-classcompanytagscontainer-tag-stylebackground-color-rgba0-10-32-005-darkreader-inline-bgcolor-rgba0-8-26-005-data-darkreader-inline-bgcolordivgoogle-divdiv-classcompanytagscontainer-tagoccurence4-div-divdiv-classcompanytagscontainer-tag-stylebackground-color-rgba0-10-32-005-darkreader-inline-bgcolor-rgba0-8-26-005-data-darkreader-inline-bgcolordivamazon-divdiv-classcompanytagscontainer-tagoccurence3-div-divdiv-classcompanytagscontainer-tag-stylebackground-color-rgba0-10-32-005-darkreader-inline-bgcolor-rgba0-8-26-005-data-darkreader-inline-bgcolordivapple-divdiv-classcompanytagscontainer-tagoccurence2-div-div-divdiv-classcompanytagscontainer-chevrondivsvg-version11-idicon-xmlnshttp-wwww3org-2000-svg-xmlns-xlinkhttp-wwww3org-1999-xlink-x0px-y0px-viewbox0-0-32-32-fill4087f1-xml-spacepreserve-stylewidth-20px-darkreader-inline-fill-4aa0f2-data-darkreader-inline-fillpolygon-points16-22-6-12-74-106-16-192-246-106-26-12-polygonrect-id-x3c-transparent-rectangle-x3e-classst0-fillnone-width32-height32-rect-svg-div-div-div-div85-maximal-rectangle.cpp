@@ -52,9 +52,6 @@ public:
         return max(area, max(left_area, right_area));
     }
     int maximalRectangle(vector<vector<char>>& matrix) {
-        if (matrix.empty() or matrix[0].empty()) {
-            return 0;
-        }
         int n = matrix.size();
         int m = matrix[0].size();
         heights.resize(m);
