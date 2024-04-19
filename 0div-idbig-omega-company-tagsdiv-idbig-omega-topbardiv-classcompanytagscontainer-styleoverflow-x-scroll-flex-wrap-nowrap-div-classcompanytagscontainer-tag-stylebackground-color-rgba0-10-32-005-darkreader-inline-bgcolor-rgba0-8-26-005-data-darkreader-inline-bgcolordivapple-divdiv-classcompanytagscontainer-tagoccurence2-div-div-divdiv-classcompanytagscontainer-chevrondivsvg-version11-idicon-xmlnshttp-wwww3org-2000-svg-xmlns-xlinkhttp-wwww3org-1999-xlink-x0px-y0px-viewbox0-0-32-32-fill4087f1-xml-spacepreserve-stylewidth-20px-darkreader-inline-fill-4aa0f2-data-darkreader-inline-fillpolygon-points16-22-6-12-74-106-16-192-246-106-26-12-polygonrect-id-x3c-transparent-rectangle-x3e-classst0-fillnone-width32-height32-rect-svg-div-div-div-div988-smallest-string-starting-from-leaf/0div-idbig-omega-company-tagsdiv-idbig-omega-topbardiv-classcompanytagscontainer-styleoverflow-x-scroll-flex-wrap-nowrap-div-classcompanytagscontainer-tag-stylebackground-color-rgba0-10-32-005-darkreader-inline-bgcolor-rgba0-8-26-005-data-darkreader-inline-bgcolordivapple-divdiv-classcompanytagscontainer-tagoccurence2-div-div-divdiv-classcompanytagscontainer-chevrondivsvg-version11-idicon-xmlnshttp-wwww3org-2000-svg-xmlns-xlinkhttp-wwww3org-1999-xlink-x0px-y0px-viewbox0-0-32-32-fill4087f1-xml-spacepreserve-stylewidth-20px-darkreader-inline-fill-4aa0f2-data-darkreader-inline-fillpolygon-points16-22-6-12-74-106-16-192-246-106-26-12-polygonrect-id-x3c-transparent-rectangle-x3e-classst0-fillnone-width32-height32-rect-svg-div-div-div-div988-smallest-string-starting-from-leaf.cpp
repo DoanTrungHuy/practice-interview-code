@@ -22,7 +22,6 @@ public:
             tmp.push_back(root->val + 'a');
             reverse(tmp.begin(), tmp.end());
             ans = min(ans, tmp);
-            tmp.pop_back();
             return;
         }
         dfs(root->left, tmp + char(root->val + 'a'), ans);
