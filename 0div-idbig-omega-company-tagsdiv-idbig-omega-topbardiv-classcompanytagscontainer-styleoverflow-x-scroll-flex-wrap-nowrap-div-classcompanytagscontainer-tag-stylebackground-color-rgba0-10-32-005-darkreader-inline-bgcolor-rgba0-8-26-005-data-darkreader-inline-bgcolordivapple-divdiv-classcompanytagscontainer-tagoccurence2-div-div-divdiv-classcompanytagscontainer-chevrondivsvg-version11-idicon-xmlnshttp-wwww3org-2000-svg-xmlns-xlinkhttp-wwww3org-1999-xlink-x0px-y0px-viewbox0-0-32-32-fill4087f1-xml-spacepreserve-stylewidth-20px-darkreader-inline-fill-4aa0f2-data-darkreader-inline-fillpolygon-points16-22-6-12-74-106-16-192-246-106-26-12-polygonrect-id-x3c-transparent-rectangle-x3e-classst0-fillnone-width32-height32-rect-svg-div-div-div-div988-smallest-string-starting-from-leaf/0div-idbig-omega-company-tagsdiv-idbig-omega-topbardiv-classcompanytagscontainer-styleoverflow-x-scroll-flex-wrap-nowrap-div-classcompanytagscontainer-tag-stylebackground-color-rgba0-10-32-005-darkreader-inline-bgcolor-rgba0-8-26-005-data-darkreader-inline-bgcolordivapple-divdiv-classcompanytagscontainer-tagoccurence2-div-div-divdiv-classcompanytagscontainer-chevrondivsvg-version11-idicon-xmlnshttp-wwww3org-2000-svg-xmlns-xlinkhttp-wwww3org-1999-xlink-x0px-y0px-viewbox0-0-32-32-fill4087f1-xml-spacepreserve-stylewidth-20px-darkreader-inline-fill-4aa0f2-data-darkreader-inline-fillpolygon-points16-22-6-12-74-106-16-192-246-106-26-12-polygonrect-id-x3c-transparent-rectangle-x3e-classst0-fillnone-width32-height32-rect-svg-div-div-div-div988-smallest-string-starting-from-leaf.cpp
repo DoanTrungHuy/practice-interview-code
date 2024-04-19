@@ -22,6 +22,7 @@ public:
             tmp.push_back(root->val + 'a');
             reverse(tmp.begin(), tmp.end());
             ans = min(ans, tmp);
+            reverse(tmp.begin(), tmp.end());
             tmp.pop_back();
             return;
         }
