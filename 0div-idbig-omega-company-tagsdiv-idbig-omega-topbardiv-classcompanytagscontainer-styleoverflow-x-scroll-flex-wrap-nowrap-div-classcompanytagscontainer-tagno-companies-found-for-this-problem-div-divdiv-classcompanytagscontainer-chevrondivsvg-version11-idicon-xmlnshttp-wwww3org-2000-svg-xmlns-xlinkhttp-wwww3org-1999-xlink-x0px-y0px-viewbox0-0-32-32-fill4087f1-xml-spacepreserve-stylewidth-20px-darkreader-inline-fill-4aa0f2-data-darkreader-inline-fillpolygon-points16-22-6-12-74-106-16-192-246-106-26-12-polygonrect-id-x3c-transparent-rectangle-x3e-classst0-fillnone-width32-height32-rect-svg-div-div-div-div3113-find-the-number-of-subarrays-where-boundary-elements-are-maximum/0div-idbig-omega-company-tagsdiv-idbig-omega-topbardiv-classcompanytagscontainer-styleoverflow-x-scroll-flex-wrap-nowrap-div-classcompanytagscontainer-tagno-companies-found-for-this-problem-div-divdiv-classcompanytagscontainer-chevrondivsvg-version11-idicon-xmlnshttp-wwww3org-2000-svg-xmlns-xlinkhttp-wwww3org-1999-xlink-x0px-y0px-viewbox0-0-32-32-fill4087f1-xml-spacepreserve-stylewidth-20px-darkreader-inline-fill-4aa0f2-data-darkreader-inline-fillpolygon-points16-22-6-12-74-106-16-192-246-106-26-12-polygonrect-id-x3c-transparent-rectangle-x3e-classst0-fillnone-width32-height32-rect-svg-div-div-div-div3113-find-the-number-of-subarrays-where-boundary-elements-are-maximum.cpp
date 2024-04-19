@@ -46,6 +46,7 @@ public:
             long long cnt = 1;
             int prev_idx = vec_num[0];
             const int m = vec_num.size();
+            ans += m;
             
             for (int i = 1; i < m; ++i) {
                 if (get_max(1, 0, n - 1, prev_idx, vec_num[i]) == num) {
@@ -53,14 +54,12 @@ public:
                 }
                 else {
                     ans += cnt * (cnt - 1) / 2;
-                    ans += cnt;
                     cnt = 1;
                     prev_idx = vec_num[i];
                 }
             }
             
             ans += cnt * (cnt - 1) / 2;
-            ans += cnt;
         }
         
         return ans;
