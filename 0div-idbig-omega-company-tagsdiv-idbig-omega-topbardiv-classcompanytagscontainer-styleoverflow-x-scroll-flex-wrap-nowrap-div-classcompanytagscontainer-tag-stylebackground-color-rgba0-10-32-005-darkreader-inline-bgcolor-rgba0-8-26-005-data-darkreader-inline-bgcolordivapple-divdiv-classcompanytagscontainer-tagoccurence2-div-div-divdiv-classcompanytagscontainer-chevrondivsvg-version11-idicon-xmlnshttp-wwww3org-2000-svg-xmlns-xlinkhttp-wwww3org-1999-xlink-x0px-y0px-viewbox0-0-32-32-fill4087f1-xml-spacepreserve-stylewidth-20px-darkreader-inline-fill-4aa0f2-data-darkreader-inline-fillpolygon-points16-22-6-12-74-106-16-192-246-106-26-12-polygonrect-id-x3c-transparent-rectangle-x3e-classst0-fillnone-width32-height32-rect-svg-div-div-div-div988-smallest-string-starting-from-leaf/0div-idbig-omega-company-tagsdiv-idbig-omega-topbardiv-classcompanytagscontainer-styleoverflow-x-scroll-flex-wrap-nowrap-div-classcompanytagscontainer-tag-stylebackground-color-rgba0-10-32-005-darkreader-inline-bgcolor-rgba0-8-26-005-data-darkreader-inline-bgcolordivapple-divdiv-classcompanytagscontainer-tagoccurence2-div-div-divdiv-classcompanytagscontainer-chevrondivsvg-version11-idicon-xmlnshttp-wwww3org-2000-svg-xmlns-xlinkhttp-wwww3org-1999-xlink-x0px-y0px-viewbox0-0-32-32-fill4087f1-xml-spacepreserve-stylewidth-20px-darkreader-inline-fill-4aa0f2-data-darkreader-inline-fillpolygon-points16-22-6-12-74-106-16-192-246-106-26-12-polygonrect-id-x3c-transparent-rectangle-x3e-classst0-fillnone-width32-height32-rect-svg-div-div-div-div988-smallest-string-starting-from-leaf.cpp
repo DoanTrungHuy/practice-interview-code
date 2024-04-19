@@ -10,9 +10,6 @@
  * };
  */
 class Solution {
-private:
-    TreeNode* tmp_root;
-    
 public:
     void dfs(TreeNode* root, string tmp, string &ans) {
         if (!root) {
@@ -29,7 +26,6 @@ public:
     }
     
     string smallestFromLeaf(TreeNode* root) {
-        tmp_root = root;
         string ans;
         ans += char(255);
         dfs(root, "", ans);
