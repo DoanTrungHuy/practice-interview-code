@@ -42,8 +42,6 @@ public:
         
         long long ans = 0;
         
-        // 2 5 2 1 2 5 2
-        
         for (auto &[num, vec_num] : um) {
             long long cnt = 1;
             int prev_idx = vec_num[0];
@@ -60,6 +58,7 @@ public:
                     prev_idx = vec_num[i];
                 }
             }
+            
             ans += cnt * (cnt - 1) / 2;
             ans += cnt;
         }
