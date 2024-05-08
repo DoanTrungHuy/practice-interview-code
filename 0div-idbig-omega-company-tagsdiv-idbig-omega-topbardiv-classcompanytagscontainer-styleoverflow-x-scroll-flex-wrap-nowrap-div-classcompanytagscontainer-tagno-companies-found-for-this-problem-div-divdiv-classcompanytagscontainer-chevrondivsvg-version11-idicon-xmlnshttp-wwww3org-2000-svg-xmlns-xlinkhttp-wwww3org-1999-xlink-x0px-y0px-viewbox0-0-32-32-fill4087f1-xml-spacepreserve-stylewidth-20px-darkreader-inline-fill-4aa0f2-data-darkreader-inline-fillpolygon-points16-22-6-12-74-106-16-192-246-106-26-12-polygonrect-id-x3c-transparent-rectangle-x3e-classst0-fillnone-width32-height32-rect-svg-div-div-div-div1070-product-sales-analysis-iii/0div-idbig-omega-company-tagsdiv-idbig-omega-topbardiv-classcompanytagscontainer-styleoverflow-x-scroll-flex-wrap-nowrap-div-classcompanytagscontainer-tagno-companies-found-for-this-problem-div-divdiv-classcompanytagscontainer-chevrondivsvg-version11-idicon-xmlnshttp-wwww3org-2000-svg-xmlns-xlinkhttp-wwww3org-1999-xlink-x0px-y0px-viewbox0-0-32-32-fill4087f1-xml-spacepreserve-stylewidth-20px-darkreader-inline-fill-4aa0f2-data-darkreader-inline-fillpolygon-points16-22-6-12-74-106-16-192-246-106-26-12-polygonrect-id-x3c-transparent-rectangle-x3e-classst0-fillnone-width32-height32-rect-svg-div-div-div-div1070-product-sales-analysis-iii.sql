@@ -2,8 +2,8 @@
 
 WITH rank_table_sale AS 
 (
-    SELECT *, (RANK() OVER(PARTITION BY product_id ORDER BY year ASC)) AS rnk_year
-   FROM Sales 
+    SELECT *, (DENSE_RANK() OVER(PARTITION BY product_id ORDER BY year ASC)) AS rnk_year
+    FROM Sales 
 )
 
 SELECT 
