@@ -14,7 +14,7 @@ SELECT p2.product_id,
 (CASE WHEN p1.product_id IS NULL THEN 10 ELSE p1.price END) AS price
 FROM cte p1
 RIGHT JOIN (
-    SELECT product_id, 10 FROM Products
+    SELECT product_id FROM Products
     GROUP BY product_id
 ) AS p2
 ON p1.product_id = p2.product_id
