@@ -14,19 +14,20 @@ FROM
         Accounts 
     GROUP BY category
 
-    UNION ALL
+    UNION
     SELECT 
         'Low Salary' AS category,
         0 AS accounts_count
     
-    UNION ALL
+    UNION
     SELECT 
         'Average Salary' AS category,
         0 AS accounts_count
     
-    UNION ALL
+    UNION
     SELECT 
         'High Salary' AS category,
         0 AS accounts_count
+    
 ) AS grouped_categories
 GROUP BY category;
