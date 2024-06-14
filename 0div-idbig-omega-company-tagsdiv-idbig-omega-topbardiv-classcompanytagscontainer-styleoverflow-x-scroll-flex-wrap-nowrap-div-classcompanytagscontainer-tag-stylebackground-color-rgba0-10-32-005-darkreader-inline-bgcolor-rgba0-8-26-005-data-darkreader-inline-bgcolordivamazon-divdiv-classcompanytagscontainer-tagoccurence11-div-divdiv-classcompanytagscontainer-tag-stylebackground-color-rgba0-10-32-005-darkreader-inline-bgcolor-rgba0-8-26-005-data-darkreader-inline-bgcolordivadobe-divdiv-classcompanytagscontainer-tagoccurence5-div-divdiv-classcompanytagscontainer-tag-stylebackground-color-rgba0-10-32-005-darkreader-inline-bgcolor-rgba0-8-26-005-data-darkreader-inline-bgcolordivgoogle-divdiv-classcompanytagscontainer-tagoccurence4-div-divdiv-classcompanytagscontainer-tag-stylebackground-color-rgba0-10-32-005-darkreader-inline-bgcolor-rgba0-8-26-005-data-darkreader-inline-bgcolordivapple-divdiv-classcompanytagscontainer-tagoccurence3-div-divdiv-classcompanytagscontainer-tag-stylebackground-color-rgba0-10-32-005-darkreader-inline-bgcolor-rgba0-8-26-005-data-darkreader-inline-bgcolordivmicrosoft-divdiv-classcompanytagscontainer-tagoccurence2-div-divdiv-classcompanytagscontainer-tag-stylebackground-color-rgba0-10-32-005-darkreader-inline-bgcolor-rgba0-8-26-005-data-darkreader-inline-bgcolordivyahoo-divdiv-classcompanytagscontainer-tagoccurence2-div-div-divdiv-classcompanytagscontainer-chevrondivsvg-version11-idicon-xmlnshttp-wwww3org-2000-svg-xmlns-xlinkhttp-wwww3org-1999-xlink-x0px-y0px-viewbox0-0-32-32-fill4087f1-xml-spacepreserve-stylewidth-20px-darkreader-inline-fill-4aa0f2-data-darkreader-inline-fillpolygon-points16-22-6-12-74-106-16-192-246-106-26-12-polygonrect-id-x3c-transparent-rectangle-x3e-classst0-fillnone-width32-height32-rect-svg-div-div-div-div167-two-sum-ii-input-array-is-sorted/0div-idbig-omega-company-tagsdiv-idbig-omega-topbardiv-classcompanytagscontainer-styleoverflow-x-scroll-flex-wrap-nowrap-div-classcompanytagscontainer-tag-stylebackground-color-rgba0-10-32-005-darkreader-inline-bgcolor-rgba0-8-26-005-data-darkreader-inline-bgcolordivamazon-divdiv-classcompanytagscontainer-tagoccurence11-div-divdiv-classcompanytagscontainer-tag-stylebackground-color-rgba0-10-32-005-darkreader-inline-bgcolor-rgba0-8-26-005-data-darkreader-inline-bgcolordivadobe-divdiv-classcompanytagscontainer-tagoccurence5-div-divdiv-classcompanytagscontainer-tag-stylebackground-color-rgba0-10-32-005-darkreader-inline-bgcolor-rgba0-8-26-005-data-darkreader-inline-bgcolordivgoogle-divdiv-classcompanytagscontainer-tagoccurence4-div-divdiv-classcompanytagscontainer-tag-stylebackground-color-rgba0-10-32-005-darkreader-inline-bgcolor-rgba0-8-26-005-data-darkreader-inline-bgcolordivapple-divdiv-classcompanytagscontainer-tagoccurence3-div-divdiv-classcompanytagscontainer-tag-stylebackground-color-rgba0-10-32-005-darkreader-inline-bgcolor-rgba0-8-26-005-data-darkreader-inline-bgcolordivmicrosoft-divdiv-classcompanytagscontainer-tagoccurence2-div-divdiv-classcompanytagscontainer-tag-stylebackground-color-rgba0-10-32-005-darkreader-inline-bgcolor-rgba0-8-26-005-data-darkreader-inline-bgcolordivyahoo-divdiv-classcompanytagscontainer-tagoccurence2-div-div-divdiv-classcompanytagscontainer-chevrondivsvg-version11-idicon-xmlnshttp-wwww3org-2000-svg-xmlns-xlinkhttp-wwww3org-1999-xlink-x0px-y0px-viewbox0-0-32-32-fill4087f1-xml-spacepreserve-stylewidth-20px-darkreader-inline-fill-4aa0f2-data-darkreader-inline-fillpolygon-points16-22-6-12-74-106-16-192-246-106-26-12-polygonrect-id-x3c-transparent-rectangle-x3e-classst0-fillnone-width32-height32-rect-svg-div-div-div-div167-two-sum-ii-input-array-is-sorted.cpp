@@ -5,19 +5,29 @@ public:
         // two pointer
         // binary search
         
-        int left = 0;
-        int right = numbers.size() - 1;
+        const int n = numbers.size();
         
-        while (left <= right) {
-            int val = numbers[left] + numbers[right];
-            if (val == target) {
-                return {left + 1, right + 1};
-            }
-            else if (val < target) {
-                left++;
-            }
-            else {
-                right--;
+        for (int i = 0; i < n; ++i) {
+            // num1 + num2 = target
+            // num1 < num2
+            
+            int num2 = target - numbers[i];
+            
+            int l = i + 1;
+            int r = n - 1;
+            
+            while (l <= r) {
+                int m = (l + r) / 2;
+                
+                if (numbers[m] == num2) {
+                    return {i + 1, m + 1};
+                }
+                else if (numbers[m] < num2) {
+                    l = m + 1;
+                }
+                else {
+                    r = m - 1;
+                }
             }
         }
         
