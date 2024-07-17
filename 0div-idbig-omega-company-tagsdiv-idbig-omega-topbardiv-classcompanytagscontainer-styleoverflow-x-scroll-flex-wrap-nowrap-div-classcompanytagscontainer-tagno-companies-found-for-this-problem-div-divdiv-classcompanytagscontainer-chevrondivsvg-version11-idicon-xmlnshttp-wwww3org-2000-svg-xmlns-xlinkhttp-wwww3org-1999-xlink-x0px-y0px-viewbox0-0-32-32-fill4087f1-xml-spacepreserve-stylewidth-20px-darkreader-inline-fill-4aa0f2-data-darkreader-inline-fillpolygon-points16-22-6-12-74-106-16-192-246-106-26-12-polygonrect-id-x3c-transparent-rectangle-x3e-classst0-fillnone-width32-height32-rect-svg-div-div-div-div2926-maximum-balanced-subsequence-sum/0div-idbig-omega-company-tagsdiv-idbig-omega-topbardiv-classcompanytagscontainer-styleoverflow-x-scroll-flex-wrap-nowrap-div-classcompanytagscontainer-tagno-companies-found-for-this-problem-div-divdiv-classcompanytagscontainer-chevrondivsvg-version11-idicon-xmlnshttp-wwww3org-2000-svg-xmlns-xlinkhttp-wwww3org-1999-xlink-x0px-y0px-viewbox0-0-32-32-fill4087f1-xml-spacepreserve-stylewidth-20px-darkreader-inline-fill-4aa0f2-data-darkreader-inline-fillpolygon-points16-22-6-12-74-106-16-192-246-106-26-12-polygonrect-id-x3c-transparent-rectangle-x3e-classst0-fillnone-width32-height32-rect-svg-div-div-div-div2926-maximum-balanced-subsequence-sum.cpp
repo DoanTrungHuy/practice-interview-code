@@ -43,7 +43,9 @@ public:
     long long maxBalancedSubsequenceSum(vector<int>& nums) {
         // nums[i] - nums[j] >= i - j 
 
-        // nums[i] - i >= nums[j] - j
+        // nums[i] - i >= nums[j] - j  -----  CON
+        // j < i
+        // nums[i] + max(CON) -> prev sum max (1, compress[nums[i] - i])
         
         const int n = nums.size();
         map<int, int> compress;
