@@ -1,5 +1,5 @@
 struct DSU {
-    vector<int> parent;
+    vector<int> parent, size;
     
     DSU() {
         
@@ -7,8 +7,11 @@ struct DSU {
     
     DSU(int n) {
         parent.resize(n + 1);
+        size.resize(n + 1);
+        
         for (int i = 0; i <= n; ++i) {
             parent[i] = i;
+            size[i] = 1;
         }
     }
     
@@ -27,7 +30,12 @@ struct DSU {
             return false;
         }
         
-        parent[u] = v;
+        if (size[u] < size[v]) {
+            swap(u, v);
+        }
+        
+        parent[v] = u;
+        size[u] += size[v];
         
         return true;
     }
