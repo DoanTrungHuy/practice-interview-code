@@ -40,7 +40,7 @@ public:
             pq.push({nums[i], i});
         }
         
-        unordered_set<int> us;
+        set<int> us;
         
         while (!pq.empty()) {
             auto [num, i] = pq.top();
