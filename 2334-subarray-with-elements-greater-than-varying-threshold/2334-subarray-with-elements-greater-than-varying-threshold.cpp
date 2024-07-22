@@ -14,6 +14,14 @@ public:
         u = find(u);
         v = find(v);
         
+        if (u == v) {
+            return;
+        }
+        
+        if (u > v) {
+            swap(u, v);
+        }
+        
         parent[u] = v;
         size[v] += size[u];
     }
