@@ -1,74 +1,110 @@
-class Solution {
-    int n;
-    vector<vector<int>> adj;
-    vector<int> val;
-    int LCA[1010][22];
-    int level[1000];
+const int MN = 1000, LOG_MN = 10;
 
-    int dfs(vector<int>& A, int u, int par, int lvl = 0) {
-        val[u] = A[u];
-        level[u] = lvl;
-        LCA[u][0] = par;
-        for(auto& v : adj[u]) {
-            if(v == par) continue;
-            val[u] ^= dfs(A, v, u, lvl + 1);
-        }
-        return val[u];
-    }
-    void init() {
-        for(int j = 0; j < 21; j++) {
-            for(int i = 0; i < n; i++) {
-                if(LCA[i][j] == -1) continue;
-                LCA[i][j+1] = LCA[LCA[i][j]][j];
-            }
-        }
-    }
-    int query(int u, int v) {
-        if(level[u] < level[v]) swap(u, v);
-        int diff = level[u] - level[v];
-        for(int i = 0; diff; i++, diff/=2) {
-            if(diff&1) u = LCA[u][i];
-        }
-        if(u != v) {
-            for(int i = 21; i >= 0; i--) {
-                if(LCA[u][i] == LCA[v][i]) continue;
-                u = LCA[u][i];
-                v = LCA[v][i];
-            }
-            u = LCA[u][0];
-        }
-        return u;
-    }
+int rmq[MN][LOG_MN + 1];
+int depth[MN], sum[MN];
+
+class Solution {
+private:
+    vector<int> nums;
+    vector<vector<int>> adj;
+    int n;
+    
 public:
-    int minimumScore(vector<int>& A, vector<vector<int>>& edges) {
-        n = A.size();
-        adj = vector<vector<int>>(n);
-        val = vector<int>(n);
-        memset(LCA, -1, sizeof LCA);
-        memset(level, -1, sizeof level);
-        for(auto& e : edges) {
-            int u = e[0], v = e[1];
+    void dfs(int u, int p) {
+        sum[u] = nums[u];
+        for (int v : adj[u]) {
+            if (v == p) {
+                continue;
+            }
+            rmq[v][0] = u;
+            depth[v] = depth[u] + 1;
+            dfs(v, u);
+            sum[u] ^= sum[v];
+        }    
+    }
+    
+    int lca(int u, int v) {
+        if (depth[u] < depth[v]) {
+            swap(u, v);
+        }
+        int diff = depth[u] - depth[v];
+        for (int i = LOG_MN; i >= 0; --i) {
+            if ((diff >> i) & 1) {
+                u = rmq[u][i];
+            }
+        }
+        if (u == v) {
+            return u;
+        }
+        for (int i = LOG_MN; i >= 0; --i) {
+            if (rmq[u][i] != rmq[v][i]) {
+                u = rmq[u][i];
+                v = rmq[v][i];
+            }
+        }
+        return rmq[u][0];
+    }
+    
+    int minimumScore(vector<int>& nums, vector<vector<int>>& edges) {
+        this->n = nums.size();
+        this->nums = nums;
+        adj.resize(n);
+        memset(rmq, -1, sizeof(rmq));
+        
+        for (auto e : edges) {
+            int u = e[0];
+            int v = e[1];
+            
             adj[u].push_back(v);
             adj[v].push_back(u);
         }
-        dfs(A,0,-1);
-        init();
-        int res = INT_MAX;
-        for(int i = 1; i < n; i++) {
-            for(int j = i + 1; j < n; j++) {
-                int lca = query(i,j);
-                int a, b, c;
-                if(lca == i) {
-                    a = val[0] ^ val[i], b = val[i] ^ val[j], c = val[j]; 
-                } else if(lca == j) {
-                    a = val[0] ^ val[j], b = val[j] ^ val[i], c = val[i];
-                } else {
-                    a = val[0] ^ val[i] ^ val[j], b = val[i], c = val[j];
+        
+        dfs(0, -1);
+        
+        for (int lift = 1; lift <= LOG_MN; ++lift) {
+            for (int node = 0; node < n; ++node) {
+                if (rmq[node][lift - 1] != -1) {
+                    rmq[node][lift] = rmq[rmq[node][lift - 1]][lift - 1];
                 }
-                int ma = max({a,b,c}), mi = min({a,b,c});
-                res = min(res, ma - mi);
             }
         }
-        return res;
+        
+        
+        int ans = INT_MAX;
+        
+        for (int i = 1; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                int node_lca = lca(i, j);
+                
+                int a, b, c;
+                
+                if (node_lca == i) {
+                    a = sum[0] ^ sum[i];
+                    b = sum[i] ^ sum[j];
+                    c = sum[j];
+                }
+                else if (node_lca == j) {
+                    a = sum[0] ^ sum[j];
+                    b = sum[j] ^ sum[i];
+                    c = sum[i];
+                }
+                else {
+                    a = sum[0] ^ sum[i] ^ sum[j];
+                    b = sum[i];
+                    c = sum[j];
+                }
+                
+                int ma = max({a, b, c});
+                int mi = min({a, b, c});
+                
+                ans = min(ans, ma - mi);
+                
+                if (i == 0 and j == 2) {
+                    cout << a << ' ' << b << ' ' << c << '\n';
+                }
+            }
+        }
+        
+        return ans;
     }
 };
