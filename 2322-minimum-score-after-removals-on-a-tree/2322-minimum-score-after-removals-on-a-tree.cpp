@@ -98,10 +98,6 @@ public:
                 int mi = min({a, b, c});
                 
                 ans = min(ans, ma - mi);
-                
-                if (i == 0 and j == 2) {
-                    cout << a << ' ' << b << ' ' << c << '\n';
-                }
             }
         }
         
