@@ -1,4 +1,4 @@
-const int MN = 2e5;
+const int MN = 1e5;
 
 int memo[MN][3];
 
