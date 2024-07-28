@@ -42,7 +42,7 @@ public:
                 }
                 
                 if (dv < dist[v]) {
-                    dist[v] = dv;
+                    swap(dist[v], dv);
                     pq.push({dist[v], v});
                 }
                 
