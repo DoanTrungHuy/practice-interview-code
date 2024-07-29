@@ -9,12 +9,12 @@ public:
         const int n = s.size();
         int last[26] = {};
         long long ans = 0;
+        int total_substr = 0;
         
         for (int i = 0; i < n; ++i) {
+            total_substr += i + 1 - last[s[i] - 'a'];
             last[s[i] - 'a'] = i + 1;
-            for (int c = 0; c < 26; ++c) {
-                ans += last[c];
-            }
+            ans += total_substr;
         }
         
         return ans;
