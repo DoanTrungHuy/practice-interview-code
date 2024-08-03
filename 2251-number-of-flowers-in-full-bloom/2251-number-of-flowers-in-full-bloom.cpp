@@ -28,9 +28,6 @@ public:
                 it--;
                 ans[i] = it->second;
             }
-            else {
-                ans[i] = 0;
-            }
         }
         
         return ans;
