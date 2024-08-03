@@ -1,28 +1,36 @@
 class Solution {
 public:
     vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& people) {
-        map<int, int> line;
+        map<int, int> compress;
         
-        for (vector<int> flower : flowers) {
-            int start = flower[0], end = flower[1];
-            line[start]++;
-            line[end + 1]--;
+        for (auto flower : flowers) {
+            int l = flower[0];
+            int r = flower[1];
+            compress[l]++;
+            compress[r + 1]--;
         }
         
-        line[0] = 0;
-        int sum = 0;
+        int times = 0;
+        int curr_num_flower = 0;
         
-        for (auto &[position, flower] : line) {
-            sum += flower;
-            flower = sum;
+        for (auto &[k, v] : compress) {
+            curr_num_flower += v;
+            v = curr_num_flower;
         }
         
-        vector<int> ans;
+        const int n = people.size();
         
-        for (int member : people) {
-            auto index = line.upper_bound(member);
-            index--;
-            ans.push_back(index->second);
+        vector<int> ans(n);
+        
+        for (int i = 0; i < n; ++i) {
+            auto it = compress.upper_bound(people[i]);
+            if (it != compress.begin()) {
+                it--;
+                ans[i] = it->second;
+            }
+            else {
+                ans[i] = 0;
+            }
         }
         
         return ans;
