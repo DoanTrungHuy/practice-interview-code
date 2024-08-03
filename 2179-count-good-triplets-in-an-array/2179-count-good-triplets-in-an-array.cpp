@@ -34,6 +34,12 @@ public:
             mapping[nums2[i]] = i; 
         }
         
+        vector<int> idx(n);
+        
+        for (int i = 0; i < n; ++i) {
+            idx[i] = mapping[nums1[i]];
+        }
+        
         vector<int> left_smaller(n), right_larger(n);
         
         FenwickTree ft[2];
@@ -42,9 +48,8 @@ public:
         ft[1] = FenwickTree(n);
         
         for (int i = 0; i < n; ++i) {
-            int j = mapping[nums1[i]];
-            left_smaller[i] = ft[0].count(j - 1);
-            ft[0].update(j, 1);
+            left_smaller[i] = ft[0].count(idx[i] - 1);
+            ft[0].update(idx[i], 1);
         }
         
         // 0 -> j - 1, j, j + 1 -> n - 1
@@ -53,9 +58,8 @@ public:
         // count(n - 1) - count(j)
         
         for (int i = n - 1; i >= 0; --i) {
-            int j = mapping[nums1[i]];
-            right_larger[i] = ft[1].count(n - 1) - ft[1].count(j);
-            ft[1].update(j, 1);
+            right_larger[i] = ft[1].count(n - 1) - ft[1].count(idx[i]);
+            ft[1].update(idx[i], 1);
         }
         
         long long ans = 0;
