@@ -47,6 +47,11 @@ public:
             ft[0].update(j, 1);
         }
         
+        // 0 -> j - 1, j, j + 1 -> n - 1
+        
+        // count(j - 1)
+        // count(n - 1) - count(j)
+        
         for (int i = n - 1; i >= 0; --i) {
             int j = mapping[nums1[i]];
             right_larger[i] = ft[1].count(n - 1) - ft[1].count(j);
