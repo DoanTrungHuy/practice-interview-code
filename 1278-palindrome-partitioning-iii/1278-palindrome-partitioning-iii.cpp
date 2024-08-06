@@ -1,4 +1,5 @@
 int memo[101][101][101];
+int sav[101][101];
 
 class Solution {
 private:
@@ -7,13 +8,13 @@ private:
     
 public:
     int count_palind(int left, int right) {
-        int cnt = 0;
-        while (left < right) {
-            cnt += s[left] != s[right];
-            left++;
-            right--;
+        if (left > right) {
+            return 0;
         }
-        return cnt;
+        if (sav[left][right] != -1) {
+            return sav[left][right];
+        }
+        return sav[left][right] = (s[left] != s[right]) + count_palind(left + 1, right - 1);
     }
     
     int dp(int i, int p, int k) {
@@ -35,6 +36,7 @@ public:
         this->s = s;
         this->n = s.size();
         memset(memo, -1, sizeof(memo));
+        memset(sav, -1, sizeof(sav));
         return dp(0, 0, k);
     }
 };
