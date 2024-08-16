@@ -15,6 +15,7 @@ class Solution:
                 glen += i - j
             
             return glen
+        
                 
         
         while left <= right:
