@@ -15,13 +15,9 @@ class Solution:
                 
             top3.append(sorted(tmp)[::-1][:3])
         
-        for i1 in range(m):
-            for i2 in range(i1 + 1, m):
-                for i3 in range(i2 + 1, m):
-                    for v1, j1 in top3[i1]:
-                        for v2, j2 in top3[i2]:
-                            for v3, j3 in top3[i3]:
-                                if j1 != j2 and j2 != j3 and j3 != j1:
-                                    max_sum = max(max_sum, v1 + v2 + v3)
+        for r1, r2, r3 in combinations(top3, 3):
+            for a, b, c in product(r1, r2, r3):
+                if a[1] != b[1] and a[1] != c[1] and b[1] != c[1]:
+                    max_sum = max(max_sum, a[0] + b[0] + c[0])
                                     
         return max_sum
