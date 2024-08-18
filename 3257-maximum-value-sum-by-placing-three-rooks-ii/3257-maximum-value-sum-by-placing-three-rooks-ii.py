@@ -9,11 +9,10 @@ class Solution:
                 else: heappush(h, (v,i))
             data.append(h)
         
-        
         h = []
         for i,r in enumerate(data):
             for v,j in r:
-                if len(h)==12: heappushpop(h, (v, i, j))
+                if len(h)==100: heappushpop(h, (v, i, j))
                 else: heappush(h, (v,i,j))
                     
         res=-math.inf
@@ -21,4 +20,5 @@ class Solution:
             sa, sb = {x[1], y[1], z[1]}, {x[2], y[2], z[2]}
             if len(sa)==3 and len(sb)==3:
                 res = max(res, x[0]+y[0]+z[0])
+                
         return res
