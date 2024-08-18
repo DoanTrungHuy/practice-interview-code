@@ -5,16 +5,15 @@ class Solution:
         for r in board:
             h = []
             for i,v in enumerate(r):
-                if len(h)==5: heappushpop(h, (v,i))
+                if len(h)==3: heappushpop(h, (v,i))
                 else: heappush(h, (v,i))
             data.append(h)
         h = []
         for i,r in enumerate(data):
             for v,j in r:
-                if len(h)==25: heappushpop(h, (v, i, j))
+                if len(h)==12: heappushpop(h, (v, i, j))
                 else: heappush(h, (v,i,j))
-        # print(data)
-        # print(h)
+        
         res=-math.inf
         for x,y,z in combinations(h, 3):
             sa, sb = {x[1], y[1], z[1]}, {x[2], y[2], z[2]}
