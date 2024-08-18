@@ -19,7 +19,7 @@ class Solution:
             
         for i in range(m):
             for v, j in top3[i]:
-                if len(new_dataset) == 15:
+                if len(new_dataset) == 12:
                     heappop(new_dataset)
                     heappush(new_dataset, (v, i, j))
                 else:
