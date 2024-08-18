@@ -87,8 +87,7 @@ public:
                         if (j1 != j2) {
                             ll i3 = i2 + 1;
 
-                            ll left = min(j1, j2);
-                            ll right = max(j1, j2);
+                            ll left = min(j1, j2), right = max(j1, j2);
 
                             ll v3 = -1e9;
 
