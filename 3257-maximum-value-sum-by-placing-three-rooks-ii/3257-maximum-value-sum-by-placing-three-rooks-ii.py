@@ -1,30 +1,33 @@
 class Solution:
     def maximumValueSum(self, board: List[List[int]]) -> int:
-        m,n = len(board), len(board[0])
-        data = []
+        m = len(board)
+        n = len(board[0])
         
-        for r in board:
-            h = []
-            for i,v in enumerate(r):
-                if len(h) == 3: 
-                    heappushpop(h, (v,i))
-                else: 
-                    heappush(h, (v,i))
-            data.append(h)
+        max_sum = -10**18
         
-        h = []
-        for i,r in enumerate(data):
-            for v,j in r:
-                if len(h) == 12: 
-                    heappushpop(h, (v, i, j))
-                else: 
-                    heappush(h, (v,i,j))
-                    
-        res = -math.inf
+        top3 = []
         
-        for x,y,z in combinations(h, 3):
-            sa, sb = {x[1], y[1], z[1]}, {x[2], y[2], z[2]}
-            if len(sa) == 3 and len(sb) == 3:
-                res = max(res, x[0] + y[0] + z[0])
+        for i in range(m):
+            tmp = []
+            
+            for j, v in enumerate(board[i]):
+                tmp.append((board[i][j], j))
                 
-        return res
+            top3.append(sorted(tmp)[::-1][:3])
+            
+        new_dataset = []
+            
+        for i in range(m):
+            for v, j in top3[i]:
+                if len(new_dataset) == 100:
+                    heappop(new_dataset)
+                    heappush(new_dataset, (v, i, j))
+                else:
+                    heappush(new_dataset, (v, i, j))
+        
+        for d1, d2, d3 in combinations(new_dataset, 3):
+            ur, uc = {d1[1], d2[1], d3[1]}, {d1[2], d2[2], d3[2]}
+            if len(ur) == 3 and len(uc) == 3:
+                max_sum = max(max_sum, d1[0] + d2[0] + d3[0])
+                                    
+        return max_sum
