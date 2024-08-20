@@ -12,7 +12,7 @@ class Solution:
             if i == (n // 2 + (n&1)):
                 return r == 0
             
-            for d in range(9, 0, -1):
+            for d in range(9, -1, -1):
                 self.ans[i] = chr(d + ord('0'))
                 self.ans[n - i - 1] = chr(d + ord('0'))
                 
