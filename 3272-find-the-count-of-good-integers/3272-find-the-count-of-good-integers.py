@@ -9,7 +9,7 @@ class Solution:
         
         for i in range(1, n + 1):
             fact[i] = fact[i - 1] * i
-        print(fact)
+        
         ans = 0
 
         for num in range(10**(half - 1), 10**half):
