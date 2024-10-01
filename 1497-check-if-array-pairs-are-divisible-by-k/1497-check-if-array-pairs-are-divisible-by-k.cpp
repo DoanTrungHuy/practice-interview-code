@@ -1,8 +1,11 @@
 class Solution {
 public:
     bool canArrange(vector<int>& arr, int k) {
-        // num1%k + num2%k = 0
-        // num1%k = -num2%k
+        // (num1%k + num2%k) % k = 0
+        // (num1%k + num2%k) = k
+        // 0 <= num1, num2 <= k - 1
+        // cnt[0] = cnt[0 + k] = cnt[0 + 0] = cnt[k + k] is even
+        // pair valid: cnt[1], cnt[4] | etc
         
         unordered_map<long long, long long> cnt;
         
