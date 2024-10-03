@@ -18,10 +18,13 @@ public:
 
         for (int i = 0, s = 0; i < n; ++i) {
             (s += nums[i]) %= k;
-            if (pi.count((t + (-s%k + k) % k) % k)) {
-                ans = min(ans, (i + 1 - pi[(t + (-s%k + k) % k) % k]));
+            int ls = (t + (-s%k + k) % k) % k;
+            int rs = (-s%k + k) % k;
+            
+            if (pi.count(ls)) {
+                ans = min(ans, i + 1 - pi[ls]);
             }
-            pi[(-s%k + k) % k] = i + 1;
+            pi[rs] = i + 1;
         }
         
         return ans == n ? - 1 : ans;
