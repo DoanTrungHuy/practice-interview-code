@@ -13,16 +13,15 @@ public:
         }
         
         unordered_map<int, int> pi;
+        pi[0] = 0;
         int ans = n;
 
-        for (int i = 0, s = 0; i <= n; ++i) {
-            if (i) {
-                (s += nums[i - 1]) %= k;
+        for (int i = 0, s = 0; i < n; ++i) {
+            (s += nums[i]) %= k;
+            if (pi.count((t + (-s%k + k) % k) % k)) {
+                ans = min(ans, (i + 1 - pi[(t + (-s%k + k) % k) % k]));
             }
-            if (pi.count((t - s%k + k) % k)) {
-                ans = min(ans, i - pi[(t + (-s%k + k) % k) % k]);
-            }
-            pi[(-s%k + k) % k] = i;
+            pi[(-s%k + k) % k] = i + 1;
         }
         
         return ans == n ? - 1 : ans;
