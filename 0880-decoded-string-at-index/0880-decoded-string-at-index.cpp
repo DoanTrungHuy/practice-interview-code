@@ -21,7 +21,8 @@ public:
                 k %= real_size;
             }
             else {
-                if (k % real_size == 0) {
+                k %= real_size;
+                if (k == 0) {
                     return string(1, c);
                 }
                 real_size--;
