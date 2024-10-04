@@ -1,15 +1,33 @@
 class Solution {
 public:
     long long dividePlayers(vector<int>& skill) {
-        sort(skill.begin(), skill.end());
         const int n = skill.size();
-        long long s = 0;
         
-        for (int i = 0; i < n / 2; ++i) {
-            if (skill[i] + skill[n - i - 1] != skill[0] + skill[n - 1]) {
-                return -1;
+        long long mi = LLONG_MAX, ma = LLONG_MIN;
+        
+        for (int i = 0; i < n; ++i) {
+            mi = min(mi, 1LL*skill[i]);
+            ma = max(ma, 1LL*skill[i]);
+        }
+        
+        long long target = ma + mi;
+        long long s = 0;
+        int cnt[1001] = {};
+        int np = 0;
+        
+        for (int i = 0; i < n; ++i) {
+            if (cnt[target - skill[i]]) {
+                s += skill[i] * (target - skill[i]);
+                cnt[target - skill[i]]--;
+                np++;
             }
-            s += 1LL*skill[i]*skill[n - i - 1];
+            else {
+                cnt[skill[i]]++;
+            }
+        }
+        
+        if (np != n / 2) {
+            return -1;
         }
         
         return s;
