@@ -15,13 +15,12 @@ public:
         
         for (int i = n - 1; i >= 0; --i) {
             char c = s[i];
+            k %= real_size;
             
             if (isdigit(c)) {
                 real_size /= (c - '0');
-                k %= real_size;
             }
             else {
-                k %= real_size;
                 if (k == 0) {
                     return string(1, c);
                 }
