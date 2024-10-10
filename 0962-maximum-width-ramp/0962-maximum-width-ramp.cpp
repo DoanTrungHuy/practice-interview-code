@@ -1,10 +1,10 @@
+const int INF = 1e9;
+
 class SegmentTree {
 private:
     vector<int> tree;
     
-public:
-    const int INF = 1e9;
-    
+public:    
     SegmentTree(int n) {
         tree.resize(4*n, INF);
     }
