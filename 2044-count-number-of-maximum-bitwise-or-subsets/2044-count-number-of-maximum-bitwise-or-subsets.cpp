@@ -2,25 +2,25 @@ class Solution {
 public:
     int countMaxOrSubsets(vector<int>& nums) {
         const int n = nums.size();
-        int max_num = 0;
-        
-        for (int i = 0; i < n; ++i) {
-            max_num |= nums[i];
+        int max_or = 0, ans = 0;
+    
+        for (int num : nums) {
+            max_or |= num;
         }
-        
-        int MB = (1 << n) - 1;
-        int ans = 0;
-        
-        for (int mask = 0; mask <= MB; ++mask) {
-            int num = 0;
-            for (int bit = 0; bit < n; ++bit) {
-                if (mask & (1 << bit)) {
-                    num |= nums[bit];
+
+        function<void(int, int)> dfs = [&](int i, int current_or) {
+            if (i == n) {
+                if (current_or == max_or) {
+                    ++ans;
                 }
+                return;
             }
-            ans += num == max_num;
-        }
-        
+
+            dfs(i + 1, current_or | nums[i]);
+            dfs(i + 1, current_or);
+        };
+
+        dfs(0, 0);
         return ans;
     }
 };
