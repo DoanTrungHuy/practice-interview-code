@@ -1,7 +1,6 @@
 class Solution {
 public:
     int dfs(int n, int k) {
-        cout << n << ' ' << k << '\n';
         if (n == 1) {
             return 0;
         }
