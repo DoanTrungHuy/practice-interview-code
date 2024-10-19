@@ -11,7 +11,7 @@ public:
         else if (k == mid) {
             return 1;
         }
-        return !dfs(n - 1, (mid << 1) - k);
+        return !dfs(n - 1, 2*mid - k);
     }
     
     char findKthBit(int n, int k) {
