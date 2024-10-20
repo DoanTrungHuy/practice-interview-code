@@ -48,7 +48,6 @@ public:
                 else if (op == '!') {
                     st.push(!bits[0] ? 't' : 'f');
                 }
-                cout << op << '\n';
             }
             else {
                 st.push(c);
