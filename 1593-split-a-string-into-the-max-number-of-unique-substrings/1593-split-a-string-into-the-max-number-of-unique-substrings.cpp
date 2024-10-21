@@ -23,13 +23,13 @@ public:
         TrieNode *curr = root;
         
         for (int j = i; j < n; ++j) {
-            int index = s[j] - 'a';
+            int c = s[j] - 'a';
             
-            if (!curr->child[index]) {
-                curr->child[index] = new TrieNode();
+            if (!curr->child[c]) {
+                curr->child[c] = new TrieNode();
             }
             
-            curr = curr->child[index];
+            curr = curr->child[c];
             
             if (!curr->is_word) {
                 curr->is_word = true;
