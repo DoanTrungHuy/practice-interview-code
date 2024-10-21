@@ -24,7 +24,7 @@ public:
         TrieNode *curr = root;
         
         for (int j = i; j < n; ++j) {
-            if (n - i + l <= ans) {
+            if (n - j + l <= ans) {
                 break;
             }
             
