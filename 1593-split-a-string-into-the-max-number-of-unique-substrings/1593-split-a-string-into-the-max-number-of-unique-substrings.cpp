@@ -1,7 +1,7 @@
 class Solution {
 private:
     int ans;
-    unordered_set<string> us;
+    unordered_set<long long> us;
     
 public:
     void dfs(string &s, int p) {
@@ -10,13 +10,13 @@ public:
             ans = max(ans, (int)us.size());
             return;
         }
-        string tmp;
+        long long hash = 0;
         for (int i = p; i < n; ++i) {
-            tmp += s[i];
-            if (!us.count(tmp)) {
-                us.insert(tmp);
+            hash = hash*10 + s[i];
+            if (!us.count(hash)) {
+                us.insert(hash);
                 dfs(s, i + 1);
-                us.erase(tmp);
+                us.erase(hash);
             }
         }
     }
