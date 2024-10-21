@@ -12,14 +12,19 @@ class Solution {
 private:
     TrieNode *root;
     int n;
+    int ans;
     
 public:
-    int dfs(string &s, int i) {
-        if (i == n) {
-            return 0;
+    void dfs(string &s, int i, int l) {
+        if (n - i + l <= ans) {
+            return;
         }
         
-        int ans = 0;
+        if (i == n) {
+            ans = max(ans, l);
+            return;
+        }
+        
         TrieNode *curr = root;
         
         for (int j = i; j < n; ++j) {
@@ -33,17 +38,17 @@ public:
             
             if (!curr->is_word) {
                 curr->is_word = true;
-                ans = max(ans, 1 + dfs(s, j + 1));
+                dfs(s, j + 1, l + 1);
                 curr->is_word = false;
             }
         }
-        
-        return ans;
     }
     
     int maxUniqueSplit(string s) {
+        ans = 0;
         root = new TrieNode();
         this->n = s.size();
-        return dfs(s, 0);
+        dfs(s, 0, 0);
+        return ans;
     }
 };
