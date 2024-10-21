@@ -16,10 +16,6 @@ private:
     
 public:
     void dfs(string &s, int i, int l) {
-        if (n - i + l <= ans) {
-            return;
-        }
-        
         if (i == n) {
             ans = max(ans, l);
             return;
@@ -28,6 +24,10 @@ public:
         TrieNode *curr = root;
         
         for (int j = i; j < n; ++j) {
+            if (n - i + l <= ans) {
+                break;
+            }
+            
             int c = s[j] - 'a';
             
             if (!curr->child[c]) {
