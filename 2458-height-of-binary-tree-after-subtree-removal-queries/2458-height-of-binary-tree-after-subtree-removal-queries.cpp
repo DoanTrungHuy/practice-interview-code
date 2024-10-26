@@ -71,7 +71,7 @@ public:
         index = 0;
         dfs(root, 0);
         const int n = d.size();
-        SegmentTree st(4*n);
+        SegmentTree st(n);
         
         for (int i = 0; i < n; ++i) {
             st.update(1, 0, n - 1, i, d[i]);
