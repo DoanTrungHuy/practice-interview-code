@@ -1,12 +1,12 @@
 class Solution {
 private:
-    vector<vector<int>> nA;
+    vector<vector<int>> adj;
     vector<int> ans;
 
 public:
     int dfs(int node) {
         int cnt = 1;
-        for (int child : nA[node]) {
+        for (int child : adj[node]) {
             cnt += dfs(child);
         }
         return ans[node] = cnt;
@@ -26,10 +26,10 @@ public:
             }
         }
 
-        nA.resize(n);
+        adj.resize(n);
         
         for (int i = 1; i < n; ++i) {
-            nA[nP[i]].push_back(i);
+            adj[nP[i]].push_back(i);
         }
 
         ans.resize(n, 0);
