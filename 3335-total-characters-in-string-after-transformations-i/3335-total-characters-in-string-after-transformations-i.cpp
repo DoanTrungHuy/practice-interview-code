@@ -1,72 +1,53 @@
-using ll = long long;
+int memo[26][100005];
+const int MOD = 1e9 + 7;
 
 class Solution {
+private:
+    vector<vector<int>> adj;
+    
 public:
+    int dp(int c, int times) {
+        if (times == 0) {
+            return 1;
+        }
+        if (memo[c][times] != -1) {
+            return memo[c][times];
+        }
+        int ans = 0;
+        for (int next_c : adj[c]) {
+            ans = (ans + dp(next_c, times - 1)) % MOD;
+        }
+        return memo[c][times] = ans;
+    };
+    
     int lengthAfterTransformations(string s, int t) {
-        const int MOD = 1e9 + 7;
-
-        auto mul = [&](const vector<vector<ll>> &a, const vector<vector<ll>> &b) {
-            vector<vector<ll>> c(26, vector<ll>(26, 0));
-            for (int i = 0; i < 26; ++i) {
-                for (int k = 0; k < 26; ++k) {
-                    for (int j = 0; j < 26; ++j) {
-                        c[i][j] = (c[i][j] + (a[i][k] * b[k][j]) % MOD) % MOD;
-                    }
-                }
-            }
-            return c;
-        };
-
-        auto exp = [&](vector<vector<ll>> &mat, ll p) {
-            vector<vector<ll>> c(26, vector<ll>(26, 0));
-            for (int i = 0; i < 26; ++i) {
-                c[i][i] = 1;
-            }
-            vector<vector<ll>> base = mat;
-            while (p > 0) {
-                if (p & 1) {
-                    c = mul(c, base);
-                }
-                base = mul(base, base);
-                p /= 2;
-            }
-            return c;
-        };
-
-        vector<vector<ll>> M(26, vector<ll>(26, 0));
-
-        for (int c = 0; c < 26; ++c) {
-            if (c == 25) {
-                M[c][0] = 1;
-                M[c][1] = 1;
+        adj.resize(26);
+        
+        for (int i = 0; i < 26; ++i) {
+            if (i == 25) {
+                adj[i].push_back(0);
+                adj[i].push_back(1);
             } 
             else {
-                M[c][c + 1] = 1;
+                adj[i].push_back(i + 1);
             }
         }
-
-        vector<vector<ll>> r = exp(M, t);
         
-        vector<ll> cnt(26, 0);
+        memset(memo, -1, sizeof memo);
+        
+        const int n = s.size();
+        
+        map<int, int> mm;
+        long long ans = 0;
         
         for (char c : s) {
-            cnt[c - 'a']++;
+            mm[c - 'a']++;
         }
-
-        vector<ll> f(26, 0);
-
-        for (int i = 0; i < 26; ++i) {
-            for (int j = 0; j < 26; ++j) {
-                f[j] = (f[j] + cnt[i] * r[i][j]) % MOD;
-            }
-        }
-
-        ll ans = 0;
         
-        for (ll val : f) {
-            ans = (ans + val) % MOD;
+        for (auto [k, v] : mm) {
+            ans = (ans + 1LL*v*dp(k, t)) % MOD;
         }
-
+        
         return ans;
     }
 };
