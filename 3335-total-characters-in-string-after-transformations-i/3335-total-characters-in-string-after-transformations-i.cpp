@@ -35,8 +35,6 @@ public:
         
         memset(memo, -1, sizeof memo);
         
-        const int n = s.size();
-        
         map<int, int> mm;
         long long ans = 0;
         
