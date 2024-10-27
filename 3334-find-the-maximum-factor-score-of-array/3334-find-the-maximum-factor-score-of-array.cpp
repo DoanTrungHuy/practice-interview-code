@@ -12,7 +12,8 @@ public:
         ll ans = 0, tg = nums[0], tl = nums[0];
 
         for (ll i = 1; i < n; ++i) {
-            tg = gcd(tg, nums[i]), tl = lcm(tl, nums[i]);
+            tg = gcd(tg, nums[i]);
+            tl = lcm(tl, nums[i]);
         }
 
         ans = max(ans, (ll)tg * tl);
@@ -22,7 +23,8 @@ public:
             
             for (ll j = 0; j < n; ++j) {
                 if (i != j) {
-                    cd = (cd == 0) ? nums[j] : gcd(cd, nums[j]), cl = lcm(cl, nums[j]);
+                    cd = (cd == 0) ? nums[j] : gcd(cd, nums[j]);
+                    cl = lcm(cl, nums[j]);
                 }
             }
             
