@@ -34,7 +34,6 @@ public:
         }
         
         memset(memo, -1, sizeof memo);
-        
         map<int, int> mm;
         long long ans = 0;
         
