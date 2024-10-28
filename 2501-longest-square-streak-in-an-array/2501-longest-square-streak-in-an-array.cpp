@@ -12,17 +12,13 @@ public:
             if (sq*sq == nums[i] and dp.count(sq)) {
                 dp[nums[i]] = dp[sq] + 1;
             }
-            else if (dp.count(nums[i]) == 0){
+            else if (dp.count(nums[i]) == 0) {
                 dp[nums[i]] = 1;
             }
             
             ans = max(ans, dp[nums[i]]);
         }
         
-        if (ans < 2) {
-            return -1;
-        }
-        
-        return ans;
+        return (ans < 2) ? -1 : ans;
     }
 };
