@@ -1,43 +1,44 @@
 class Solution {
 public:
     int minimumMountainRemovals(vector<int>& nums) {
+        // Đầu tiên là tìm dãy con tăng dần dài nhất từ phía bên trái
+        // Tiếp theo thì mình cũng tìm dãy con tăng dần dài nhất từ phải sang
         const int n = nums.size();
-        vector<int> dp[2], max_len[2];
-        max_len[0].resize(n);
-        max_len[1].resize(n);
+        int dp1[n + 1];
+        
+        // duyệt for i -> n - 1 check for j -> i - 1
+        // sẽ pick những thằng nhỏ nums[j] < nums[i]
+        // dp[i] = max(dp[i], dp[j] + 1) gọi là độ dài tại thời điểm i lớn nhất khi chọn thử các phương án trước (j < i);
+        
+        int dp2[n + 1];
         
         for (int i = 0; i < n; ++i) {
-            auto it = lower_bound(dp[0].begin(), dp[0].end(), nums[i]);
-            if (it == dp[0].end()) {
-                dp[0].push_back(nums[i]);
-                max_len[0][i] = dp[0].size();
-            }
-            else {
-                *it = nums[i];
-                max_len[0][i] = distance(dp[0].begin(), it) + 1;
+            dp1[i] = 1;
+            for (int j = 0; j < i; ++j) {
+                if (nums[j] < nums[i]) {
+                    dp1[i] = max(dp1[i], dp1[j] + 1);
+                }
             }
         }
         
         for (int i = n - 1; i >= 0; --i) {
-            auto it = lower_bound(dp[1].begin(), dp[1].end(), nums[i]);
-            if (it == dp[1].end()) {
-                dp[1].push_back(nums[i]);
-                max_len[1][i] = dp[1].size();
-            }
-            else {
-                *it = nums[i];
-                max_len[1][i] = distance(dp[1].begin(), it) + 1;
+            dp2[i] = 1;
+            for (int j = i + 1; j < n; ++j) {
+                if (nums[j] < nums[i]) {
+                    dp2[i] = max(dp2[i], dp2[j] + 1);
+                }
             }
         }
         
-        int LIS_ = 0;
+        int max_mountain = 0;
         
-        for (int i = 1; i < n - 1; ++i) {
-            if (max_len[0][i] > 1 and max_len[1][i] > 1) {
-                LIS_ = max(LIS_, max_len[0][i] + max_len[1][i] - 1);
+        for (int i = 0; i < n; ++i) {
+            if (dp1[i] == 1 || dp2[i] == 1) {
+                continue;
             }
+            max_mountain = max(max_mountain, dp1[i] + dp2[i] - 1);
         }
         
-        return n - LIS_;
+        return n - max_mountain;
     }
 };
