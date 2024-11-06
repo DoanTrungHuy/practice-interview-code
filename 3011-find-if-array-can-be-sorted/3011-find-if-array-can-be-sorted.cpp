@@ -32,6 +32,8 @@ public:
                 prev_val = grp[i][j];
             }
         }
+        
+        grp.clear();
     
         return true;
     }
