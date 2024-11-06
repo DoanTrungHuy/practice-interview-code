@@ -32,9 +32,7 @@ public:
                 prev_val = grp[i][j];
             }
         }
-        
-        
-        
+    
         return true;
     }
 };
