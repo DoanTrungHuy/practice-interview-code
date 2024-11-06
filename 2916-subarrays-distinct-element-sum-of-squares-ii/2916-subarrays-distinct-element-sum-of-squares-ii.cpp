@@ -18,8 +18,8 @@ public:
     
     /*
         (a + x)*(a + x) + (b + x)*(b + x) [x = lazy[node]]
-        <-> a*a + 2*a*x + x + b*b + 2*b*x + x
-        <-> (a*a) + (b*b) + 2*x*(a + b) + 2*x
+        <-> a*a + 2*a*x + x + b*b + 2*b*x + x*x
+        <-> (a*a) + (b*b) + 2*x*(a + b) + 2*x*x
         <-> summ[node] = a + b = summ[node] + lazy[node]*(right - left + 1)
         <-> prev_sumq[node] = a*a + b*b
         <-> sumq[node] = (a + x)*(a + x) + (b + x)*(b + x) 
