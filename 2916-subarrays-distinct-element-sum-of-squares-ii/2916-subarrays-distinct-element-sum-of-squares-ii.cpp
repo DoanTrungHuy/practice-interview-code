@@ -23,7 +23,7 @@ public:
         <-> summ[node] = a + b = summ[node] + lazy[node]*(right - left + 1)
         <-> prev_sumq[node] = a*a + b*b = 0*0 + 0*0 = 0
         <-> sumq[node] = (a + x)*(a + x) + (b + x)*(b + x) 
-                       = prev_sumq[node] + 2*summ[node] + (right - left + 1)
+                       = prev_sumq[node] + 2*lazy[node]*summ[node] + lazy[node]*lazy[node]*(right - left + 1)
     */
     
     void down(ll node, ll left, ll right) {
