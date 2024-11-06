@@ -21,7 +21,7 @@ public:
         <-> a*a + 2*a*x + x + b*b + 2*b*x + x
         <-> (a*a) + (b*b) + 2*x*(a + b) + 2*x
         <-> summ[node] = a + b = summ[node] + lazy[node]*(right - left + 1)
-        <-> prev_sumq[node] = a*a + b*b = 0*0 + 0*0 = 0
+        <-> prev_sumq[node] = a*a + b*b
         <-> sumq[node] = (a + x)*(a + x) + (b + x)*(b + x) 
                        = prev_sumq[node] + 2*lazy[node]*summ[node] + lazy[node]*lazy[node]*(right - left + 1)
     */
