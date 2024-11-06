@@ -33,8 +33,6 @@ public:
             }
         }
         
-        grp.clear();
-    
         return true;
     }
 };
