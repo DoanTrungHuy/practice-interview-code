@@ -17,7 +17,7 @@ public:
     }
     
     /*
-        a*a + b*b (State transition) -> (a + x)*(a + x) + (b + x)*(b + x)
+        a*a + b*b (State transition) -> (a + x)*(a + x) + (b + x)*(b + x) [x = lazy[node]]
         <-> a*a + 2*a*x + x + b*b + 2*b*x + x
         <-> (a*a) + (b*b) + 2*x*(a + b) + 2*x
         <-> summ[node] = a + b = summ[node] + lazy[node]*(right - left + 1)
@@ -78,12 +78,6 @@ public:
     int sumCounts(vector<int>& nums) {
         const ll n = nums.size();
 
-        // 2 2 5 5
-        // 1
-        // 1 1
-        // 2 2 1
-        // 2 2 1 1
-        
         SegmentTree st(n);
         unordered_map<ll, ll> last_idx;
         ll ans = 0;
