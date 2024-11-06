@@ -17,7 +17,7 @@ public:
     }
     
     /*
-        a*a + b*b (State transition) -> (a + x)*(a + x) + (b + x)*(b + x) [x = lazy[node]]
+        (a + x)*(a + x) + (b + x)*(b + x) [x = lazy[node]]
         <-> a*a + 2*a*x + x + b*b + 2*b*x + x
         <-> (a*a) + (b*b) + 2*x*(a + b) + 2*x
         <-> summ[node] = a + b = summ[node] + lazy[node]*(right - left + 1)
