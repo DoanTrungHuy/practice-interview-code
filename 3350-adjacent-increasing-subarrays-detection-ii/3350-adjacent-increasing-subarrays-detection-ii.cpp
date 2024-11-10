@@ -3,20 +3,20 @@ public:
     int maxIncreasingSubarrays(vector<int>& nums) {
         const int n = nums.size();
         
-        auto f = [&](int k) {
-            vector<int> dp(n);
-            int cnt = 0;
-            
-            for (int i = 0; i < n; ++i) {
-                if (i && nums[i] > nums[i - 1]) {
-                    ++cnt;
-                } 
-                else {
-                    cnt = 1;
-                }
-                dp[i] = cnt;
+        vector<int> dp(n);
+        int cnt = 0;
+
+        for (int i = 0; i < n; ++i) {
+            if (i && nums[i] > nums[i - 1]) {
+                ++cnt;
+            } 
+            else {
+                cnt = 1;
             }
-            
+            dp[i] = cnt;
+        }
+        
+        auto f = [&](int k) {
             for (int i = 0; i < n - 2*k + 1; ++i) {
                 if (dp[i + k - 1] - dp[i] == dp[i + 2*k - 1] - dp[i + k] && dp[i + 2*k - 1] - dp[i + k] == k - 1) {
                     return true;
