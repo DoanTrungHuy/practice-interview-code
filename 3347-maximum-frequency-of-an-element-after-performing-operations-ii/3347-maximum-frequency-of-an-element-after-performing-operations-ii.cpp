@@ -5,24 +5,20 @@ public:
         sort(nums.begin(), nums.end());
         const int MN = 2e5 + 10;
         using pii = pair<int, int>;
-        vector<pii> events;
-        unordered_map<int, int> um;
+        unordered_map<int, int> um, events;
         
         set<int> points;
         
         for (int i = 0; i < n; ++i) {
             um[nums[i]]++;
+            events[nums[i] - k]++;
+            events[nums[i] + k + 1]--;
             points.insert(nums[i]);
-            events.push_back({nums[i] - k, 1});
             points.insert(nums[i] - k);
-            events.push_back({nums[i] + k + 1, -1});
-            points.insert(nums[i] + k);
+            points.insert(nums[i] + k + 1);
         }
         
-        sort(events.begin(), events.end());
-        
-        const int m = events.size();
-        int ans = 0, line = 0, i = 0;
+        int ans = 0, line = 0;
         
         // |--------------|
         //         |-----------------|
@@ -30,17 +26,8 @@ public:
         //    2    3      2          1
         
         for (int p : points) {
-            int cnt_p = 0;
-            
-            if (um.count(p)) {
-                cnt_p = um[p];
-            }
-            
-            while (i < m && events[i].first <= p) {
-                line += events[i++].second;
-            }
-            
-            ans = max(ans, cnt_p + min(numOperations, line - cnt_p));
+            line += events[p];
+            ans = max(ans, um[p] + min(numOperations, line - um[p]));
         }
         
         return ans;
