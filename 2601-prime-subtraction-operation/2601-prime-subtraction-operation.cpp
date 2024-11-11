@@ -19,7 +19,7 @@ public:
         int target = 0;
         
         for (int i = 0; i < n; ++i) {
-            int p = INT_MAX;
+            int p = 0;
             int left = 0, right = primes.size() - 1;
             
             while (left <= right) {
@@ -33,15 +33,11 @@ public:
                 }
             }
             
-            if (p == INT_MAX and nums[i] <= target) {
+            if (nums[i] - p <= target) {
                 return false;
             }
-            else if (p == INT_MAX and nums[i] > target) {
-                target = nums[i];
-            }
-            else {
-                target = nums[i] - p;
-            }
+            
+            target = nums[i] - p;
         }
         
         return true;
