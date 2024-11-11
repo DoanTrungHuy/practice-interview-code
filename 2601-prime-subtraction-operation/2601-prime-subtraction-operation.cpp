@@ -32,7 +32,7 @@ public:
                     right = mid - 1;
                 }
             }
-                        
+            
             if (p == INT_MAX and nums[i] <= target) {
                 return false;
             }
