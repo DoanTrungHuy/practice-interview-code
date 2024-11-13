@@ -37,7 +37,6 @@ public:
 class Solution {
 public:
     long long countFairPairs(vector<int>& nums, int lower, int upper) {
-        // lower - nums[j] <= nums[i] <= upper - nums[j]
         const int n = nums.size();
         map<int, int> compress;
         
