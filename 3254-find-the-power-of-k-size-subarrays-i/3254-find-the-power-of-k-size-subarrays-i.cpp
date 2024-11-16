@@ -11,23 +11,14 @@ public:
         }
         
         vector<int> ans(n - k + 1, -1);
-        multiset<int> ms;
-        
-        for (int i = 0; i < k - 1; ++i) {
-            ms.insert(nums[i]);
-        }
         
         for (int i = 0; i < n - k + 1; i++) {
             int l = i;
             int r = i + k - 1;
             
-            ms.insert(nums[r]);
-            
             if (dp[r] - dp[l] + 1 == k) {
-                ans[i] = *ms.rbegin();
+                ans[i] = nums[r];
             }
-            
-            ms.erase(ms.lower_bound(nums[l]));
         }
         
         return ans;
