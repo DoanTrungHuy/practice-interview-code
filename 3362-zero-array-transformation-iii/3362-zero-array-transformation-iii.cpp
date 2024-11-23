@@ -88,14 +88,6 @@ public:
         const int n = nums.size();
         const int m = queries.size();
         
-        // [0,4,4,0]
-        // [[0,0],[3,3],[0,2],[3,3],[0,2],[0,1],[1,1],[1,2],[0,1],[2,3],[0,1],[1,2]]
-        // vector<int> v = {0,4,4,0};
-        // vector<vector<int>> q = {{0,0},{3,3},{0,2},{3,3},{0,2},{0,1},{1,1},{1,2},{0,1},{2,3},{0,1},{1,2}};
-        // if (nums == v && queries == q) {
-        //     return 8;
-        // }
-        
         SegmentTree st(n);
 
         for (int i = 0; i < m; ++i) {
@@ -118,7 +110,7 @@ public:
             if (a[1] != b[1]) {
                 return a[1] < b[1];
             }
-            return a[0] > b[0];
+            return a[1] - a[0] < b[1] - b[0];
         });
 
         int cnt = 0;
