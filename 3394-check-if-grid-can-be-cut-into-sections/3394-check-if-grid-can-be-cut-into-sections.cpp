@@ -26,7 +26,6 @@ public:
                     div++;
                 }
             }
-            
 
             return div >= 3;
         };
