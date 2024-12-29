@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing">3691. Minimum Operations to Make Columns Strictly Increasing</a></h2><h3>Easy</h3><hr><p>You are given a <code>m x n</code> matrix <code>grid</code> consisting of <b>non-negative</b> integers.</p>
+<h2><a href="https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing/">3691. Minimum Operations to Make Columns Strictly Increasing</a></h2><h3>Easy</h3><hr><p>You are given a <code>m x n</code> matrix <code>grid</code> consisting of <b>non-negative</b> integers.</p>
 
 <p>In one operation, you can increment the value of any <code>grid[i][j]</code> by 1.</p>
 
