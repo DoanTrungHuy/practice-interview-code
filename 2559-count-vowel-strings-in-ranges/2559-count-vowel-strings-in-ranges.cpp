@@ -8,11 +8,7 @@ public:
         for (int i = 0; i < n; ++i) {
             char first = words[i][0];
             char last = words[i].back();
-            if (vowels.count(first) && vowels.count(last)) {
-                pref[i + 1] = pref[i] + 1;
-            } else {
-                pref[i + 1] = pref[i];
-            }
+            pref[i + 1] = pref[i] + (vowels.count(first) && vowels.count(last));
         }
 
         vector<int> ans;
