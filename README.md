@@ -10,3 +10,15 @@
         <img src = "https://assets.leetcode.com/static_assets/others/Knight.gif" alt="badge knight" width="25" height="25"> 
     </h4>
 </div>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
+## Prefix Sum
+|  |
+| ------- |
+| [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
+<!---LeetCode Topics End-->
