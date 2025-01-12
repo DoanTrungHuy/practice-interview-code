@@ -34,10 +34,6 @@ class Solution:
         if not self.bfs(self.n, i_adj):
             return False
 
-        for ws in adj.values():
-            if len(ws) > self.threshold:
-                return False
-
         return True
 
     def minMaxWeight(self, n, edges, threshold):
