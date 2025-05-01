@@ -17,6 +17,7 @@
 |  |
 | ------- |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 ## Prefix Sum
 |  |
 | ------- |
@@ -30,8 +31,25 @@
 |  |
 | ------- |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2059-unique-length-3-palindromic-subsequences) |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 ## Bit Manipulation
 |  |
 | ------- |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2059-unique-length-3-palindromic-subsequences) |
+## Rolling Hash
+|  |
+| ------- |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
+## String Matching
+|  |
+| ------- |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
+## Matrix
+|  |
+| ------- |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
+## Hash Function
+|  |
+| ------- |
+| [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 <!---LeetCode Topics End-->
