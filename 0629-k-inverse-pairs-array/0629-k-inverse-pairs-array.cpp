@@ -15,7 +15,7 @@ public:
         if (dp[i][inv] != -1) {
             return dp[i][inv];
         }
-        int maxJ = std::min(n - i - 1, k - inv);
+        int maxJ = min(n - i - 1, k - inv);
         int left = inv - 1;
         int res = (prefix[i + 1][inv + maxJ] - (left >= 0 ? prefix[i + 1][left] : 0) + MOD) % MOD;
         dp[i][inv] = res;
