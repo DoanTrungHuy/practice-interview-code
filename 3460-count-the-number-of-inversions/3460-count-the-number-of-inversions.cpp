@@ -1,7 +1,3 @@
-#include <vector>
-#include <unordered_map>
-using namespace std;
-
 const int MOD = 1e9 + 7;
 
 class Solution {
