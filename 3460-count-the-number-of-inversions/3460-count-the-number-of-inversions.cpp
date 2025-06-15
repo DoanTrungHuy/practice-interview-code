@@ -25,7 +25,7 @@ private:
         
         int res = 0;
         for (int k = 0; k <= pos; k++) {
-            int new_inv = inv + (pos - k);
+            int new_inv = inv + k;
             res = (res + solve(pos + 1, new_inv, n)) % MOD;
         }
         
