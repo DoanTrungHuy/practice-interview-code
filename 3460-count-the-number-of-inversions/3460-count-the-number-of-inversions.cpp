@@ -7,7 +7,7 @@ private:
     unordered_map<int, int> reqs;
     
     int solve(int pos, int inv, int n) {
-        if (reqs.count(pos - 1) && reqs[pos - 1] != inv) {
+        if (reqs.count(pos) && reqs[pos] != inv) {
             return 0;
         }
         
@@ -36,7 +36,7 @@ public:
     int numberOfPermutations(int n, vector<vector<int>>& requirements) {
         memset(dp, -1, sizeof(dp));
         for (auto& r : requirements) {
-            reqs[r[0]] = r[1];
+            reqs[r[0] + 1] = r[1];
         }
         return solve(0, 0, n);
     }
