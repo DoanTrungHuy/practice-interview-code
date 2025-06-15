@@ -46,11 +46,6 @@ public:
         }
 
         int max_inv = (n * (n - 1)) / 2;
-        for (const auto& r : requirements) {
-            if (r[1] > max_inv) {
-                return 0;
-            }
-        }
 
         int last_req = reqs[n - 1];
         return dp(n - 1, last_req);
