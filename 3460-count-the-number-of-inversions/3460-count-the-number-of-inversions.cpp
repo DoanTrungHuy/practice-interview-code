@@ -1,50 +1,43 @@
 const int MOD = 1e9 + 7;
+const int MAX_INV = 400;
 
 class Solution {
 private:
+    int dp[301][401];
     unordered_map<int, int> reqs;
-    unordered_map<int, unordered_map<int, int>> memo;
-
-public:
-    int dp(int i, int inv) {
-        if (i == -1) {
-            return inv == 0 ? 1 : 0;
+    
+    int solve(int pos, int inv, int n) {
+        if (reqs.count(pos - 1) && reqs[pos - 1] != inv) {
+            return 0;
+        }
+        
+        if (pos == n) {
+            return 1;
         }
 
-        if (memo.count(i) && memo[i].count(inv)) {
-            return memo[i][inv];
+        if (inv > MAX_INV) {
+            return 0;
         }
 
-        int ans = 0;
-
-        if (reqs.count(i)) {
-            if (reqs[i] != inv) {
-                return memo[i][inv] = 0;
-            } else {
-                for (int k = 0; k <= i; ++k) {
-                    int new_inv = inv - (i - k);
-                    if (new_inv >= 0) {
-                        ans = (ans + dp(i - 1, new_inv)) % MOD;
-                    }
-                }
-            }
-        } else {
-            for (int k = 0; k <= i; ++k) {
-                int new_inv = inv - (i - k);
-                if (new_inv >= 0) {
-                    ans = (ans + dp(i - 1, new_inv)) % MOD;
-                }
-            }
+        if (dp[pos][inv] != -1) {
+            return dp[pos][inv];
         }
-
-        return memo[i][inv] = ans;
+        
+        int res = 0;
+        for (int k = 0; k <= pos; k++) {
+            int new_inv = inv + (pos - k);
+            res = (res + solve(pos + 1, new_inv, n)) % MOD;
+        }
+        
+        return dp[pos][inv] = res;
     }
 
+public:
     int numberOfPermutations(int n, vector<vector<int>>& requirements) {
-        for (const auto& r : requirements) {
+        memset(dp, -1, sizeof(dp));
+        for (auto& r : requirements) {
             reqs[r[0]] = r[1];
         }
-
-        return dp(n - 1, reqs[n - 1]);
+        return solve(0, 0, n);
     }
 };
