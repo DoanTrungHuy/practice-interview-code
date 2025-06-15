@@ -45,9 +45,6 @@ public:
             reqs[r[0]] = r[1];
         }
 
-        int max_inv = (n * (n - 1)) / 2;
-
-        int last_req = reqs[n - 1];
-        return dp(n - 1, last_req);
+        return dp(n - 1, reqs[n - 1]);
     }
 };
