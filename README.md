@@ -16,6 +16,7 @@
 ## Array
 |  |
 | ------- |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
@@ -59,4 +60,16 @@
 | ------- |
 | [0629-k-inverse-pairs-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0629-k-inverse-pairs-array) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
+## Greedy
+|  |
+| ------- |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+## Sorting
+|  |
+| ------- |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 <!---LeetCode Topics End-->
