@@ -20,6 +20,7 @@
 | [2144-maximum-difference-between-increasing-elements](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
+| [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 ## Prefix Sum
 |  |
@@ -64,6 +65,7 @@
 |  |
 | ------- |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+| [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Sorting
 |  |
 | ------- |
@@ -72,4 +74,8 @@
 |  |
 | ------- |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+## Sliding Window
+|  |
+| ------- |
+| [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 <!---LeetCode Topics End-->
