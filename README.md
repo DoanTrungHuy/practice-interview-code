@@ -59,6 +59,7 @@
 ## Dynamic Programming
 |  |
 | ------- |
+| [0600-non-negative-integers-without-consecutive-ones](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0600-non-negative-integers-without-consecutive-ones) |
 | [0629-k-inverse-pairs-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0629-k-inverse-pairs-array) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
 ## Greedy
