@@ -1,9 +1,10 @@
-<h2><a href="https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/">600. Non-negative Integers without Consecutive Ones</a></h2><h3>Hard</h3><hr><div><p>Given a positive integer <code>n</code>, return the number of the integers in the range <code>[0, n]</code> whose binary representations <strong>do not</strong> contain consecutive ones.</p>
+<h2><a href="https://leetcode.com/problems/non-negative-integers-without-consecutive-ones">600. Non-negative Integers without Consecutive Ones</a></h2><h3>Hard</h3><hr><p>Given a positive integer <code>n</code>, return the number of the integers in the range <code>[0, n]</code> whose binary representations <strong>do not</strong> contain consecutive ones.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> n = 5
+<pre>
+<strong>Input:</strong> n = 5
 <strong>Output:</strong> 5
 <strong>Explanation:</strong>
 Here are the non-negative integers &lt;= 5 with their corresponding binary representations:
@@ -18,13 +19,15 @@ Among them, only integer 3 disobeys the rule (two consecutive ones) and the othe
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> n = 1
+<pre>
+<strong>Input:</strong> n = 1
 <strong>Output:</strong> 2
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> n = 2
+<pre>
+<strong>Input:</strong> n = 2
 <strong>Output:</strong> 3
 </pre>
 
@@ -34,4 +37,3 @@ Among them, only integer 3 disobeys the rule (two consecutive ones) and the othe
 <ul>
 	<li><code>1 &lt;= n &lt;= 10<sup>9</sup></code></li>
 </ul>
-</div>
