@@ -16,6 +16,7 @@
 ## Array
 |  |
 | ------- |
+| [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
@@ -34,6 +35,7 @@
 ## String
 |  |
 | ------- |
+| [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 ## Bit Manipulation
@@ -61,6 +63,7 @@
 | ------- |
 | [0600-non-negative-integers-without-consecutive-ones](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0600-non-negative-integers-without-consecutive-ones) |
 | [0629-k-inverse-pairs-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0629-k-inverse-pairs-array) |
+| [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1012-numbers-with-repeated-digits](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1012-numbers-with-repeated-digits) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
 ## Greedy
@@ -87,6 +90,11 @@
 ## Math
 |  |
 | ------- |
+| [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1012-numbers-with-repeated-digits](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1012-numbers-with-repeated-digits) |
 | [1411-convert-binary-number-in-a-linked-list-to-integer](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1411-convert-binary-number-in-a-linked-list-to-integer) |
+## Binary Search
+|  |
+| ------- |
+| [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 <!---LeetCode Topics End-->
