@@ -100,6 +100,7 @@
 ## Database
 |  |
 | ------- |
+| [0550-game-play-analysis-iv](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0550-game-play-analysis-iv) |
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0570-managers-with-at-least-5-direct-reports) |
 | [1148-article-views-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1148-article-views-i) |
 | [1174-immediate-food-delivery-ii](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1174-immediate-food-delivery-ii) |
