@@ -102,4 +102,5 @@
 | ------- |
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0570-managers-with-at-least-5-direct-reports) |
 | [1148-article-views-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1148-article-views-i) |
+| [1934-confirmation-rate](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1934-confirmation-rate) |
 <!---LeetCode Topics End-->
