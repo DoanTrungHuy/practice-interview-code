@@ -97,4 +97,8 @@
 |  |
 | ------- |
 | [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
+## Database
+|  |
+| ------- |
+| [1148-article-views-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1148-article-views-i) |
 <!---LeetCode Topics End-->
