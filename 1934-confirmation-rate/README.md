@@ -1,6 +1,7 @@
-<h2><a href="https://leetcode.com/problems/confirmation-rate/">1934. Confirmation Rate</a></h2><h3>Medium</h3><hr><div class="sql-schema-wrapper__3VBi"><a class="sql-schema-link__3cEg">SQL Schema<svg viewBox="0 0 24 24" width="1em" height="1em" class="icon__1Md2"><path fill-rule="evenodd" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></a></div><div><p>Table: <code>Signups</code></p>
+<h2><a href="https://leetcode.com/problems/confirmation-rate">2087. Confirmation Rate</a></h2><h3>Medium</h3><hr><p>Table: <code>Signups</code></p>
 
-<pre>+----------------+----------+
+<pre>
++----------------+----------+
 | Column Name    | Type     |
 +----------------+----------+
 | user_id        | int      |
@@ -14,7 +15,8 @@ Each row contains information about the signup time for the user with ID user_id
 
 <p>Table: <code>Confirmations</code></p>
 
-<pre>+----------------+----------+
+<pre>
++----------------+----------+
 | Column Name    | Type     |
 +----------------+----------+
 | user_id        | int      |
@@ -23,13 +25,13 @@ Each row contains information about the signup time for the user with ID user_id
 +----------------+----------+
 (user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.
 user_id is a foreign key (reference column) to the Signups table.
-action is an ENUM (category) of the type ('confirmed', 'timeout')
-Each row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed ('confirmed') or expired without confirming ('timeout').
+action is an ENUM (category) of the type (&#39;confirmed&#39;, &#39;timeout&#39;)
+Each row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed (&#39;confirmed&#39;) or expired without confirming (&#39;timeout&#39;).
 </pre>
 
 <p>&nbsp;</p>
 
-<p>The <strong>confirmation rate</strong> of a user is the number of <code>'confirmed'</code> messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is <code>0</code>. Round the confirmation rate to <strong>two decimal</strong> places.</p>
+<p>The <strong>confirmation rate</strong> of a user is the number of <code>&#39;confirmed&#39;</code> messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is <code>0</code>. Round the confirmation rate to <strong>two decimal</strong> places.</p>
 
 <p>Write a solution to find the <strong>confirmation rate</strong> of each user.</p>
 
@@ -40,7 +42,8 @@ Each row of this table indicates that the user with ID user_id requested a confi
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> 
+<pre>
+<strong>Input:</strong> 
 Signups table:
 +---------+---------------------+
 | user_id | time_stamp          |
@@ -77,4 +80,3 @@ User 3 made 2 requests and both timed out. The confirmation rate is 0.
 User 7 made 3 requests and all were confirmed. The confirmation rate is 1.
 User 2 made 2 requests where one was confirmed and the other timed out. The confirmation rate is 1 / 2 = 0.5.
 </pre>
-</div>
