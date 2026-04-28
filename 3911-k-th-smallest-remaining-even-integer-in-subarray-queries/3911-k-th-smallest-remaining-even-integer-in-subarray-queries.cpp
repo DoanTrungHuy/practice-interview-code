@@ -47,9 +47,7 @@ public:
                 // dùng pref để đếm số chẵn trong nums[l..r] <= mid
                 int left2 = l, right2 = r, deleted = 0;
                 // đếm chẵn trong nums[l..r] <= mid
-                int pos = upper_bound(nums.begin()+l, 
-                                    nums.begin()+r+1, mid) 
-                        - nums.begin();
+                int pos = upper_bound(nums.begin()+l, nums.begin()+r+1, mid) - nums.begin();
                 deleted = pref[pos] - pref[l];
                 
                 if (total - deleted >= k) hi = mid;
