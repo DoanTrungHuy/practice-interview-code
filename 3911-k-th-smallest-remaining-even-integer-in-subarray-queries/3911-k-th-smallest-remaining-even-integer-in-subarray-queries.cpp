@@ -33,7 +33,7 @@ public:
 
             int right_bound_cnt_even = nums[r] / 2;
 
-            if (2*(k + sum_del) > nums[r]) {
+            if (k > right_bound_cnt_even) {
                 ans.push_back(2*(k + sum_del));
                 continue;
             }
