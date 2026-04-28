@@ -22,8 +22,6 @@ public:
             int r = q[1];
             int k = q[2];
 
-            int sum_del = pref[r + 1] - pref[l];
-
             long long lo = 1, hi = 2e9 + 2e5 + 10;
             while (lo < hi) {
                 long long mid = lo + (hi - lo) / 2;
