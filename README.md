@@ -18,6 +18,7 @@
 | ------- |
 | [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+| [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
@@ -53,6 +54,7 @@
 ## Matrix
 |  |
 | ------- |
+| [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
 ## Hash Function
 |  |
@@ -75,6 +77,7 @@
 |  |
 | ------- |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+| [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -93,6 +96,7 @@
 | [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1012-numbers-with-repeated-digits](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1012-numbers-with-repeated-digits) |
 | [1411-convert-binary-number-in-a-linked-list-to-integer](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1411-convert-binary-number-in-a-linked-list-to-integer) |
+| [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 ## Binary Search
 |  |
 | ------- |
