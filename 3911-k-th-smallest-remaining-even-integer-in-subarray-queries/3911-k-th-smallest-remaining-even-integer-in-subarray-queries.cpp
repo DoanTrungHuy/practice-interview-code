@@ -60,7 +60,7 @@ public:
                 }
             }
 
-            ans.push_back(X & 1 ? X + 1 : X);
+            ans.push_back(X);
         }
 
         return ans;
