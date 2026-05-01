@@ -56,15 +56,11 @@ public:
 
         memset(dp, 0, sizeof(dp));
 
-        for (int i = 0; i < k; ++i) {
-            for (int state = 0; state <= 1; ++state) {
-                dp[i][state] = nums[i];
+        for (int i = 0; i < n; ++i) {
+            if (i - k >= 0) {
+                st1.update(1, 0, max_n, nums[i - k], dp[i - k][0]);
+                st2.update(1, 0, max_n, nums[i - k], dp[i - k][1]);
             }
-        }
-
-        for (int i = k; i < n; ++i) {
-            st1.update(1, 0, max_n, nums[i - k], dp[i - k][0]);
-            st2.update(1, 0, max_n, nums[i - k], dp[i - k][1]);
 
             long long get1 = st1.get(1, 0, max_n, 0, nums[i] - 1);
             long long get2 = st2.get(1, 0, max_n, nums[i] + 1, max_n);
