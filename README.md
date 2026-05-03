@@ -21,6 +21,7 @@
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2358-number-of-ways-to-split-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/2358-number-of-ways-to-split-array) |
+| [3409-longest-subsequence-with-decreasing-adjacent-difference](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3409-longest-subsequence-with-decreasing-adjacent-difference) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 | [3821-count-cells-in-overlapping-horizontal-and-vertical-substrings](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3821-count-cells-in-overlapping-horizontal-and-vertical-substrings) |
@@ -67,6 +68,7 @@
 | [0629-k-inverse-pairs-array](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0629-k-inverse-pairs-array) |
 | [0902-numbers-at-most-n-given-digit-set](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/0902-numbers-at-most-n-given-digit-set) |
 | [1012-numbers-with-repeated-digits](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/1012-numbers-with-repeated-digits) |
+| [3409-longest-subsequence-with-decreasing-adjacent-difference](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3409-longest-subsequence-with-decreasing-adjacent-difference) |
 | [3460-count-the-number-of-inversions](https://github.com/DoanTrungHuy/practice-interview-code/tree/master/3460-count-the-number-of-inversions) |
 ## Greedy
 |  |
