@@ -1471,6 +1471,8 @@ code[class*="language-"], pre[class*="language-"] {
   max-width: var(--container-width, 1200px);
   margin: 0.75rem auto;
   padding: 0 1rem;
+  gap: var(--space-4);
+  flex-wrap: wrap;
 }
 
 .results-count {
