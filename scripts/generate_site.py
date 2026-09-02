@@ -375,8 +375,8 @@ def jsonld_problem(problem: dict) -> str:
     data = {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "headline": f"#{p['number']} {p.get('full_title', '')} - LeetCode Solution",
-        "description": f"Lời giải chi tiết bài #{p['number']} {p.get('full_title', '')} trên LeetCode. Ngôn ngữ: {p.get('primary_language_name', 'N/A')}. Thuật toán: {', '.join(p.get('approaches', []))}.",
+        "headline": f"{p.get('full_title', '')} - LeetCode Solution",
+        "description": f"Lời giải bài {p.get('full_title', '')} trên LeetCode. Ngôn ngữ: {p.get('primary_language_name', 'N/A')}. Thuật toán: {', '.join(p.get('approaches', []))}.",
         "author": {"@type": "Person", "name": AUTHOR},
         "publisher": {"@type": "Organization", "name": SITE_NAME},
         "mainEntityOfPage": {"@type": "WebPage", "@id": f"{SITE_URL}/problems/{p['slug']}.html"},
@@ -601,7 +601,6 @@ def generate_problem_page(p: dict, prev_p, next_p):
         <div class="code-header-left">
             <span class="lang-label lang-{cf['language_id']}">{cf['language_name']}</span>
             <span class="code-filename">{cf['filename']}</span>
-            <span class="code-lines">{cf['line_count']} dòng</span>
         </div>
         <button class="copy-btn" data-target="{copy_id}" aria-label="Sao chép code">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -648,7 +647,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
     <span class="nav-arrow">←</span>
     <div class="nav-info">
         <span class="nav-direction">Bài trước</span>
-        <span class="nav-title">#{prev_p['number']} {html.escape(pt)}</span>
+        <span class="nav-title">{html.escape(pt)}</span>
     </div>
 </a>'''
     if next_p:
@@ -656,7 +655,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
         nav_next = f'''<a href="{next_p['slug']}.html" class="nav-next">
     <div class="nav-info">
         <span class="nav-direction">Bài tiếp</span>
-        <span class="nav-title">#{next_p['number']} {html.escape(nt)}</span>
+        <span class="nav-title">{html.escape(nt)}</span>
     </div>
     <span class="nav-arrow">→</span>
 </a>'''
@@ -669,7 +668,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
     meta_desc = f"Lời giải #{number} {title} ({difficulty}) trên LeetCode. Thuật toán: {', '.join(approaches[:3]) if approaches else difficulty}. Ngôn ngữ: {all_langs}."
 
     page = f'''{head_html(
-        f"#{number} {title} | Lời Giải LeetCode - {SITE_NAME}",
+        f"{title} | Lời Giải LeetCode - {SITE_NAME}",
         meta_desc,
         canonical,
         is_sub=True,
@@ -688,7 +687,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
     <span class="breadcrumb-sep">›</span>
     <a href="../index.html?difficulty={diff_lower}">{difficulty}</a>
     <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current" aria-current="page">#{number} {html.escape(title)}</span>
+    <span class="breadcrumb-current" aria-current="page">{html.escape(title)}</span>
 </nav>
 
 <div class="problem-layout">
@@ -696,7 +695,6 @@ def generate_problem_page(p: dict, prev_p, next_p):
         <article>
             <div class="problem-header-section">
                 <h1 class="problem-title">
-                    <span class="problem-number-large">#{number}</span>
                     {html.escape(title)}
                 </h1>
                 <div class="problem-meta">
@@ -718,7 +716,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
             {approach_html}
 
             <section class="solution-section">
-                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải ({len(p["code_files"])} file, {p.get("total_lines", 0)} dòng)</h2>
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải</h2>
                 {"".join(code_sections)}
             </section>
         </article>
@@ -735,7 +733,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
                 <h3>📊 Thông Tin Bài Toán</h3>
                 <div class="info-item">
                     <span class="info-label">Số bài</span>
-                    <span class="info-value">#{number}</span>
+                    <span class="info-value">{number}</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Độ khó</span>
