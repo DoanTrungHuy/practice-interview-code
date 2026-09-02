@@ -856,19 +856,23 @@ body.light-theme .icon-moon {
   display: flex;
   gap: var(--space-8);
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--space-6) var(--space-6) var(--space-24);
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .problem-main {
   flex: 1;
   min-width: 0;
+  max-width: 100%;
   background: var(--surface-color);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .problem-sidebar {
@@ -951,6 +955,15 @@ body.light-theme .icon-moon {
 .description-section, .solution-section, .approach-section {
   padding: var(--space-8);
   border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.approach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .section-title {
@@ -1051,8 +1064,10 @@ body.light-theme .icon-moon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   padding: var(--space-3) var(--space-5);
-  background: var(--surface-color);
+  background: rgba(0,0,0,0.2);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -1093,6 +1108,8 @@ body.light-theme .icon-moon {
 .code-block {
   overflow-x: auto;
   background: var(--code-bg);
+  width: 100%;
+  max-width: 100%;
 }
 
 .code-block pre {
@@ -1261,6 +1278,7 @@ code[class*="language-"], pre[class*="language-"] {
 @media (max-width: 1024px) {
   .problem-layout {
     flex-direction: column;
+    padding: var(--space-4) var(--space-2) var(--space-12);
   }
   .problem-sidebar {
     width: 100%;
@@ -1308,6 +1326,9 @@ code[class*="language-"], pre[class*="language-"] {
   }
   .nav-next .nav-direction {
     flex-direction: row-reverse;
+  }
+  .description-section, .solution-section, .approach-section {
+    padding: var(--space-4) var(--space-2);
   }
 }
 
