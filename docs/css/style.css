@@ -258,15 +258,9 @@ button {
 .logo-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-family: var(--font-mono);
-  font-weight: 800;
-  box-shadow: var(--shadow-glow);
 }
 
 .logo-text {

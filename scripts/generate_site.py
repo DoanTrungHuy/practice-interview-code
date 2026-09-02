@@ -289,7 +289,7 @@ def head_html(title, description="", canonical="", is_sub=False, og_type="websit
     <link rel="icon" type="image/svg+xml" href="{prefix}logo.svg">
 
     <!-- Open Graph -->
-    <meta property="og:image" content="{SITE_URL}/logo.svg">
+    <meta property="og:image" content="https://opengraph.githubassets.com/1/DoanTrungHuy/practice-interview-code">
     <meta property="og:title" content="{html.escape(title)}">
     <meta property="og:description" content="{html.escape(description[:200])}">
     <meta property="og:type" content="{og_type}">
@@ -300,7 +300,7 @@ def head_html(title, description="", canonical="", is_sub=False, og_type="websit
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{html.escape(title)}">
-    <meta name="twitter:image" content="{SITE_URL}/logo.svg">
+    <meta name="twitter:image" content="https://opengraph.githubassets.com/1/DoanTrungHuy/practice-interview-code">
     <meta name="twitter:description" content="{html.escape(description[:200])}">
 
     <!-- Google Fonts -->
@@ -326,7 +326,7 @@ def header_html(is_sub=False):
     <div class="header-glow"></div>
     <div class="nav-container">
         <a href="{prefix}index.html" class="logo">
-            <span class="logo-icon">⚡</span>
+            <img src="{prefix}logo.svg" alt="Logo" class="logo-icon">
             <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
         </a>
         <nav class="nav-links">
@@ -349,12 +349,13 @@ def header_html(is_sub=False):
 </header>'''
 
 
-def footer_html():
+def footer_html(is_sub=False):
+    prefix = "../" if is_sub else ""
     year = datetime.now().year
     return f'''<footer class="site-footer">
     <div class="footer-content">
         <div class="footer-brand">
-            <span class="logo-icon">⚡</span>
+            <img src="{prefix}logo.svg" alt="Logo" class="logo-icon">
             <span>LeetCode<span class="logo-accent">Solutions</span></span>
         </div>
         <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
@@ -773,7 +774,7 @@ def generate_problem_page(p: dict, prev_p, next_p):
     {ad_slot(ADSENSE_SLOT_BOTTOM, "horizontal")}
 </div>
 
-{footer_html()}
+{footer_html(is_sub=True)}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
