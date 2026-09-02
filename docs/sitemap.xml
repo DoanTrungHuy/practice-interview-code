@@ -1,0 +1,2319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0001-two-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0002-add-two-numbers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0003-longest-substring-without-repeating-characters.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0005-longest-palindromic-substring.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0006-zigzag-conversion.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0007-reverse-integer.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0010-regular-expression-matching.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0011-container-with-most-water.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0012-integer-to-roman.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0014-longest-common-prefix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0015-3sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0017-letter-combinations-of-a-phone-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0018-4sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0019-remove-nth-node-from-end-of-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0020-valid-parentheses.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0021-merge-two-sorted-lists.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0023-merge-k-sorted-lists.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0024-swap-nodes-in-pairs.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0025-reverse-nodes-in-k-group.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0026-remove-duplicates-from-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0027-remove-element.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0028-find-the-index-of-the-first-occurrence-in-a-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0029-divide-two-integers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0030-substring-with-concatenation-of-all-words.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0031-next-permutation.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0033-search-in-rotated-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0034-find-first-and-last-position-of-element-in-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0035-search-insert-position.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0036-valid-sudoku.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0038-count-and-say.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0040-combination-sum-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0041-first-missing-positive.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0042-trapping-rain-water.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0043-multiply-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0044-wildcard-matching.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0045-jump-game-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0046-permutations.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0047-permutations-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0048-rotate-image.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0049-group-anagrams.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0050-powx-n.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0051-n-queens.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0052-n-queens-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0053-maximum-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0054-spiral-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0055-jump-game.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0056-merge-intervals.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0057-insert-interval.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0059-spiral-matrix-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0062-unique-paths.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0063-unique-paths-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0064-minimum-path-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0067-add-binary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0068-text-justification.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0070-climbing-stairs.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0071-simplify-path.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0072-edit-distance.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0073-set-matrix-zeroes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0074-search-a-2d-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0075-sort-colors.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0076-minimum-window-substring.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0077-combinations.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0078-subsets.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0079-word-search.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0081-search-in-rotated-sorted-array-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0082-remove-duplicates-from-sorted-list-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0083-remove-duplicates-from-sorted-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0084-largest-rectangle-in-histogram.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0085-maximal-rectangle.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0086-partition-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0087-scramble-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0088-merge-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0089-gray-code.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0090-subsets-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0092-reverse-linked-list-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0093-restore-ip-addresses.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0094-binary-tree-inorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0095-unique-binary-search-trees-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0097-interleaving-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0098-validate-binary-search-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0100-same-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0101-symmetric-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0102-binary-tree-level-order-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0103-binary-tree-zigzag-level-order-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0104-maximum-depth-of-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0105-construct-binary-tree-from-preorder-and-inorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0106-construct-binary-tree-from-inorder-and-postorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0107-binary-tree-level-order-traversal-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0108-convert-sorted-array-to-binary-search-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0109-convert-sorted-list-to-binary-search-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0111-minimum-depth-of-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0114-flatten-binary-tree-to-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0115-distinct-subsequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0118-pascals-triangle.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0119-pascals-triangle-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0121-best-time-to-buy-and-sell-stock.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0122-best-time-to-buy-and-sell-stock-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0123-best-time-to-buy-and-sell-stock-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0124-binary-tree-maximum-path-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0125-valid-palindrome.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0127-word-ladder.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0128-longest-consecutive-sequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0129-sum-root-to-leaf-numbers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0131-palindrome-partitioning.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0133-clone-graph.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0134-gas-station.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0135-candy.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0136-single-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0137-single-number-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0138-copy-list-with-random-pointer.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0139-word-break.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0140-word-break-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0141-linked-list-cycle.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0142-linked-list-cycle-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0144-binary-tree-preorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0145-binary-tree-postorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0146-lru-cache.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0148-sort-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0149-max-points-on-a-line.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0150-evaluate-reverse-polish-notation.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0151-reverse-words-in-a-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0152-maximum-product-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0153-find-minimum-in-rotated-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0155-min-stack.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0160-intersection-of-two-linked-lists.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0162-find-peak-element.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0164-maximum-gap.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0168-excel-sheet-column-title.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0169-majority-element.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0174-dungeon-game.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0176-second-highest-salary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0178-rank-scores.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0180-consecutive-numbers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0183-customers-who-never-order.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0184-department-highest-salary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0187-repeated-dna-sequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0188-best-time-to-buy-and-sell-stock-iv.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0196-delete-duplicate-emails.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0198-house-robber.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0199-binary-tree-right-side-view.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0200-number-of-islands.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0201-bitwise-and-of-numbers-range.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0202-happy-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0203-remove-linked-list-elements.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0204-count-primes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0205-isomorphic-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0206-reverse-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0207-course-schedule.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0208-implement-trie-prefix-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0209-minimum-size-subarray-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0210-course-schedule-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0211-design-add-and-search-words-data-structure.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0212-word-search-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0213-house-robber-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0214-shortest-palindrome.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0215-kth-largest-element-in-an-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0216-combination-sum-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0217-contains-duplicate.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0218-the-skyline-problem.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0219-contains-duplicate-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0221-maximal-square.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0222-count-complete-tree-nodes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0223-rectangle-area.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0224-basic-calculator.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0225-implement-stack-using-queues.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0226-invert-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0228-summary-ranges.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0229-majority-element-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0230-kth-smallest-element-in-a-bst.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0232-implement-queue-using-stacks.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0233-number-of-digit-one.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0234-palindrome-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0235-lowest-common-ancestor-of-a-binary-search-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0236-lowest-common-ancestor-of-a-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0237-delete-node-in-a-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0238-product-of-array-except-self.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0239-sliding-window-maximum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0240-search-a-2d-matrix-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0242-valid-anagram.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0258-add-digits.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0260-single-number-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0263-ugly-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0264-ugly-number-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0274-h-index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0275-h-index-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0278-first-bad-version.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0279-perfect-squares.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0287-find-the-duplicate-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0290-word-pattern.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0295-find-median-from-data-stream.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0299-bulls-and-cows.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0300-longest-increasing-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0303-range-sum-query-immutable.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0304-range-sum-query-2d-immutable.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0307-range-sum-query-mutable.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0309-best-time-to-buy-and-sell-stock-with-cooldown.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0310-minimum-height-trees.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0312-burst-balloons.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0315-count-of-smaller-numbers-after-self.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0318-maximum-product-of-word-lengths.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0319-bulb-switcher.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0322-coin-change.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0328-odd-even-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0329-longest-increasing-path-in-a-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0332-reconstruct-itinerary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0338-counting-bits.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0342-power-of-four.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0343-integer-break.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0345-reverse-vowels-of-a-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0347-top-k-frequent-elements.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0350-intersection-of-two-arrays-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0352-data-stream-as-disjoint-intervals.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0354-russian-doll-envelopes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0357-count-numbers-with-unique-digits.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0365-water-and-jug-problem.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0368-largest-divisible-subset.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0371-sum-of-two-integers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0373-find-k-pairs-with-smallest-sums.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0374-guess-number-higher-or-lower.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0377-combination-sum-iv.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0380-insert-delete-getrandom-o1.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0382-linked-list-random-node.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0383-ransom-note.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0386-lexicographical-numbers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0387-first-unique-character-in-a-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0391-perfect-rectangle.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0392-is-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0394-decode-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0397-integer-replacement.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0399-evaluate-division.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0402-remove-k-digits.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0403-frog-jump.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0404-sum-of-left-leaves.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0406-queue-reconstruction-by-height.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0409-longest-palindrome.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0410-split-array-largest-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0415-add-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0416-partition-equal-subset-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0417-pacific-atlantic-water-flow.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0419-battleships-in-a-board.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0421-maximum-xor-of-two-numbers-in-an-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0424-longest-repeating-character-replacement.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0427-construct-quad-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0433-minimum-genetic-mutation.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0435-non-overlapping-intervals.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0436-find-right-interval.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0438-find-all-anagrams-in-a-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0443-string-compression.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0445-add-two-numbers-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0446-arithmetic-slices-ii-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0448-find-all-numbers-disappeared-in-an-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0451-sort-characters-by-frequency.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0452-minimum-number-of-arrows-to-burst-balloons.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0456-132-pattern.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0459-repeated-substring-pattern.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0460-lfu-cache.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0461-hamming-distance.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0462-minimum-moves-to-equal-array-elements-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0463-island-perimeter.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0472-concatenated-words.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0473-matchsticks-to-square.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0475-heaters.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0476-number-complement.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0485-max-consecutive-ones.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0486-predict-the-winner.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0491-non-decreasing-subsequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0494-target-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0500-keyboard-row.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0502-ipo.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0503-next-greater-element-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0507-perfect-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0509-fibonacci-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0515-find-largest-value-in-each-tree-row.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0516-longest-palindromic-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0518-coin-change-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0520-detect-capital.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0523-continuous-subarray-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0525-contiguous-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0526-beautiful-arrangement.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0528-random-pick-with-weight.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0530-minimum-absolute-difference-in-bst.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0540-single-element-in-a-sorted-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0542-01-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0543-diameter-of-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0547-number-of-provinces.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0550-game-play-analysis-iv.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0560-subarray-sum-equals-k.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0564-find-the-closest-palindrome.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0565-array-nesting.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0566-reshape-the-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0567-permutation-in-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0570-managers-with-at-least-5-direct-reports.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0576-out-of-boundary-paths.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0581-shortest-unsorted-continuous-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0583-delete-operation-for-two-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0584-find-customer-referee.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0587-erect-the-fence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0589-n-ary-tree-preorder-traversal.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0593-valid-square.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0594-longest-harmonious-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0595-big-countries.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0600-non-negative-integers-without-consecutive-ones.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0605-can-place-flowers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0608-tree-node.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0611-valid-triangle-number.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0621-task-scheduler.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0624-maximum-distance-in-arrays.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0626-exchange-seats.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0627-swap-salary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0629-k-inverse-pairs-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0632-smallest-range-covering-elements-from-k-lists.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0637-average-of-levels-in-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0641-design-circular-deque.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0643-maximum-average-subarray-i.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0645-set-mismatch.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0646-maximum-length-of-pair-chain.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0647-palindromic-substrings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0648-replace-words.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0649-dota2-senate.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0650-2-keys-keyboard.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0652-find-duplicate-subtrees.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0653-two-sum-iv-input-is-a-bst.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0658-find-k-closest-elements.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0661-image-smoother.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0662-maximum-width-of-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0664-strange-printer.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0665-non-decreasing-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0668-kth-smallest-number-in-multiplication-table.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0670-maximum-swap.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0673-number-of-longest-increasing-subsequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0676-implement-magic-dictionary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0677-map-sum-pairs.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0679-24-game.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0684-redundant-connection.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0688-knight-probability-in-chessboard.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0689-maximum-sum-of-3-non-overlapping-subarrays.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0691-stickers-to-spell-word.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0692-top-k-frequent-words.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0695-max-area-of-island.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0697-degree-of-an-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0698-partition-to-k-equal-sum-subsets.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0703-kth-largest-element-in-a-stream.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0704-binary-search.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0705-design-hashset.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0706-design-hashmap.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0709-to-lower-case.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0712-minimum-ascii-delete-sum-for-two-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0713-subarray-product-less-than-k.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0714-best-time-to-buy-and-sell-stock-with-transaction-fee.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0717-1-bit-and-2-bit-characters.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0718-maximum-length-of-repeated-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0719-find-k-th-smallest-pair-distance.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0720-longest-word-in-dictionary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0721-accounts-merge.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0724-find-pivot-index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0725-split-linked-list-in-parts.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0729-my-calendar-i.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0730-count-different-palindromic-subsequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0731-my-calendar-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0732-my-calendar-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0733-flood-fill.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0735-asteroid-collision.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0739-daily-temperatures.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0740-delete-and-earn.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0741-cherry-pickup.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0744-find-smallest-letter-greater-than-target.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0746-min-cost-climbing-stairs.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0749-contain-virus.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0752-open-the-lock.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0753-cracking-the-safe.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0766-toeplitz-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0767-reorganize-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0778-swim-in-rising-water.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0779-k-th-symbol-in-grammar.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0783-minimum-distance-between-bst-nodes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0785-is-graph-bipartite.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0786-k-th-smallest-prime-fraction.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0787-cheapest-flights-within-k-stops.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0788-rotated-digits.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0790-domino-and-tromino-tiling.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0792-number-of-matching-subsequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0796-rotate-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0797-all-paths-from-source-to-target.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0802-find-eventual-safe-states.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0805-split-array-with-same-average.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0808-soup-servings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0820-short-encoding-of-words.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0821-shortest-distance-to-a-character.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0826-most-profit-assigning-work.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0827-making-a-large-island.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0828-count-unique-characters-of-all-substrings-of-a-given-string.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0829-consecutive-numbers-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0834-sum-of-distances-in-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0835-image-overlap.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0837-new-21-game.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0839-similar-string-groups.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0841-keys-and-rooms.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0842-split-array-into-fibonacci-sequence.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0844-backspace-string-compare.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0847-shortest-path-visiting-all-nodes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0850-rectangle-area-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0851-loud-and-rich.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0852-peak-index-in-a-mountain-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0854-k-similar-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0859-buddy-strings.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0861-score-after-flipping-matrix.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0862-shortest-subarray-with-sum-at-least-k.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0863-all-nodes-distance-k-in-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0864-shortest-path-to-get-all-keys.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0872-leaf-similar-trees.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0875-koko-eating-bananas.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0876-middle-of-the-linked-list.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0877-stone-game.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0879-profitable-schemes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0880-decoded-string-at-index.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0881-boats-to-save-people.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0886-possible-bipartition.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0894-all-possible-full-binary-trees.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0896-monotonic-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0899-orderly-queue.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0901-online-stock-span.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0902-numbers-at-most-n-given-digit-set.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0904-fruit-into-baskets.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0905-sort-array-by-parity.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0907-sum-of-subarray-minimums.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0909-snakes-and-ladders.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0912-sort-an-array.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0916-word-subsets.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0918-maximum-sum-circular-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0920-number-of-music-playlists.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0921-minimum-add-to-make-parentheses-valid.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0924-minimize-malware-spread.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0926-flip-string-to-monotone-increasing.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0928-minimize-malware-spread-ii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0931-minimum-falling-path-sum.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0933-number-of-recent-calls.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0934-shortest-bridge.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0938-range-sum-of-bst.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0944-delete-columns-to-make-sorted.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0945-minimum-increment-to-make-array-unique.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0946-validate-stack-sequences.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0947-most-stones-removed-with-same-row-or-column.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0953-verifying-an-alien-dictionary.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0956-tallest-billboard.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0958-check-completeness-of-a-binary-tree.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0959-regions-cut-by-slashes.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0960-delete-columns-to-make-sorted-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0962-maximum-width-ramp.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0968-binary-tree-cameras.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0969-pancake-sorting.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0974-subarray-sums-divisible-by-k.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0976-largest-perimeter-triangle.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0978-longest-turbulent-subarray.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0980-unique-paths-iii.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0981-time-based-key-value-store.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0982-triples-with-bitwise-and-equal-to-zero.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0983-minimum-cost-for-tickets.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0986-interval-list-intersections.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0989-add-to-array-form-of-integer.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0992-subarrays-with-k-different-integers.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0996-number-of-squareful-arrays.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://doantrunguy.github.io/practice-interview-code/problems/0997-find-the-town-judge.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#749 749. Contain Virus | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy</title>
+    <meta name="description" content="Lời giải #749 749. Contain Virus (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Union Find, Matrix. Ngôn ngữ: C++.">
+    <meta name="author" content="Doan Trung Huy">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://doantrunguy.github.io/practice-interview-code/problems/0749-contain-virus.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="#749 749. Contain Virus | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:description" content="Lời giải #749 749. Contain Virus (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Union Find, Matrix. Ngôn ngữ: C++.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://doantrunguy.github.io/practice-interview-code/problems/0749-contain-virus.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#749 749. Contain Virus | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta name="twitter:description" content="Lời giải #749 749. Contain Virus (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Union Find, Matrix. Ngôn ngữ: C++.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "#749 749. Contain Virus - LeetCode Solution", "description": "Lời giải chi tiết bài #749 749. Contain Virus trên LeetCode. Ngôn ngữ: C++. Thuật toán: Bit Manipulation, Union Find, Matrix.", "author": {"@type": "Person", "name": "Doan Trung Huy"}, "publisher": {"@type": "Organization", "name": "LeetCode Solutions by Doan Trung Huy"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://doantrunguy.github.io/practice-interview-code/problems/0749-contain-virus.html"}, "proficiencyLevel": "Hard", "programmingLanguage": ["C++"], "keywords": "Hard, C++, Bit Manipulation, Union Find, Matrix"}</script>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">🏠 Trang chủ</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" class="nav-link" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="ad-banner ad-top">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">🏠 Trang chủ</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="../index.html?difficulty=hard">Hard</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current" aria-current="page">#749 749. Contain Virus</span>
+</nav>
+
+<div class="problem-layout">
+    <main class="problem-main">
+        <article>
+            <div class="problem-header-section">
+                <h1 class="problem-title">
+                    <span class="problem-number-large">#749</span>
+                    749. Contain Virus
+                </h1>
+                <div class="problem-meta">
+                    <span class="difficulty-badge difficulty-hard">Hard (Khó)</span>
+                    <span class="lang-badge lang-cpp">C++</span>
+                    <a href="https://leetcode.com/problems/contain-virus/" class="leetcode-link" target="_blank" rel="noopener noreferrer">
+                        🔗 Xem trên LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <section class="description-section">
+                <h2 class="section-title"><span class="section-icon">📋</span> Đề Bài</h2>
+                <div class="description-content">
+                    <p>A virus is spreading rapidly, and your task is to quarantine the infected area by installing walls.</p>
+
+<p>The world is modeled as an <code>m x n</code> binary grid <code>isInfected</code>, where <code>isInfected[i][j] == 0</code> represents uninfected cells, and <code>isInfected[i][j] == 1</code> represents cells contaminated with the virus. A wall (and only one wall) can be installed between any two <strong>4-directionally</strong> adjacent cells, on the shared boundary.</p>
+
+<p>Every night, the virus spreads to all neighboring cells in all four directions unless blocked by a wall. Resources are limited. Each day, you can install walls around only one region (i.e., the affected area (continuous block of infected cells) that threatens the most uninfected cells the following night). There <strong>will never be a tie</strong>.</p>
+
+<p>Return <em>the number of walls used to quarantine all the infected regions</em>. If the world will become fully infected, return the number of walls used.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/01/virus11-grid.jpg" style="width: 500px; height: 255px;">
+<pre><strong>Input:</strong> isInfected = [[0,1,0,0,0,0,0,1],[0,1,0,0,0,0,0,1],[0,0,0,0,0,0,0,1],[0,0,0,0,0,0,0,0]]
+<strong>Output:</strong> 10
+<strong>Explanation:</strong> There are 2 contaminated regions.
+On the first day, add 5 walls to quarantine the viral region on the left. The board after the virus spreads is:
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/01/virus12edited-grid.jpg" style="width: 500px; height: 257px;">
+On the second day, add 5 walls to quarantine the viral region on the right. The virus is fully contained.
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/01/virus13edited-grid.jpg" style="width: 500px; height: 261px;">
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/06/01/virus2-grid.jpg" style="width: 653px; height: 253px;">
+<pre><strong>Input:</strong> isInfected = [[1,1,1],[1,0,1],[1,1,1]]
+<strong>Output:</strong> 4
+<strong>Explanation:</strong> Even though there is only one cell saved, there are 4 walls built.
+Notice that walls are only built on the shared boundary of two different cells.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+
+<pre><strong>Input:</strong> isInfected = [[1,1,1,0,0,0,0,0,0],[1,0,1,0,1,1,1,1,1],[1,1,1,0,0,0,0,0,0]]
+<strong>Output:</strong> 13
+<strong>Explanation:</strong> The region on the left only builds two new walls.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>m ==&nbsp;isInfected.length</code></li>
+	<li><code>n ==&nbsp;isInfected[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 50</code></li>
+	<li><code>isInfected[i][j]</code> is either <code>0</code> or <code>1</code>.</li>
+	<li>There is always a contiguous viral region throughout the described process that will <strong>infect strictly more uncontaminated squares</strong> in the next round.</li>
+</ul>
+
+                </div>
+            </section>
+
+            <div class="approach-section">
+    <h2 class="section-title"><span class="section-icon">🧠</span> Thuật Toán &amp; Kỹ Thuật</h2>
+    <div class="approach-tags"><span class="approach-tag"><strong>Bit Manipulation</strong> (Thao tác bit)</span><span class="approach-tag"><strong>Union Find</strong> (Tập hợp rời rạc)</span><span class="approach-tag"><strong>Matrix</strong> (Ma trận)</span></div>
+    <div class="complexity-info">
+        <div class="complexity-item">
+            <span class="complexity-label">⏱️ Thời gian</span>
+            <code class="complexity-value">O(n²)</code>
+        </div>
+        <div class="complexity-item">
+            <span class="complexity-label">💾 Không gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+    </div>
+</div>
+
+            <section class="solution-section">
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải (1 file, 159 dòng)</h2>
+                <div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-cpp">C++</span>
+            <span class="code-filename">0749-contain-virus.cpp</span>
+            <span class="code-lines">159 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-cpp-0" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-cpp-0" class="language-cpp">class DSU {
+private:
+    vector&lt;int&gt; parent, rank;
+    
+public:
+    DSU() {
+        
+    }
+    
+    DSU(int n) {
+        parent.resize(n, -1);
+        rank.resize(n, 1);
+    }
+    
+    void add(int u) {
+        parent[u] = u;
+    }
+    
+    int find(int u) {
+        if (parent[u] == -1) {
+            return -1;
+        }
+        if (u == parent[u]) {
+            return u;
+        }
+        return parent[u] = find(parent[u]);
+    }
+    
+    void _union(int u, int v) {
+        int pu = find(u);
+        int pv = find(v);
+        
+        if (pu == pv) {
+            return;
+        }
+        
+        if (rank[pu] &gt; rank[pv]) {
+            rank[pu] += rank[pv];
+            parent[pv] = pu;
+        }
+        else {
+            rank[pv] += rank[pu];
+            parent[pu] = pv;
+        }
+    }
+    
+    int get_rank(int u) {
+        return rank[find(u)];
+    }
+    
+    void set_parent_of(int u, int val) {
+        parent[u] = val;
+    }
+};
+
+class Solution {
+private:
+    int m, n;
+    
+public:
+    int containVirus(vector&lt;vector&lt;int&gt;&gt;&amp; grid) {
+        m = grid.size(), n = grid[0].size();
+        DSU dsu(n*m);
+        
+        for (int i = 0; i &lt; m; ++i) {
+            for (int j = 0; j &lt; n; ++j) {
+                if (grid[i][j]) {
+                    int fc = i*n + j;
+                    int fu = fc - n;
+                    int fl = fc - 1;
+                    
+                    dsu.add(fc);
+                    
+                    if (i - 1 &gt;= 0 and grid[i - 1][j]) {
+                        dsu._union(fc, fu);
+                    }
+                    if (j - 1 &gt;= 0 and grid[i][j - 1]) {
+                        dsu._union(fc, fl);
+                    }
+                }
+            }
+        }
+        
+        int ans = 0;
+        const int DIR[5] = {-1, 0, 1, 0, -1};
+        
+        while (true) {
+            map&lt;int, set&lt;pair&lt;int, int&gt;&gt;&gt; partition_affect;
+            map&lt;int, int&gt; outline;
+            
+            for (int i = 0; i &lt; m; ++i) {
+                for (int j = 0; j &lt; n; ++j) { 
+                    if (!grid[i][j] or dsu.find(n*i + j) == -1) {
+                        continue;
+                    }
+                    for (int k = 0; k &lt; 4; ++k) {
+                        int ni = i + DIR[k];
+                        int nj = j + DIR[k + 1];
+                        
+                        if (!isValid(ni, nj) or grid[ni][nj]) {
+                            continue;
+                        }
+                        
+                        partition_affect[dsu.find(i*n + j)].insert({ni, nj});
+                        outline[dsu.find(i*n + j)]++;
+                    }
+                }
+            }
+            
+            if (partition_affect.size() == 0) {
+                break;
+            }
+            
+            int largest_partition = INT_MIN;
+            int max_num = INT_MIN;
+            
+            for (auto [num, set_in_partition] : partition_affect) {
+                if (largest_partition &lt; (int)set_in_partition.size()) {
+                    largest_partition = (int)set_in_partition.size();
+                    max_num = num;
+                }
+            }
+            
+            ans += outline[max_num];
+            
+            dsu.set_parent_of(max_num, -1);
+            
+            for (auto [key, partition] : partition_affect) {
+                if (key == max_num) {
+                    continue;
+                }
+                for (auto [i, j] : partition) {
+                    grid[i][j] = 1;
+                    dsu.add(i*n + j);
+                    for (int k = 0; k &lt; 4; ++k) {
+                        int ni = i + DIR[k];
+                        int nj = j + DIR[k + 1];
+
+                        if (!isValid(ni, nj)) {
+                            continue;
+                        }
+
+                        if (dsu.find(ni*n + nj) == -1) {
+                            continue;
+                        }
+
+                        dsu._union(i*n + j, ni*n + nj);
+                    }
+                }
+            }
+        }
+        
+        return ans;
+    }
+    
+    bool isValid(int i, int j) {
+        return 0 &lt;= i and i &lt; m and 0 &lt;= j and j &lt; n;
+    }
+};</code></pre>
+    </div>
+</div>
+            </section>
+        </article>
+
+        <nav class="problem-nav" aria-label="Problem navigation">
+            <a href="0746-min-cost-climbing-stairs.html" class="nav-prev">
+    <span class="nav-arrow">←</span>
+    <div class="nav-info">
+        <span class="nav-direction">Bài trước</span>
+        <span class="nav-title">#746 746. Min Cost Climbing Stairs</span>
+    </div>
+</a>
+            <a href="0752-open-the-lock.html" class="nav-next">
+    <div class="nav-info">
+        <span class="nav-direction">Bài tiếp</span>
+        <span class="nav-title">#752 752. Open the Lock</span>
+    </div>
+    <span class="nav-arrow">→</span>
+</a>
+        </nav>
+    </main>
+
+    <aside class="problem-sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-info">
+                <h3>📊 Thông Tin Bài Toán</h3>
+                <div class="info-item">
+                    <span class="info-label">Số bài</span>
+                    <span class="info-value">#749</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ khó</span>
+                    <span class="difficulty-badge difficulty-hard">Hard</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Ngôn ngữ</span>
+                    <span class="info-value">C++</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thuật toán</span>
+                    <span class="info-value">Bit Manipulation, Union Find, Matrix</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thời gian</span>
+                    <code class="info-value">O(n²)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bộ nhớ</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng dòng code</span>
+                    <span class="info-value">159</span>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-sidebar">
+                <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block;min-height:250px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="ad-banner ad-bottom">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span>LeetCode<span class="logo-accent">Solutions</span></span>
+        </div>
+        <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code/issues" target="_blank" rel="noopener">Báo lỗi</a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Doan Trung Huy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

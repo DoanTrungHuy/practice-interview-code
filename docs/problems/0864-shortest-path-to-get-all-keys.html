@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#864 864. Shortest Path to Get All Keys | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy</title>
+    <meta name="description" content="Lời giải #864 864. Shortest Path to Get All Keys (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Matrix, String. Ngôn ngữ: C++.">
+    <meta name="author" content="Doan Trung Huy">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://doantrunguy.github.io/practice-interview-code/problems/0864-shortest-path-to-get-all-keys.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="#864 864. Shortest Path to Get All Keys | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:description" content="Lời giải #864 864. Shortest Path to Get All Keys (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Matrix, String. Ngôn ngữ: C++.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://doantrunguy.github.io/practice-interview-code/problems/0864-shortest-path-to-get-all-keys.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#864 864. Shortest Path to Get All Keys | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta name="twitter:description" content="Lời giải #864 864. Shortest Path to Get All Keys (Hard) trên LeetCode. Thuật toán: Bit Manipulation, Matrix, String. Ngôn ngữ: C++.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "#864 864. Shortest Path to Get All Keys - LeetCode Solution", "description": "Lời giải chi tiết bài #864 864. Shortest Path to Get All Keys trên LeetCode. Ngôn ngữ: C++. Thuật toán: Bit Manipulation, Matrix, String.", "author": {"@type": "Person", "name": "Doan Trung Huy"}, "publisher": {"@type": "Organization", "name": "LeetCode Solutions by Doan Trung Huy"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://doantrunguy.github.io/practice-interview-code/problems/0864-shortest-path-to-get-all-keys.html"}, "proficiencyLevel": "Hard", "programmingLanguage": ["C++"], "keywords": "Hard, C++, Bit Manipulation, Matrix, String"}</script>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">🏠 Trang chủ</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" class="nav-link" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="ad-banner ad-top">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">🏠 Trang chủ</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="../index.html?difficulty=hard">Hard</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current" aria-current="page">#864 864. Shortest Path to Get All Keys</span>
+</nav>
+
+<div class="problem-layout">
+    <main class="problem-main">
+        <article>
+            <div class="problem-header-section">
+                <h1 class="problem-title">
+                    <span class="problem-number-large">#864</span>
+                    864. Shortest Path to Get All Keys
+                </h1>
+                <div class="problem-meta">
+                    <span class="difficulty-badge difficulty-hard">Hard (Khó)</span>
+                    <span class="lang-badge lang-cpp">C++</span>
+                    <a href="https://leetcode.com/problems/shortest-path-to-get-all-keys/" class="leetcode-link" target="_blank" rel="noopener noreferrer">
+                        🔗 Xem trên LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <section class="description-section">
+                <h2 class="section-title"><span class="section-icon">📋</span> Đề Bài</h2>
+                <div class="description-content">
+                    <p>You are given an <code>m x n</code> grid <code>grid</code> where:</p>
+
+<ul>
+	<li><code>'.'</code> is an empty cell.</li>
+	<li><code>'#'</code> is a wall.</li>
+	<li><code>'@'</code> is the starting point.</li>
+	<li>Lowercase letters represent keys.</li>
+	<li>Uppercase letters represent locks.</li>
+</ul>
+
+<p>You start at the starting point and one move consists of walking one space in one of the four cardinal directions. You cannot walk outside the grid, or walk into a wall.</p>
+
+<p>If you walk over a key, you can pick it up and you cannot walk over a lock unless you have its corresponding key.</p>
+
+<p>For some <code><font face="monospace">1 &lt;= k &lt;= 6</font></code>, there is exactly one lowercase and one uppercase letter of the first <code>k</code> letters of the English alphabet in the grid. This means that there is exactly one key for each lock, and one lock for each key; and also that the letters used to represent the keys and locks were chosen in the same order as the English alphabet.</p>
+
+<p>Return <em>the lowest number of moves to acquire all keys</em>. If it is impossible, return <code>-1</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/07/23/lc-keys2.jpg" style="width: 404px; height: 245px;">
+<pre><strong>Input:</strong> grid = ["@.a..","###.#","b.A.B"]
+<strong>Output:</strong> 8
+<strong>Explanation:</strong> Note that the goal is to obtain all the keys not to open all the locks.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/07/23/lc-key2.jpg" style="width: 404px; height: 245px;">
+<pre><strong>Input:</strong> grid = ["@..aA","..B#.","....b"]
+<strong>Output:</strong> 6
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/07/23/lc-keys3.jpg" style="width: 244px; height: 85px;">
+<pre><strong>Input:</strong> grid = ["@Aa"]
+<strong>Output:</strong> -1
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>m == grid.length</code></li>
+	<li><code>n == grid[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 30</code></li>
+	<li><code>grid[i][j]</code> is either an English letter, <code>'.'</code>, <code>'#'</code>, or <code>'@'</code>.</li>
+	<li>The number of keys in the grid is in the range <code>[1, 6]</code>.</li>
+	<li>Each key in the grid is <strong>unique</strong>.</li>
+	<li>Each key in the grid has a matching lock.</li>
+</ul>
+
+                </div>
+            </section>
+
+            <div class="approach-section">
+    <h2 class="section-title"><span class="section-icon">🧠</span> Thuật Toán &amp; Kỹ Thuật</h2>
+    <div class="approach-tags"><span class="approach-tag"><strong>Bit Manipulation</strong> (Thao tác bit)</span><span class="approach-tag"><strong>Matrix</strong> (Ma trận)</span><span class="approach-tag"><strong>String</strong> (Chuỗi)</span></div>
+    <div class="complexity-info">
+        <div class="complexity-item">
+            <span class="complexity-label">⏱️ Thời gian</span>
+            <code class="complexity-value">O(n²)</code>
+        </div>
+        <div class="complexity-item">
+            <span class="complexity-label">💾 Không gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+    </div>
+</div>
+
+            <section class="solution-section">
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải (1 file, 71 dòng)</h2>
+                <div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-cpp">C++</span>
+            <span class="code-filename">0864-shortest-path-to-get-all-keys.cpp</span>
+            <span class="code-lines">71 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-cpp-0" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-cpp-0" class="language-cpp">class Solution {
+public:
+    int shortestPathAllKeys(vector&lt;string&gt;&amp; grid) {
+        int containsKey = 0;
+        int n = grid.size(), m = grid[0].size();
+        
+        queue&lt;tuple&lt;int, int, int&gt;&gt; mq;
+        const int numKey = 6;
+        bool visited[n][m][1 &lt;&lt; numKey];
+        memset(visited, false, sizeof(visited));
+        
+        int keys = 0;
+        
+        for (int i = 0; i &lt; n; ++i) {
+            for (int j = 0; j &lt; m; ++j) {
+                if (grid[i][j] == &#x27;@&#x27;) {
+                    mq.push({i, j, 0});
+                    visited[i][j][0] = true;
+                }
+                
+                if (&#x27;a&#x27; &lt;= grid[i][j] and grid[i][j] &lt;= &#x27;f&#x27;) {
+                    keys++;
+                }
+            }
+        }
+        
+        int dx[4] = {-1, 1, 0, 0};
+        int dy[4] = {0, 0, -1, 1};
+        
+        int step = 0;
+        
+        while (!mq.empty()) {
+            int size = mq.size();
+            while (size--) {
+                auto [x, y, mask] = mq.front();
+                mq.pop();
+                
+                if (mask == (1 &lt;&lt; keys) - 1) {
+                    return step;
+                }
+
+                for (int i = 0; i &lt; 4; ++i) {
+                    int nx = x + dx[i];
+                    int ny = y + dy[i];
+
+                    if (0 &lt;= nx and nx &lt; n and 0 &lt;= ny and ny &lt; m and grid[nx][ny] != &#x27;#&#x27;) {
+                        if (&#x27;A&#x27; &lt;= grid[nx][ny] and grid[nx][ny] &lt;= &#x27;F&#x27;) {
+                            if (!(mask &amp; (1 &lt;&lt; (grid[nx][ny] - &#x27;A&#x27;)))) {
+                                continue;
+                            }
+                        }
+                        
+                        int newMask = mask;
+                        
+                        if (&#x27;a&#x27; &lt;= grid[nx][ny] and grid[nx][ny] &lt;= &#x27;f&#x27;) {
+                            newMask |= (1 &lt;&lt; (grid[nx][ny] - &#x27;a&#x27;));
+                        }
+                        
+                        if (!visited[nx][ny][newMask]) {
+                            mq.push({nx, ny, newMask});
+                            visited[nx][ny][newMask] = true;
+                        }
+                    }
+                }
+            }
+            step += 1;
+        }
+        
+        return -1;
+    }
+};</code></pre>
+    </div>
+</div>
+            </section>
+        </article>
+
+        <nav class="problem-nav" aria-label="Problem navigation">
+            <a href="0863-all-nodes-distance-k-in-binary-tree.html" class="nav-prev">
+    <span class="nav-arrow">←</span>
+    <div class="nav-info">
+        <span class="nav-direction">Bài trước</span>
+        <span class="nav-title">#863 863. All Nodes Distance K in Binary Tree</span>
+    </div>
+</a>
+            <a href="0872-leaf-similar-trees.html" class="nav-next">
+    <div class="nav-info">
+        <span class="nav-direction">Bài tiếp</span>
+        <span class="nav-title">#872 872. Leaf-Similar Trees</span>
+    </div>
+    <span class="nav-arrow">→</span>
+</a>
+        </nav>
+    </main>
+
+    <aside class="problem-sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-info">
+                <h3>📊 Thông Tin Bài Toán</h3>
+                <div class="info-item">
+                    <span class="info-label">Số bài</span>
+                    <span class="info-value">#864</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ khó</span>
+                    <span class="difficulty-badge difficulty-hard">Hard</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Ngôn ngữ</span>
+                    <span class="info-value">C++</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thuật toán</span>
+                    <span class="info-value">Bit Manipulation, Matrix, String</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thời gian</span>
+                    <code class="info-value">O(n²)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bộ nhớ</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng dòng code</span>
+                    <span class="info-value">71</span>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-sidebar">
+                <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block;min-height:250px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="ad-banner ad-bottom">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span>LeetCode<span class="logo-accent">Solutions</span></span>
+        </div>
+        <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code/issues" target="_blank" rel="noopener">Báo lỗi</a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Doan Trung Huy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#160 160. Intersection of Two Linked Lists | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy</title>
+    <meta name="description" content="Lời giải #160 160. Intersection of Two Linked Lists (Easy) trên LeetCode. Thuật toán: Linked List. Ngôn ngữ: Python.">
+    <meta name="author" content="Doan Trung Huy">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://doantrunguy.github.io/practice-interview-code/problems/0160-intersection-of-two-linked-lists.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="#160 160. Intersection of Two Linked Lists | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:description" content="Lời giải #160 160. Intersection of Two Linked Lists (Easy) trên LeetCode. Thuật toán: Linked List. Ngôn ngữ: Python.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://doantrunguy.github.io/practice-interview-code/problems/0160-intersection-of-two-linked-lists.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#160 160. Intersection of Two Linked Lists | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta name="twitter:description" content="Lời giải #160 160. Intersection of Two Linked Lists (Easy) trên LeetCode. Thuật toán: Linked List. Ngôn ngữ: Python.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "#160 160. Intersection of Two Linked Lists - LeetCode Solution", "description": "Lời giải chi tiết bài #160 160. Intersection of Two Linked Lists trên LeetCode. Ngôn ngữ: Python. Thuật toán: Linked List.", "author": {"@type": "Person", "name": "Doan Trung Huy"}, "publisher": {"@type": "Organization", "name": "LeetCode Solutions by Doan Trung Huy"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://doantrunguy.github.io/practice-interview-code/problems/0160-intersection-of-two-linked-lists.html"}, "proficiencyLevel": "Easy", "programmingLanguage": ["Python"], "keywords": "Easy, Python, Linked List"}</script>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">🏠 Trang chủ</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" class="nav-link" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="ad-banner ad-top">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">🏠 Trang chủ</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="../index.html?difficulty=easy">Easy</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current" aria-current="page">#160 160. Intersection of Two Linked Lists</span>
+</nav>
+
+<div class="problem-layout">
+    <main class="problem-main">
+        <article>
+            <div class="problem-header-section">
+                <h1 class="problem-title">
+                    <span class="problem-number-large">#160</span>
+                    160. Intersection of Two Linked Lists
+                </h1>
+                <div class="problem-meta">
+                    <span class="difficulty-badge difficulty-easy">Easy (Dễ)</span>
+                    <span class="lang-badge lang-python">Python</span>
+                    <a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" class="leetcode-link" target="_blank" rel="noopener noreferrer">
+                        🔗 Xem trên LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <section class="description-section">
+                <h2 class="section-title"><span class="section-icon">📋</span> Đề Bài</h2>
+                <div class="description-content">
+                    <p>Given the heads of two singly linked-lists <code>headA</code> and <code>headB</code>, return <em>the node at which the two lists intersect</em>. If the two linked lists have no intersection at all, return <code>null</code>.</p>
+
+<p>For example, the following two linked lists begin to intersect at node <code>c1</code>:</p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_statement.png" style="width: 500px; height: 162px;">
+<p>The test cases are generated such that there are no cycles anywhere in the entire linked structure.</p>
+
+<p><strong>Note</strong> that the linked lists must <strong>retain their original structure</strong> after the function returns.</p>
+
+<p><strong>Custom Judge:</strong></p>
+
+<p>The inputs to the <strong>judge</strong> are given as follows (your program is <strong>not</strong> given these inputs):</p>
+
+<ul>
+	<li><code>intersectVal</code> - The value of the node where the intersection occurs. This is <code>0</code> if there is no intersected node.</li>
+	<li><code>listA</code> - The first linked list.</li>
+	<li><code>listB</code> - The second linked list.</li>
+	<li><code>skipA</code> - The number of nodes to skip ahead in <code>listA</code> (starting from the head) to get to the intersected node.</li>
+	<li><code>skipB</code> - The number of nodes to skip ahead in <code>listB</code> (starting from the head) to get to the intersected node.</li>
+</ul>
+
+<p>The judge will then create the linked structure based on these inputs and pass the two heads, <code>headA</code> and <code>headB</code> to your program. If you correctly return the intersected node, then your solution will be <strong>accepted</strong>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png" style="width: 500px; height: 162px;">
+<pre><strong>Input:</strong> intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+<strong>Output:</strong> Intersected at '8'
+<strong>Explanation:</strong> The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
+- Note that the intersected node's value is not 1 because the nodes with value 1 in A and B (2<sup>nd</sup> node in A and 3<sup>rd</sup> node in B) are different node references. In other words, they point to two different locations in memory, while the nodes with value 8 in A and B (3<sup>rd</sup> node in A and 4<sup>th</sup> node in B) point to the same location in memory.
+</pre>
+
+<p><strong class="example">Example 2:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_2.png" style="width: 500px; height: 194px;">
+<pre><strong>Input:</strong> intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+<strong>Output:</strong> Intersected at '2'
+<strong>Explanation:</strong> The intersected node's value is 2 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
+</pre>
+
+<p><strong class="example">Example 3:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/03/05/160_example_3.png" style="width: 300px; height: 189px;">
+<pre><strong>Input:</strong> intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+<strong>Output:</strong> No intersection
+<strong>Explanation:</strong> From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Explanation: The two lists do not intersect, so return null.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li>The number of nodes of <code>listA</code> is in the <code>m</code>.</li>
+	<li>The number of nodes of <code>listB</code> is in the <code>n</code>.</li>
+	<li><code>1 &lt;= m, n &lt;= 3 * 10<sup>4</sup></code></li>
+	<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
+	<li><code>0 &lt;= skipA &lt;&nbsp;m</code></li>
+	<li><code>0 &lt;= skipB &lt;&nbsp;n</code></li>
+	<li><code>intersectVal</code> is <code>0</code> if <code>listA</code> and <code>listB</code> do not intersect.</li>
+	<li><code>intersectVal == listA[skipA] == listB[skipB]</code> if <code>listA</code> and <code>listB</code> intersect.</li>
+</ul>
+
+<p>&nbsp;</p>
+<strong>Follow up:</strong> Could you write a solution that runs in <code>O(m + n)</code> time and use only <code>O(1)</code> memory?
+                </div>
+            </section>
+
+            <div class="approach-section">
+    <h2 class="section-title"><span class="section-icon">🧠</span> Thuật Toán &amp; Kỹ Thuật</h2>
+    <div class="approach-tags"><span class="approach-tag"><strong>Linked List</strong> (Danh sách liên kết)</span></div>
+    <div class="complexity-info">
+        <div class="complexity-item">
+            <span class="complexity-label">⏱️ Thời gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+        <div class="complexity-item">
+            <span class="complexity-label">💾 Không gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+    </div>
+</div>
+
+            <section class="solution-section">
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải (1 file, 16 dòng)</h2>
+                <div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-python">Python</span>
+            <span class="code-filename">0160-intersection-of-two-linked-lists.py</span>
+            <span class="code-lines">16 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-python-0" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-python-0" class="language-python"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -&gt; Optional[ListNode]:
+        curr1 = headA
+        curr2 = headB
+        
+        while curr1 != curr2:
+            curr1 = curr1.next if curr1 else headB
+            curr2 = curr2.next if curr2 else headA
+            
+        return curr1</code></pre>
+    </div>
+</div>
+            </section>
+        </article>
+
+        <nav class="problem-nav" aria-label="Problem navigation">
+            <a href="0155-min-stack.html" class="nav-prev">
+    <span class="nav-arrow">←</span>
+    <div class="nav-info">
+        <span class="nav-direction">Bài trước</span>
+        <span class="nav-title">#155 155. Min Stack</span>
+    </div>
+</a>
+            <a href="0162-find-peak-element.html" class="nav-next">
+    <div class="nav-info">
+        <span class="nav-direction">Bài tiếp</span>
+        <span class="nav-title">#162 162. Find Peak Element</span>
+    </div>
+    <span class="nav-arrow">→</span>
+</a>
+        </nav>
+    </main>
+
+    <aside class="problem-sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-info">
+                <h3>📊 Thông Tin Bài Toán</h3>
+                <div class="info-item">
+                    <span class="info-label">Số bài</span>
+                    <span class="info-value">#160</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ khó</span>
+                    <span class="difficulty-badge difficulty-easy">Easy</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Ngôn ngữ</span>
+                    <span class="info-value">Python</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thuật toán</span>
+                    <span class="info-value">Linked List</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thời gian</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bộ nhớ</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng dòng code</span>
+                    <span class="info-value">16</span>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-sidebar">
+                <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block;min-height:250px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="ad-banner ad-bottom">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span>LeetCode<span class="logo-accent">Solutions</span></span>
+        </div>
+        <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code/issues" target="_blank" rel="noopener">Báo lỗi</a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Doan Trung Huy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

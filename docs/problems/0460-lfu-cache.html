@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#460 460. LFU Cache | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy</title>
+    <meta name="description" content="Lời giải #460 460. LFU Cache (Hard) trên LeetCode. Thuật toán: Hash Table, Linked List. Ngôn ngữ: C++, Python.">
+    <meta name="author" content="Doan Trung Huy">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://doantrunguy.github.io/practice-interview-code/problems/0460-lfu-cache.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="#460 460. LFU Cache | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:description" content="Lời giải #460 460. LFU Cache (Hard) trên LeetCode. Thuật toán: Hash Table, Linked List. Ngôn ngữ: C++, Python.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://doantrunguy.github.io/practice-interview-code/problems/0460-lfu-cache.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#460 460. LFU Cache | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta name="twitter:description" content="Lời giải #460 460. LFU Cache (Hard) trên LeetCode. Thuật toán: Hash Table, Linked List. Ngôn ngữ: C++, Python.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "#460 460. LFU Cache - LeetCode Solution", "description": "Lời giải chi tiết bài #460 460. LFU Cache trên LeetCode. Ngôn ngữ: C++. Thuật toán: Hash Table, Linked List.", "author": {"@type": "Person", "name": "Doan Trung Huy"}, "publisher": {"@type": "Organization", "name": "LeetCode Solutions by Doan Trung Huy"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://doantrunguy.github.io/practice-interview-code/problems/0460-lfu-cache.html"}, "proficiencyLevel": "Hard", "programmingLanguage": ["C++", "Python"], "keywords": "Hard, C++, Hash Table, Linked List"}</script>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">🏠 Trang chủ</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" class="nav-link" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="ad-banner ad-top">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">🏠 Trang chủ</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="../index.html?difficulty=hard">Hard</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current" aria-current="page">#460 460. LFU Cache</span>
+</nav>
+
+<div class="problem-layout">
+    <main class="problem-main">
+        <article>
+            <div class="problem-header-section">
+                <h1 class="problem-title">
+                    <span class="problem-number-large">#460</span>
+                    460. LFU Cache
+                </h1>
+                <div class="problem-meta">
+                    <span class="difficulty-badge difficulty-hard">Hard (Khó)</span>
+                    <span class="lang-badge lang-cpp">C++</span> <span class="lang-badge lang-python">Python</span>
+                    <a href="https://leetcode.com/problems/lfu-cache/" class="leetcode-link" target="_blank" rel="noopener noreferrer">
+                        🔗 Xem trên LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <section class="description-section">
+                <h2 class="section-title"><span class="section-icon">📋</span> Đề Bài</h2>
+                <div class="description-content">
+                    <p>Design and implement a data structure for a <a href="https://en.wikipedia.org/wiki/Least_frequently_used" target="_blank">Least Frequently Used (LFU)</a> cache.</p>
+
+<p>Implement the <code>LFUCache</code> class:</p>
+
+<ul>
+	<li><code>LFUCache(int capacity)</code> Initializes the object with the <code>capacity</code> of the data structure.</li>
+	<li><code>int get(int key)</code> Gets the value of the <code>key</code> if the <code>key</code> exists in the cache. Otherwise, returns <code>-1</code>.</li>
+	<li><code>void put(int key, int value)</code> Update the value of the <code>key</code> if present, or inserts the <code>key</code> if not already present. When the cache reaches its <code>capacity</code>, it should invalidate and remove the <strong>least frequently used</strong> key before inserting a new item. For this problem, when there is a <strong>tie</strong> (i.e., two or more keys with the same frequency), the <strong>least recently used</strong> <code>key</code> would be invalidated.</li>
+</ul>
+
+<p>To determine the least frequently used key, a <strong>use counter</strong> is maintained for each key in the cache. The key with the smallest <strong>use counter</strong> is the least frequently used key.</p>
+
+<p>When a key is first inserted into the cache, its <strong>use counter</strong> is set to <code>1</code> (due to the <code>put</code> operation). The <strong>use counter</strong> for a key in the cache is incremented either a <code>get</code> or <code>put</code> operation is called on it.</p>
+
+<p>The functions&nbsp;<code data-stringify-type="code">get</code>&nbsp;and&nbsp;<code data-stringify-type="code">put</code>&nbsp;must each run in <code>O(1)</code> average time complexity.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+
+<pre><strong>Input</strong>
+["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get", "get", "get"]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]
+<strong>Output</strong>
+[null, null, null, 1, null, -1, 3, null, -1, 3, 4]
+
+<strong>Explanation</strong>
+// cnt(x) = the use counter for key x
+// cache=[] will show the last used order for tiebreakers (leftmost element is  most recent)
+LFUCache lfu = new LFUCache(2);
+lfu.put(1, 1);   // cache=[1,_], cnt(1)=1
+lfu.put(2, 2);   // cache=[2,1], cnt(2)=1, cnt(1)=1
+lfu.get(1);      // return 1
+                 // cache=[1,2], cnt(2)=1, cnt(1)=2
+lfu.put(3, 3);   // 2 is the LFU key because cnt(2)=1 is the smallest, invalidate 2.
+&nbsp;                // cache=[3,1], cnt(3)=1, cnt(1)=2
+lfu.get(2);      // return -1 (not found)
+lfu.get(3);      // return 3
+                 // cache=[3,1], cnt(3)=2, cnt(1)=2
+lfu.put(4, 4);   // Both 1 and 3 have the same cnt, but 1 is LRU, invalidate 1.
+                 // cache=[4,3], cnt(4)=1, cnt(3)=2
+lfu.get(1);      // return -1 (not found)
+lfu.get(3);      // return 3
+                 // cache=[3,4], cnt(4)=1, cnt(3)=3
+lfu.get(4);      // return 4
+                 // cache=[4,3], cnt(4)=2, cnt(3)=3
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>0 &lt;= capacity&nbsp;&lt;= 10<sup>4</sup></code></li>
+	<li><code>0 &lt;= key &lt;= 10<sup>5</sup></code></li>
+	<li><code>0 &lt;= value &lt;= 10<sup>9</sup></code></li>
+	<li>At most <code>2 * 10<sup>5</sup></code>&nbsp;calls will be made to <code>get</code> and <code>put</code>.</li>
+</ul>
+
+<p>&nbsp;</p>
+<span style="display: none;">&nbsp;</span>
+                </div>
+            </section>
+
+            <div class="approach-section">
+    <h2 class="section-title"><span class="section-icon">🧠</span> Thuật Toán &amp; Kỹ Thuật</h2>
+    <div class="approach-tags"><span class="approach-tag"><strong>Hash Table</strong> (Bảng băm)</span><span class="approach-tag"><strong>Linked List</strong> (Danh sách liên kết)</span></div>
+    <div class="complexity-info">
+        <div class="complexity-item">
+            <span class="complexity-label">⏱️ Thời gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+        <div class="complexity-item">
+            <span class="complexity-label">💾 Không gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+    </div>
+</div>
+
+            <section class="solution-section">
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải (2 file, 141 dòng)</h2>
+                <div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-cpp">C++</span>
+            <span class="code-filename">0460-lfu-cache.cpp</span>
+            <span class="code-lines">93 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-cpp-0" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-cpp-0" class="language-cpp">import collections
+
+class Node:
+    def __init__(self, key, val):
+        self.key = key
+        self.val = val
+        self.freq = 1
+        self.prev = self.next = None
+
+class DLinkedList:
+    def __init__(self):
+        self._sentinel = Node(None, None)
+        self._sentinel.next = self._sentinel.prev = self._sentinel
+        self._size = 0
+    
+    def __len__(self):
+        return self._size
+    
+    def append(self, node):
+        node.next = self._sentinel.next
+        node.prev = self._sentinel
+        node.next.prev = node
+        self._sentinel.next = node
+        self._size += 1
+    
+    def pop(self, node=None):
+        if self._size == 0:
+            return
+        
+        if not node:
+            node = self._sentinel.prev
+
+        node.prev.next = node.next
+        node.next.prev = node.prev
+        self._size -= 1
+        
+        return node
+        
+class LFUCache:
+    def __init__(self, capacity):
+        self._size = 0
+        self._capacity = capacity
+        
+        self._node = dict()
+        self._freq = collections.defaultdict(DLinkedList)
+        self._minfreq = 0
+        
+        
+    def _update(self, node):
+        freq = node.freq
+        
+        self._freq[freq].pop(node)
+        if self._minfreq == freq and not self._freq[freq]:
+            self._minfreq += 1
+        
+        node.freq += 1
+        freq = node.freq
+        self._freq[freq].append(node)
+    
+    def get(self, key):
+        if key not in self._node:
+            return -1
+        
+        node = self._node[key]
+        self._update(node)
+        return node.val
+
+    def put(self, key, value):
+        if self._capacity == 0:
+            return
+        
+        if key in self._node:
+            node = self._node[key]
+            self._update(node)
+            node.val = value
+        else:
+            if self._size == self._capacity:
+                node = self._freq[self._minfreq].pop()
+                del self._node[node.key]
+                self._size -= 1
+                
+            node = Node(key, value)
+            self._node[key] = node
+            self._freq[1].append(node)
+            self._minfreq = 1
+            self._size += 1
+        
+
+
+# Your LFUCache object will be instantiated and called as such:
+# obj = LFUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)</code></pre>
+    </div>
+</div><div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-python">Python</span>
+            <span class="code-filename">0460-lfu-cache.py</span>
+            <span class="code-lines">48 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-python-1" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-python-1" class="language-python">class Node:
+    def __init__(self, key, val, cnt):
+        self.key = key
+        self.val = val
+        self.cnt = cnt
+
+class LFUCache:
+    def __init__(self, capacity: int):
+        self.countOfLL = defaultdict(deque)
+        self.keyOfNode = defaultdict(Node)
+        self.capacity = capacity
+        self.minFreq = 0
+
+    def get(self, key: int) -&gt; int:
+        if key not in self.keyOfNode:
+            return -1
+
+        node = self.keyOfNode[key]
+        self.countOfLL[node.cnt].remove(key)
+
+        node.cnt += 1
+        self.countOfLL[node.cnt].appendleft(key)
+
+        if not self.countOfLL[self.minFreq]:
+            self.minFreq += 1
+
+        return node.val
+        
+
+    def put(self, key: int, value: int) -&gt; None:
+        if self.capacity == 0:
+            return
+        
+        if key in self.keyOfNode:
+            self.keyOfNode[key].val = value
+            self.get(key)
+        else:
+            if len(self.keyOfNode) == self.capacity:
+                del self.keyOfNode[self.countOfLL[self.minFreq].pop()]
+            self.minFreq = 1
+            self.keyOfNode[key] = Node(key, value, self.minFreq)
+            self.countOfLL[self.minFreq].appendleft(key)
+
+
+# Your LFUCache object will be instantiated and called as such:
+# obj = LFUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)</code></pre>
+    </div>
+</div>
+            </section>
+        </article>
+
+        <nav class="problem-nav" aria-label="Problem navigation">
+            <a href="0459-repeated-substring-pattern.html" class="nav-prev">
+    <span class="nav-arrow">←</span>
+    <div class="nav-info">
+        <span class="nav-direction">Bài trước</span>
+        <span class="nav-title">#459 459. Repeated Substring Pattern</span>
+    </div>
+</a>
+            <a href="0461-hamming-distance.html" class="nav-next">
+    <div class="nav-info">
+        <span class="nav-direction">Bài tiếp</span>
+        <span class="nav-title">#461 461. Hamming Distance</span>
+    </div>
+    <span class="nav-arrow">→</span>
+</a>
+        </nav>
+    </main>
+
+    <aside class="problem-sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-info">
+                <h3>📊 Thông Tin Bài Toán</h3>
+                <div class="info-item">
+                    <span class="info-label">Số bài</span>
+                    <span class="info-value">#460</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ khó</span>
+                    <span class="difficulty-badge difficulty-hard">Hard</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Ngôn ngữ</span>
+                    <span class="info-value">C++, Python</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thuật toán</span>
+                    <span class="info-value">Hash Table, Linked List</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thời gian</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bộ nhớ</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng dòng code</span>
+                    <span class="info-value">141</span>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-sidebar">
+                <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block;min-height:250px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="ad-banner ad-bottom">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span>LeetCode<span class="logo-accent">Solutions</span></span>
+        </div>
+        <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code/issues" target="_blank" rel="noopener">Báo lỗi</a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Doan Trung Huy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

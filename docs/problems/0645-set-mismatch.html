@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#645 645. Set Mismatch | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy</title>
+    <meta name="description" content="Lời giải #645 645. Set Mismatch (Easy) trên LeetCode. Thuật toán: Hash Table. Ngôn ngữ: Python.">
+    <meta name="author" content="Doan Trung Huy">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://doantrunguy.github.io/practice-interview-code/problems/0645-set-mismatch.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="#645 645. Set Mismatch | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:description" content="Lời giải #645 645. Set Mismatch (Easy) trên LeetCode. Thuật toán: Hash Table. Ngôn ngữ: Python.">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LeetCode Solutions by Doan Trung Huy">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:url" content="https://doantrunguy.github.io/practice-interview-code/problems/0645-set-mismatch.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="#645 645. Set Mismatch | Lời Giải LeetCode - LeetCode Solutions by Doan Trung Huy">
+    <meta name="twitter:description" content="Lời giải #645 645. Set Mismatch (Easy) trên LeetCode. Thuật toán: Hash Table. Ngôn ngữ: Python.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "#645 645. Set Mismatch - LeetCode Solution", "description": "Lời giải chi tiết bài #645 645. Set Mismatch trên LeetCode. Ngôn ngữ: Python. Thuật toán: Hash Table.", "author": {"@type": "Person", "name": "Doan Trung Huy"}, "publisher": {"@type": "Organization", "name": "LeetCode Solutions by Doan Trung Huy"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://doantrunguy.github.io/practice-interview-code/problems/0645-set-mismatch.html"}, "proficiencyLevel": "Easy", "programmingLanguage": ["Python"], "keywords": "Easy, Python, Hash Table"}</script>
+<header class="site-header">
+    <div class="header-glow"></div>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">LeetCode<span class="logo-accent">Solutions</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">🏠 Trang chủ</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" class="nav-link" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+            </a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Chuyển đổi giao diện">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="ad-banner ad-top">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">🏠 Trang chủ</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="../index.html?difficulty=easy">Easy</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current" aria-current="page">#645 645. Set Mismatch</span>
+</nav>
+
+<div class="problem-layout">
+    <main class="problem-main">
+        <article>
+            <div class="problem-header-section">
+                <h1 class="problem-title">
+                    <span class="problem-number-large">#645</span>
+                    645. Set Mismatch
+                </h1>
+                <div class="problem-meta">
+                    <span class="difficulty-badge difficulty-easy">Easy (Dễ)</span>
+                    <span class="lang-badge lang-python">Python</span>
+                    <a href="https://leetcode.com/problems/set-mismatch/" class="leetcode-link" target="_blank" rel="noopener noreferrer">
+                        🔗 Xem trên LeetCode
+                    </a>
+                </div>
+            </div>
+
+            <section class="description-section">
+                <h2 class="section-title"><span class="section-icon">📋</span> Đề Bài</h2>
+                <div class="description-content">
+                    <p>You have a set of integers <code>s</code>, which originally contains all the numbers from <code>1</code> to <code>n</code>. Unfortunately, due to some error, one of the numbers in <code>s</code> got duplicated to another number in the set, which results in <strong>repetition of one</strong> number and <strong>loss of another</strong> number.</p>
+
+<p>You are given an integer array <code>nums</code> representing the data status of this set after the error.</p>
+
+<p>Find the number that occurs twice and the number that is missing and return <em>them in the form of an array</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong class="example">Example 1:</strong></p>
+<pre><strong>Input:</strong> nums = [1,2,2,4]
+<strong>Output:</strong> [2,3]
+</pre><p><strong class="example">Example 2:</strong></p>
+<pre><strong>Input:</strong> nums = [1,1]
+<strong>Output:</strong> [1,2]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
+
+                </div>
+            </section>
+
+            <div class="approach-section">
+    <h2 class="section-title"><span class="section-icon">🧠</span> Thuật Toán &amp; Kỹ Thuật</h2>
+    <div class="approach-tags"><span class="approach-tag"><strong>Hash Table</strong> (Bảng băm)</span></div>
+    <div class="complexity-info">
+        <div class="complexity-item">
+            <span class="complexity-label">⏱️ Thời gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+        <div class="complexity-item">
+            <span class="complexity-label">💾 Không gian</span>
+            <code class="complexity-value">O(n)</code>
+        </div>
+    </div>
+</div>
+
+            <section class="solution-section">
+                <h2 class="section-title"><span class="section-icon">💻</span> Lời Giải (1 file, 15 dòng)</h2>
+                <div class="solution-block">
+    <div class="code-header">
+        <div class="code-header-left">
+            <span class="lang-label lang-python">Python</span>
+            <span class="code-filename">0645-set-mismatch.py</span>
+            <span class="code-lines">15 dòng</span>
+        </div>
+        <button class="copy-btn" data-target="code-python-0" aria-label="Sao chép code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+        </button>
+    </div>
+    <div class="code-block">
+        <pre class="line-numbers"><code id="code-python-0" class="language-python">class Solution:
+    def findErrorNums(self, nums: List[int]) -&gt; List[int]:
+        hashMap = Counter(nums)
+        n = len(nums)
+        s = 0
+        ans = []
+        
+        for key in hashMap:
+            s += key
+            if hashMap[key] &gt; 1:
+                ans.append(key)
+                
+        ans.append(n * (n + 1) // 2 - s)
+        
+        return ans
+            </code></pre>
+    </div>
+</div>
+            </section>
+        </article>
+
+        <nav class="problem-nav" aria-label="Problem navigation">
+            <a href="0643-maximum-average-subarray-i.html" class="nav-prev">
+    <span class="nav-arrow">←</span>
+    <div class="nav-info">
+        <span class="nav-direction">Bài trước</span>
+        <span class="nav-title">#643 643. Maximum Average Subarray I</span>
+    </div>
+</a>
+            <a href="0646-maximum-length-of-pair-chain.html" class="nav-next">
+    <div class="nav-info">
+        <span class="nav-direction">Bài tiếp</span>
+        <span class="nav-title">#646 646. Maximum Length of Pair Chain</span>
+    </div>
+    <span class="nav-arrow">→</span>
+</a>
+        </nav>
+    </main>
+
+    <aside class="problem-sidebar">
+        <div class="sidebar-sticky">
+            <div class="sidebar-info">
+                <h3>📊 Thông Tin Bài Toán</h3>
+                <div class="info-item">
+                    <span class="info-label">Số bài</span>
+                    <span class="info-value">#645</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Độ khó</span>
+                    <span class="difficulty-badge difficulty-easy">Easy</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Ngôn ngữ</span>
+                    <span class="info-value">Python</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thuật toán</span>
+                    <span class="info-value">Hash Table</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Thời gian</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bộ nhớ</span>
+                    <code class="info-value">O(n)</code>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tổng dòng code</span>
+                    <span class="info-value">15</span>
+                </div>
+            </div>
+
+            <div class="ad-banner ad-sidebar">
+                <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block;min-height:250px;" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="ad-banner ad-bottom">
+    <div class="ad-container">
+    <span class="ad-label">Quảng cáo</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXXXX" data-ad-slot="1122334455" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span>LeetCode<span class="logo-accent">Solutions</span></span>
+        </div>
+        <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
+        <div class="footer-links">
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/DoanTrungHuy/practice-interview-code/issues" target="_blank" rel="noopener">Báo lỗi</a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Doan Trung Huy. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
