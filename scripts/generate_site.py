@@ -28,7 +28,7 @@ GITHUB_REPO = "https://github.com/DoanTrungHuy/practice-interview-code"
 
 # AdSense placeholder - replace with your real AdSense code
 ADSENSE_CLIENT = "ca-pub-6049045454613689"
-ADSENSE_SLOT_TOP = "1234567890"
+ADSENSE_SLOT_TOP = "5965807348"
 ADSENSE_SLOT_SIDEBAR = "0987654321"
 ADSENSE_SLOT_BOTTOM = "1122334455"
 ADSENSE_SLOT_INFEED = "5566778899"
