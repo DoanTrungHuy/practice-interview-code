@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const animateCounter = (el) => {
-        const target = parseInt(el.textContent, 10);
+        const target = parseInt(el.getAttribute('data-target'), 10);
         if (isNaN(target)) return;
         
         let current = 0;
