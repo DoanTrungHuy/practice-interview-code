@@ -488,16 +488,15 @@ def generate_index_page(problems: list):
     <div class="hero-content">
         <h1 class="hero-title">
             <span class="gradient-text">LeetCode Solutions</span>
-            <br><span class="hero-title-sub">Giải Thích Chi Tiết Từng Bài</span>
+            <br><span class="hero-title-sub">Tổng Hợp Lời Giải</span>
         </h1>
         <p class="hero-subtitle">
-            Tổng hợp <strong>{total}+</strong> lời giải LeetCode với code sạch,
-            phân tích thuật toán, và complexity analysis.
+            Tổng hợp <strong>{total}+</strong> lời giải LeetCode với code sạch và tối ưu.
             Viết bằng <strong>C++, Python, SQL</strong> &amp; nhiều ngôn ngữ khác.
         </p>
         <div class="hero-badges">
             <span class="hero-badge">🔥 {total_code_files} file code</span>
-            <span class="hero-badge">📝 Giải thích chi tiết</span>
+            <span class="hero-badge">📝 Code gọn gàng</span>
             <span class="hero-badge">🌐 {len(lang_counts)} ngôn ngữ</span>
         </div>
     </div>
