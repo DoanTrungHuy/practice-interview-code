@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <!-- Nền trắng tinh khôi, bo góc nhẹ -->
+    <rect width="512" height="512" fill="#ffffff" rx="100" />
+    
+    <!-- Cặp dấu ngoặc lập trình </>, tối giản, màu xanh đậm -->
+    <path d="M160 160 L60 256 L160 352" fill="none" stroke="#1e293b" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M352 160 L452 256 L352 352" fill="none" stroke="#1e293b" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Cấu trúc cây dữ liệu (Data Structure / Algorithm) -->
+    <!-- Các đường nối (Edges) -->
+    <line x1="256" y1="210" x2="210" y2="290" stroke="#64748b" stroke-width="20" stroke-linecap="round"/>
+    <line x1="256" y1="210" x2="302" y2="290" stroke="#64748b" stroke-width="20" stroke-linecap="round"/>
+    
+    <!-- Các điểm node (Vertices) -->
+    <circle cx="256" cy="180" r="32" fill="#3b82f6" />
+    <circle cx="210" cy="310" r="28" fill="#0ea5e9" />
+    <circle cx="302" cy="310" r="28" fill="#0ea5e9" />
+</svg>

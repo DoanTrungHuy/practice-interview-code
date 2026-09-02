@@ -286,10 +286,10 @@ def head_html(title, description="", canonical="", is_sub=False, og_type="websit
     <meta name="author" content="{AUTHOR}">
     <meta name="robots" content="index, follow, max-image-preview:large">
     {canonical_tag}
-    <link rel="icon" type="image/jpeg" href="{prefix}logo.jpg">
+    <link rel="icon" type="image/svg+xml" href="{prefix}logo.svg">
 
     <!-- Open Graph -->
-    <meta property="og:image" content="{SITE_URL}/logo.jpg">
+    <meta property="og:image" content="{SITE_URL}/logo.svg">
     <meta property="og:title" content="{html.escape(title)}">
     <meta property="og:description" content="{html.escape(description[:200])}">
     <meta property="og:type" content="{og_type}">
@@ -300,7 +300,7 @@ def head_html(title, description="", canonical="", is_sub=False, og_type="websit
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{html.escape(title)}">
-    <meta name="twitter:image" content="{SITE_URL}/logo.jpg">
+    <meta name="twitter:image" content="{SITE_URL}/logo.svg">
     <meta name="twitter:description" content="{html.escape(description[:200])}">
 
     <!-- Google Fonts -->
