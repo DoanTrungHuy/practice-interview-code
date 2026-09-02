@@ -1319,10 +1319,10 @@ code[class*="language-"], pre[class*="language-"] {
     flex-direction: column;
   }
   .nav-next, .nav-prev {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .nav-next .nav-info, .nav-prev .nav-info {
     align-items: center;
