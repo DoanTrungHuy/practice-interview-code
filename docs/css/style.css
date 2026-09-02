@@ -1318,8 +1318,15 @@ code[class*="language-"], pre[class*="language-"] {
   .problem-nav {
     flex-direction: column;
   }
-  .nav-next {
+  .nav-next, .nav-prev {
     flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  .nav-next .nav-info, .nav-prev .nav-info {
+    align-items: center;
+    text-align: center;
   }
   .description-section, .solution-section, .approach-section {
     padding: var(--space-4) var(--space-2);
