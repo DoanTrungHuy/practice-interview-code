@@ -967,6 +967,8 @@ body.light-theme .icon-moon {
   font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--text-secondary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .description-content p { margin-bottom: var(--space-4); }
@@ -984,6 +986,7 @@ body.light-theme .icon-moon {
   font-size: 0.875em;
   color: var(--accent-tertiary);
   border: 1px solid var(--border-color);
+  word-break: break-word;
 }
 
 .description-content pre {
@@ -994,6 +997,7 @@ body.light-theme .icon-moon {
   margin: var(--space-6) 0;
   border: 1px solid var(--border-color);
   border-left: 4px solid var(--accent-primary);
+  max-width: 100%;
 }
 
 .description-content pre code {
@@ -1002,6 +1006,8 @@ body.light-theme .icon-moon {
   border: none;
   color: var(--text-primary);
   font-size: 0.875rem;
+  word-break: normal;
+  white-space: pre;
 }
 
 .description-content blockquote {
