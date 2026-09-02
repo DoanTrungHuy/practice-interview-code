@@ -360,6 +360,7 @@ def footer_html(is_sub=False):
         </div>
         <p class="footer-text">Tổng hợp lời giải LeetCode bằng C++, Python, SQL &amp; nhiều ngôn ngữ khác.<br>Tài liệu ôn tập phỏng vấn lập trình hàng đầu.</p>
         <div class="footer-links">
+            <a href="https://leetcode.com/doantrunghuy/" target="_blank" rel="noopener">LeetCode Profile</a>
             <a href="{GITHUB_REPO}" target="_blank" rel="noopener">GitHub</a>
             <a href="{GITHUB_REPO}/issues" target="_blank" rel="noopener">Báo lỗi</a>
         </div>
