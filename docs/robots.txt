@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://doantrunguy.github.io/practice-interview-code/sitemap.xml
+Sitemap: https://doantrunghuy.github.io/practice-interview-code/sitemap.xml
