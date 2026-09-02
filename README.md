@@ -17,7 +17,7 @@
 ---
 
 ## 🌟 Giới thiệu (About)
-Đây là kho lưu trữ mã nguồn tổng hợp hơn 460+ bài tập LeetCode phục vụ cho việc ôn thi phỏng vấn lập trình, được thực hiện bởi **Doãn Trung Huy**.
+Đây là kho lưu trữ mã nguồn tổng hợp hơn 460+ bài tập LeetCode phục vụ cho việc ôn thi phỏng vấn lập trình, được thực hiện bởi **Doan Trung Huy**.
 
 Thay vì phải đọc code khô khan trên GitHub, toàn bộ nội dung trong kho lưu trữ này đã được render thành một trang web giao diện cao cấp (Premium Design) với đầy đủ tính năng:
 - **Tối ưu hóa đa thiết bị (Responsive):** Đọc giải thích và code mượt mà trên cả điện thoại và máy tính.
