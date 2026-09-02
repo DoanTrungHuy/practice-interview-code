@@ -497,7 +497,7 @@ def generate_index_page(problems: list):
         </p>
         <div class="hero-badges">
             <span class="hero-badge">🔥 {total_code_files} file code</span>
-            <span class="hero-badge">📝 {total_lines:,} dòng code</span>
+            <span class="hero-badge">📝 Giải thích chi tiết</span>
             <span class="hero-badge">🌐 {len(lang_counts)} ngôn ngữ</span>
         </div>
     </div>
@@ -757,10 +757,6 @@ def generate_problem_page(p: dict, prev_p, next_p):
                 <div class="info-item">
                     <span class="info-label">Bộ nhớ</span>
                     <code class="info-value">{space_c}</code>
-                </div>
-                <div class="info-item">
-                    <span class="info-label">Tổng dòng code</span>
-                    <span class="info-value">{p.get("total_lines", 0)}</span>
                 </div>
             </div>
 
