@@ -238,6 +238,7 @@ button {
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--space-4) var(--space-6);
+  position: relative;
 }
 
 .logo {
@@ -280,6 +281,15 @@ button {
   display: flex;
   align-items: center;
   gap: var(--space-8);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .nav-link {
@@ -1265,6 +1275,7 @@ code[class*="language-"], pre[class*="language-"] {
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* Hide on mobile */
+    transform: none;
   }
   .mobile-menu-toggle {
     display: flex;
