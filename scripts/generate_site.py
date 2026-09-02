@@ -555,6 +555,9 @@ def generate_index_page(problems: list):
     <div class="problems-grid">
         {"".join(cards)}
     </div>
+
+    <!-- Phân trang -->
+    <div id="pagination-controls" class="pagination-container"></div>
 </section>
 
 <div class="ad-banner ad-bottom">
