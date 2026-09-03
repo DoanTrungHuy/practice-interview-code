@@ -1,6 +1,6 @@
 <div align="center">
   <img src="docs/logo.svg" alt="LeetCode Solutions Logo" width="120" height="120" />
-  <h1>⚡ LeetCode Solutions</h1>
+  <h1>LeetCode Solutions</h1>
   
   <p>
     <strong>A massive collection of LeetCode solutions with detailed explanations.</strong>
